@@ -1,0 +1,46 @@
+{
+	"name": "craue/twigextensions-bundle",
+	"type": "symfony-bundle",
+	"description": "Useful Twig extensions for your Symfony project.",
+	"keywords": ["twig", "extensions", "symfony"],
+	"homepage": "https://github.com/craue/TwigExtensionsBundle",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Christian Raue",
+			"email": "christian.raue@gmail.com"
+		},
+		{
+			"name": "Symfony Community",
+			"homepage": "https://github.com/craue/TwigExtensionsBundle/contributors"
+		}
+	],
+	"require": {
+		"php": "~7.0",
+		"symfony/config": "~3.4|~4.2|~5.0",
+		"symfony/dependency-injection": "~3.4|~4.2|~5.0",
+		"symfony/twig-bundle": "~3.4|~4.2|~5.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^6.5.13|^7.5.1",
+		"symfony/phpunit-bridge": "~5.0",
+		"symfony/symfony": "~3.4|~4.2|~5.0"
+	},
+	"minimum-stability": "stable",
+	"autoload": {
+		"psr-4": {
+			"Craue\\TwigExtensionsBundle\\": ""
+		},
+		"exclude-from-classmap": [
+			"/Tests/"
+		]
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "2.7.x-dev"
+		}
+	},
+	"config": {
+		"sort-packages": true
+	}
+}

@@ -1,0 +1,12 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+formule:
+  path: /formule
+  controller: App\Controller\DefaultController::formule
+purchase:
+  path: /purchase
+  controller: App\Controller\DefaultController::purchase
+manageBundle:
+  path: /manageBundle
+  controller: App\Controller\DefaultController::manageBundle
