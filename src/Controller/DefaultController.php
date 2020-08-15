@@ -29,9 +29,10 @@ class DefaultController extends AbstractController
         }
         $user=$this->container->get('security.authorization_checker');
         if (($user->isGranted('ROLE_ADMIN'))){
-            return $this->render('backOffice/baseAdmin.html.twig');
+            return $this->render('backOffice/manageBundles.html.twig');
+
         }
-        return $this->render('default/baseAdmin.html.twig', [
+        return $this->render('default/index.html.twig', [
             'controller_name' => 'DefaultController',
         ]);
     }
@@ -55,11 +56,22 @@ class DefaultController extends AbstractController
 
         }
     }
-    public function manageBundle(SessionInterface $session)
+    public function manageBundle()
     {
+        return $this->render('backOffice/manageBundles.html.twig');
 
-                return $this->render('backOffice/manageBundles.html.twig'
-                );
+    }
 
-        }
+    public function addBundle()
+    {
+        return $this->render('backOffice/addBundle.html.twig'
+        );
+
+    }
+    public function addBundlebeta()
+    {
+        return $this->render('backOffice/addBundle.html.twig'
+        );
+
+    }
 }

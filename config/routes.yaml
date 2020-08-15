@@ -10,3 +10,6 @@ purchase:
 manageBundle:
   path: /manageBundle
   controller: App\Controller\DefaultController::manageBundle
+addBundle:
+  path: /addBundle
+  controller: App\Controller\DefaultController::addBundle

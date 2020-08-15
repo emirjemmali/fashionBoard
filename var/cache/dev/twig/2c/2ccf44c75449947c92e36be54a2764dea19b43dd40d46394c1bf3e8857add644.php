@@ -74,10 +74,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
         // line 15
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/css/style.css"), "html", null, true);
         echo "\">
-    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">
-    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto\">
-
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css\"/>
 </head>
 <body>
 <div class=\"page-container\">
@@ -97,9 +94,14 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                         </a>
                         <ul class=\"sub-menu\">
                             <li><a href=\"";
-        // line 38
+        // line 35
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("manageBundle");
-        echo "\">Buttons</a></li>
+        echo "\">Liste des paquets</a></li>
+                            <li><a href=\"";
+        // line 36
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addBundle");
+        echo "\">Ajouter paquet</a></li>
+
                         </ul>
                     </li>
                     <li>
@@ -130,7 +132,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                         </ul>
                     </li>
 ";
-        // line 77
+        // line 76
         echo "                </ul>
             </div>
         </div>
@@ -196,7 +198,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                                                                   data-toggle=\"dropdown\" role=\"button\"
                                                                   aria-haspopup=\"true\" aria-expanded=\"false\">
                                     <img src=";
-        // line 141
+        // line 140
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/images/avatar/avatar-1.jpg"), "html", null, true);
         echo " alt=\"\" class=\"img-circle\"></a>
                                 <ul class=\"dropdown-menu\">
@@ -207,7 +209,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                                     <li role=\"separator\" class=\"divider\"></li>
                                     <li><a href=\"#\">Account Settings</a></li>
                                     <li><a  href=\"";
-        // line 149
+        // line 148
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
         echo "\">Log Out</a></li>
                                 </ul>
@@ -219,50 +221,55 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
         </div>
         <div class=\"page-inner\">
             ";
-        // line 158
+        // line 157
         $this->displayBlock('body', $context, $blocks);
-        // line 160
+        // line 159
         echo "        </div>
     </div>
     </div>
 <script src=\"";
-        // line 163
+        // line 162
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 164
+        // line 163
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/js/bootstrap.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 165
+        // line 164
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/plugins/jquery-slimscroll/jquery.slimscroll.min.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 166
+        // line 165
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/plugins/uniform/js/jquery.uniform.standalone.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 167
+        // line 166
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/plugins/switchery/switchery.min.js"), "html", null, true);
         echo "\"></script>
 <!--<script src=\"";
-        // line 168
+        // line 167
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/plugins/morris/morris.min.js"), "html", null, true);
         echo "\"></script>-->
 <script src=\"";
-        // line 169
+        // line 168
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/plugins/raphael/raphael-min.js"), "html", null, true);
         echo "\"></script>
 <!--<script src=\"";
-        // line 170
+        // line 169
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/pages/dashborad.js"), "html", null, true);
         echo "\"></script>-->
 <script src=\"";
-        // line 171
+        // line 170
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("backOffice/js/custom.js"), "html", null, true);
         echo "\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"></script>
-
+<script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js\"></script>
+<script>
+    \$(document).ready(function () {
+        \$('#dtBasicExample').DataTable();
+        \$('.dataTables_length').addClass('bs-select');
+    });
+</script>
 </body>
 </html>";
         
@@ -270,14 +277,14 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
 
     }
 
-    // line 158
+    // line 157
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 159
+        // line 158
         echo "            ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -296,7 +303,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
 
     public function getDebugInfo()
     {
-        return array (  281 => 159,  274 => 158,  262 => 171,  258 => 170,  254 => 169,  250 => 168,  246 => 167,  242 => 166,  238 => 165,  234 => 164,  230 => 163,  225 => 160,  223 => 158,  211 => 149,  200 => 141,  134 => 77,  101 => 38,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  55 => 10,  51 => 9,  41 => 1,);
+        return array (  288 => 158,  281 => 157,  264 => 170,  260 => 169,  256 => 168,  252 => 167,  248 => 166,  244 => 165,  240 => 164,  236 => 163,  232 => 162,  227 => 159,  225 => 157,  213 => 148,  202 => 140,  136 => 76,  102 => 36,  98 => 35,  75 => 15,  71 => 14,  67 => 13,  63 => 12,  59 => 11,  55 => 10,  51 => 9,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -316,10 +323,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('backOffice/plugins/morris/morris.css') }}\">
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('backOffice/plugins/morris/morris.css') }}\">
     <link rel=\"stylesheet\" type=\"text/css\" href=\"{{ asset('backOffice/css/style.css') }}\">
-    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">
-    <link rel=\"stylesheet\" href=\"https://fonts.googleapis.com/css?family=Roboto\">
-
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css\"/>
 </head>
 <body>
 <div class=\"page-container\">
@@ -338,7 +342,9 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                             <span>Gestion des paquets</span><i class=\"accordion-icon fa fa-angle-right\"></i>
                         </a>
                         <ul class=\"sub-menu\">
-                            <li><a href=\"{{ path('manageBundle') }}\">Buttons</a></li>
+                            <li><a href=\"{{ path('manageBundle') }}\">Liste des paquets</a></li>
+                            <li><a href=\"{{ path('addBundle') }}\">Ajouter paquet</a></li>
+
                         </ul>
                     </li>
                     <li>
@@ -472,9 +478,14 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
 <script src=\"{{ asset('backOffice/plugins/raphael/raphael-min.js') }}\"></script>
 <!--<script src=\"{{ asset('backOffice/pages/dashborad.js') }}\"></script>-->
 <script src=\"{{ asset('backOffice/js/custom.js') }}\"></script>
-<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\"></script>
-
+<script type=\"text/javascript\" src=\"https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js\"></script>
+<script>
+    \$(document).ready(function () {
+        \$('#dtBasicExample').DataTable();
+        \$('.dataTables_length').addClass('bs-select');
+    });
+</script>
 </body>
-</html>", "baseAdmin.html.twig", "/home/emir/Documents/untitled/templates/baseAdmin.html.twig");
+</html>", "baseAdmin.html.twig", "/home/emir/Bureau/fashionBoard/templates/baseAdmin.html.twig");
     }
 }

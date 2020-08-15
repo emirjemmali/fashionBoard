@@ -13,10 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('backOffice/plugins/morris/morris.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('backOffice/plugins/morris/morris.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('backOffice/css/style.css') }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css"/>
 </head>
 <body>
 <div class="page-container">
@@ -35,7 +32,9 @@
                             <span>Gestion des paquets</span><i class="accordion-icon fa fa-angle-right"></i>
                         </a>
                         <ul class="sub-menu">
-                            <li><a href="{{ path('manageBundle') }}">Buttons</a></li>
+                            <li><a href="{{ path('manageBundle') }}">Liste des paquets</a></li>
+                            <li><a href="{{ path('addBundle') }}">Ajouter paquet</a></li>
+
                         </ul>
                     </li>
                     <li>
@@ -169,7 +168,12 @@
 <script src="{{ asset('backOffice/plugins/raphael/raphael-min.js') }}"></script>
 <!--<script src="{{ asset('backOffice/pages/dashborad.js') }}"></script>-->
 <script src="{{ asset('backOffice/js/custom.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
-
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#dtBasicExample').DataTable();
+        $('.dataTables_length').addClass('bs-select');
+    });
+</script>
 </body>
 </html>
