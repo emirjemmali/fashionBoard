@@ -24,6 +24,15 @@ return [
         '/formule' => [[['_route' => 'formule', '_controller' => 'App\\Controller\\DefaultController::formule'], null, null, null, false, false, null]],
         '/purchase' => [[['_route' => 'purchase', '_controller' => 'App\\Controller\\DefaultController::purchase'], null, null, null, false, false, null]],
         '/manageBundle' => [[['_route' => 'manageBundle', '_controller' => 'App\\Controller\\DefaultController::manageBundle'], null, null, null, false, false, null]],
+        '/addBundle' => [[['_route' => 'addBundle', '_controller' => 'App\\Controller\\DefaultController::addBundle'], null, null, null, false, false, null]],
+        '/manageProducts' => [[['_route' => 'manageProduct', '_controller' => 'App\\Controller\\DefaultController::manageProducts'], null, null, null, false, false, null]],
+        '/addProduct' => [[['_route' => 'addProduct', '_controller' => 'App\\Controller\\DefaultController::newProduct'], null, null, null, false, false, null]],
+        '/listFashionBoard' => [[['_route' => 'listFashionBoard', '_controller' => 'App\\Controller\\DefaultController::listFashionBoard'], null, null, null, false, false, null]],
+        '/manageFashionBoard' => [[['_route' => 'manageFashionBoard', '_controller' => 'App\\Controller\\DefaultController::manageFashionBoard'], null, null, null, false, false, null]],
+        '/manageOrders' => [[['_route' => 'manageOrders', '_controller' => 'App\\Controller\\DefaultController::manageOrders'], null, null, null, false, false, null]],
+        '/manageQuiz' => [[['_route' => 'manageQuiz', '_controller' => 'App\\Controller\\DefaultController::manageQuiz'], null, null, null, false, false, null]],
+        '/addQuiz' => [[['_route' => 'addQuiz', '_controller' => 'App\\Controller\\DefaultController::addQuiz'], null, null, null, false, false, null]],
+        '/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\DefaultController::viewDashboard'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* default/baseAdmin.html.twig */
+/* default/index.html.twig */
 class __TwigTemplate_0f63f4beaf55654052b8a7682fcf711da60c17aeda01695807f3fb3928c6b25c extends \Twig\Template
 {
     private $source;
@@ -38,9 +38,9 @@ class __TwigTemplate_0f63f4beaf55654052b8a7682fcf711da60c17aeda01695807f3fb3928c
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "default/baseAdmin.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "default/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "default/baseAdmin.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "default/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -49,7 +49,7 @@ class __TwigTemplate_0f63f4beaf55654052b8a7682fcf711da60c17aeda01695807f3fb3928c
 
     public function getTemplateName()
     {
-        return "default/baseAdmin.html.twig";
+        return "default/index.html.twig";
     }
 
     public function isTraitable()
@@ -67,6 +67,6 @@ class __TwigTemplate_0f63f4beaf55654052b8a7682fcf711da60c17aeda01695807f3fb3928c
         return new Source("{% extends 'base.html.twig' %}
 
 
-", "default/baseAdmin.html.twig", "/home/emir/Documents/untitled/templates/default/baseAdmin.html.twig");
+", "default/index.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/index.html.twig");
     }
 }

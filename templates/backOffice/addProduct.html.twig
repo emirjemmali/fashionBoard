@@ -1,0 +1,58 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+{#    <div class="add-form">#}
+{#        <div class="add-form-container">#}
+{#            <form  novalidate class="clearfix needs-validation">#}
+{#                <div class="containerFormNews">#}
+{#                    <div class="fieldsTxt">#}
+{#                        <div class="mb-5">#}
+{#                            <div class="form-group">#}
+{#                                <label for="exampleInputEmail1">Nom</label>#}
+{#                                <input type="email" class="form-control" id="exampleInputEmail1"#}
+{#                                       aria-describedby="emailHelp" placeholder="Entrer nom">#}
+{#                            </div>#}
+{#                        </span>#}
+{#                        </div>#}
+{#                        <div class="form-group">#}
+{#                            <div class="form-group">#}
+{#                                <label for="exampleInputEmail1">Description</label>#}
+{#                                <input type="description" class="form-control" placeholder="Entrer description">#}
+{#                            </span>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <!-- dateAndHour -->#}
+{#                        <div class="dateAndHour">#}
+{#                            <div class="form-group date-time-picker">#}
+{#                                <div class="input-group">#}
+{#                                    <label for="exampleInputEmail1">Url</label>#}
+{#                                    <input type="url" class="form-control" placeholder="Entrer url">#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+
+
+{#                </div>#}
+{#                <div class="add-options-message">#}
+{#                    <button id ="btnSubmit" type="submit" class="btn btn-primary btn-md-2" >#}
+{#                        Ajouter#}
+{#                        <div class="ripple-container"></div>#}
+{#                    </button>#}
+{#                </div>#}
+{#            #}
+{#                </div>#}
+{#            </form>#}
+
+{#        </div>#}
+{#    </div>#}
+    <h1>Ajouter nouveau produit</h1>
+
+    {{ form_start(form) }}
+    {# ... #}
+    {{ form_row(form.nom) }}
+    {{ form_row(form.prix) }}
+    {{ form_row(form.image) }}
+    {{ form_row(form.url) }}
+
+    {{ form_end(form) }}
+{% endblock %}

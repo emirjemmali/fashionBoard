@@ -1,0 +1,221 @@
+{% extends 'baseAdmin.html.twig' %}
+
+{% block body %}
+    <style>
+    .div_1
+        {
+            color: white;
+            background-color: black;
+            position: absolute;
+            border: 2px solid black;
+            width: 100px;
+            height: 100px;
+            cursor: move;
+        }
+    .div_2
+        {
+            position: absolute;
+            border: 2px solid steelblue;
+            height: 200px;
+        }
+    .dragzone{
+        border: 2px solid steelblue;
+        height: 1000px;
+
+    }
+    .ScrollStyle
+    {
+        max-height: 500px;
+        overflow-y: scroll;
+    }
+</style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css" rel="stylesheet" />
+    <div class="page-title mb-15">
+        <div class="pull-left"><h3 class="breadcrumb-header">FashionBoard</h3>
+            <p class="text-muted mb-0">Ajuster un style vestimentaire</p></div>
+        <div class="pull-right">
+            <div class="btn-group mx-auto">
+                <ol class="breadcrumb hide-phone pt-4 pb-4 m-0">
+                    <li class="breadcrumb-item"><a href="#">Admin</a></li>
+                    <li class="breadcrumb-item active">FashionBoard</li>
+                </ol>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div style="display: flex;direction: rtl">
+        <div>
+            <select id="test" class="selectpicker" data-live-search="true" title="Selectionner un client">
+                <option data-tokens="Moez ben chrifia">Moez ben chrifia</option>
+                <option data-tokens="Karim gharbi">Karim gharbi</option>
+                <option data-tokens="Musut ozil">Musut ozil</option>
+            </select>
+        </div>
+      <div>
+          <button type="submit" class="btn btn-primary">Valider</button>
+
+      </div>
+    </div>
+    <br><br>
+    <div id="main-wrapper" >
+            <div class="row" >
+                <div style="display: flex">
+                    <div class="col-lg-6 ScrollStyle" >
+                        <div class="col-lg-6 div1" draggable="true" ondragstart="handleDragStart(this)"
+                        >
+                            <div class="panel mb-30" style="height: 260px">
+                                <div class="panel-body">
+                                    <p class=" header-title" style="font-size: 15px;" >Sweet</p>
+                                    <p>
+                                        Marque: Zara.
+                                        <br>
+                                        prix: 50dinars.
+                                    </p>
+                                    <img src={{ asset('images/sweet.png') }} alt=""
+                                         style="width:100%;height:120px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 div2 " draggable="true" ondragstart="handleDragStart(this)" >
+                            <div class="panel mb-30" style="height: 260px">
+                                <div class="panel-body">
+                                    <p class=" header-title" style="font-size: 15px;" >Chaussures</p>
+                                    <p>
+                                        Marque: Zara.
+                                        <br>
+                                        prix: 50dinars.
+                                    </p>
+                                    <img src={{ asset('images/product-2.jpg') }} alt=""
+                                         style="width:100%;height:120px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 div3 " draggable="true" ondragstart="handleDragStart(this)">
+                            <div class="panel mb-30" style="height: 260px">
+                                <div class="panel-body">
+                                    <p class=" header-title" style="font-size: 15px;" >Lunettes</p>
+                                    <p>
+                                        Marque: Zara.
+                                        <br>
+                                        prix: 50dinars.
+                                    </p>
+                                    <img src={{ asset('images/product-3.jpg') }} alt=""
+                                         style="width:100%;height:120px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" >
+                            <div class="panel mb-30" style="height: 260px">
+                                <div class="panel-body">
+                                    <p class=" header-title" style="font-size: 15px;" >Sweet</p>
+                                    <p>
+                                        Marque: Zara.
+                                        <br>
+                                        prix: 50dinars.
+                                    </p>
+                                    <img src={{ asset('images/sweet.png') }} alt=""
+                                         style="width:100%;height:120px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="panel mb-30" style="height: 260px">
+                                <div class="panel-body">
+                                    <p class=" header-title" style="font-size: 15px;" >Sweet</p>
+                                    <p>
+                                        Marque: Zara.
+                                        <br>
+                                        prix: 50dinars.
+                                    </p>
+                                    <img src={{ asset('images/sweet.png') }} alt=""
+                                         style="width:100%;height:120px"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" >
+                            <div class="panel mb-30" style="height: 260px">
+                                <div class="panel-body">
+                                    <p class=" header-title" style="font-size: 15px;" >Sweet</p>
+                                    <p>
+                                        Marque: Zara.
+                                        <br>
+                                        prix: 50dinars.
+                                    </p>
+                                    <img src={{ asset('images/sweet.png') }} alt=""
+                                         style="width:100%;height:120px"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 dragzone"  ondragover="allowDrop(event)"
+                         ondrop="handleDrop()" ondragenter="colorize(this)"
+                         ondragleave="uncolorize(this)"
+                    ></div>
+                </div>
+            </div>
+
+    </div>
+{#    <div class="container">#}
+{#        <div class="div_3" >#}
+{#            <div class="div_1" draggable="true"#}
+{#                 ondragstart="handleDragStart()">#}
+{#                div_1#}
+{#            </div>#}
+{#        </div>#}
+
+{#        <div class="div_2" ondragover="allowDrop(event)"#}
+{#             ondrop="handleDrop()"#}
+{#             ondragenter="colorize(this)"#}
+{#             ondragleave="uncolorize(this)">#}
+{#            div_2#}
+{#        </div>#}
+{#    </div>#}
+    <script src="{{ asset('backOffice/js/jquery.min.js') }}"></script>
+    <script>
+        $(document).ready(function()
+        {
+            var id="";
+
+            allowDrop = (event) => {
+                event.preventDefault();
+            }
+            handleDragStart = (element) => {
+                console.log('Started dragging');
+                id=element.className;
+            }
+            colorize = (element) => {
+                console.log('Entered the drop zone',element.className);
+                element.classList.add('dragging-over');
+                if(id.includes("div1")){
+                    console.log('Started dragging',id);
+                    $('.div1').appendTo('.dragzone');
+                }
+                if(id.includes("div2")){
+                    console.log('Started dragging',id);
+                    $('.div2').appendTo('.dragzone');
+                }
+                if(id.includes("div3")){
+                    console.log('Started dragging',id);
+                    $('.div3').appendTo('.dragzone');
+                }
+                //$('.div2').appendTo('.dragzone');
+
+
+            }
+            uncolorize = (element) => {
+                console.log('Left the drop zone');
+                element.classList.remove('dragging-over');
+                $('.div_1').appendTo('.div_3');
+
+            }
+            handleDrop = () => {
+                console.log('You dropped something!');
+                $('.div_1').appendTo('.div_2');
+            }
+
+        });
+    </script>
+
+
+{% endblock %}

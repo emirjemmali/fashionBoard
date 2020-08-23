@@ -586,6 +586,6 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
 
 
-{% endblock %}", "default/purchase.html.twig", "/home/emir/Documents/untitled/templates/default/purchase.html.twig");
+{% endblock %}", "default/purchase.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/purchase.html.twig");
     }
 }

@@ -22,4 +22,13 @@ return [
     'formule' => [[], ['_controller' => 'App\\Controller\\DefaultController::formule'], [], [['text', '/formule']], [], []],
     'purchase' => [[], ['_controller' => 'App\\Controller\\DefaultController::purchase'], [], [['text', '/purchase']], [], []],
     'manageBundle' => [[], ['_controller' => 'App\\Controller\\DefaultController::manageBundle'], [], [['text', '/manageBundle']], [], []],
+    'addBundle' => [[], ['_controller' => 'App\\Controller\\DefaultController::addBundle'], [], [['text', '/addBundle']], [], []],
+    'manageProduct' => [[], ['_controller' => 'App\\Controller\\DefaultController::manageProducts'], [], [['text', '/manageProducts']], [], []],
+    'addProduct' => [[], ['_controller' => 'App\\Controller\\DefaultController::newProduct'], [], [['text', '/addProduct']], [], []],
+    'listFashionBoard' => [[], ['_controller' => 'App\\Controller\\DefaultController::listFashionBoard'], [], [['text', '/listFashionBoard']], [], []],
+    'manageFashionBoard' => [[], ['_controller' => 'App\\Controller\\DefaultController::manageFashionBoard'], [], [['text', '/manageFashionBoard']], [], []],
+    'manageOrders' => [[], ['_controller' => 'App\\Controller\\DefaultController::manageOrders'], [], [['text', '/manageOrders']], [], []],
+    'manageQuiz' => [[], ['_controller' => 'App\\Controller\\DefaultController::manageQuiz'], [], [['text', '/manageQuiz']], [], []],
+    'addQuiz' => [[], ['_controller' => 'App\\Controller\\DefaultController::addQuiz'], [], [['text', '/addQuiz']], [], []],
+    'dashboard' => [[], ['_controller' => 'App\\Controller\\DefaultController::viewDashboard'], [], [['text', '/dashboard']], [], []],
 ];

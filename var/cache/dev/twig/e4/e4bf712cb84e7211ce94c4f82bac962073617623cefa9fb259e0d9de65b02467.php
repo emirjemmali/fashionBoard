@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Twig/layout.html.twig */
+/* TwigBundle::layout.html.twig */
 class __TwigTemplate_a0759dafdf0a885018fe2de986bf194957fe1f90773b0cf02f48c9e25429540c extends \Twig\Template
 {
     private $source;
@@ -37,7 +37,7 @@ class __TwigTemplate_a0759dafdf0a885018fe2de986bf194957fe1f90773b0cf02f48c9e2542
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Twig/layout.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "TwigBundle::layout.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -152,7 +152,7 @@ class __TwigTemplate_a0759dafdf0a885018fe2de986bf194957fe1f90773b0cf02f48c9e2542
 
     public function getTemplateName()
     {
-        return "@Twig/layout.html.twig";
+        return "TwigBundle::layout.html.twig";
     }
 
     public function isTraitable()
@@ -203,6 +203,6 @@ class __TwigTemplate_a0759dafdf0a885018fe2de986bf194957fe1f90773b0cf02f48c9e2542
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "@Twig/layout.html.twig", "/home/emir/Documents/untitled/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "TwigBundle::layout.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

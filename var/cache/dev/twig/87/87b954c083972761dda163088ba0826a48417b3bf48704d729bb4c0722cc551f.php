@@ -1433,6 +1433,6 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
 <!-- Mirrored from premiumlayers.net/demo/html/maxshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Aug 2020 11:27:57 GMT -->
 </html>
-", "base.html.twig", "/home/emir/Documents/untitled/templates/base.html.twig");
+", "base.html.twig", "/home/emir/Bureau/fashionBoard/templates/base.html.twig");
     }
 }

@@ -175,6 +175,6 @@ class __TwigTemplate_66f8ee8c1f130b5bafdae547289bb4699ed4d433ff367607e9fae3b2233
         </div>
         {{ form_end(form) }}
     </div>
-</div>", "@FOSUser/Registration/register_content.html.twig", "/home/emir/Documents/untitled/templates/bundles/FOSUserBundle/Registration/register_content.html.twig");
+</div>", "@FOSUser/Registration/register_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Registration/register_content.html.twig");
     }
 }

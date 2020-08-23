@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* @Twig/exception.css.twig */
+/* TwigBundle::exception.css.twig */
 class __TwigTemplate_e0cfe7ed437b699a86740e11d4be5acabda5ba4e2db1d8dc8ab7c88ce6f8dd5e extends \Twig\Template
 {
     private $source;
@@ -34,7 +34,7 @@ class __TwigTemplate_e0cfe7ed437b699a86740e11d4be5acabda5ba4e2db1d8dc8ab7c88ce6f
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "@Twig/exception.css.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "TwigBundle::exception.css.twig"));
 
         // line 3
         echo ":root {
@@ -252,7 +252,7 @@ header .container { display: flex; justify-content: space-between; }
 
     public function getTemplateName()
     {
-        return "@Twig/exception.css.twig";
+        return "TwigBundle::exception.css.twig";
     }
 
     public function getDebugInfo()
@@ -471,6 +471,6 @@ header .container { display: flex; justify-content: space-between; }
     .hidden-xs-down { display: initial; }
     .help-link { margin-left: 30px; }
 }
-", "@Twig/exception.css.twig", "/home/emir/Documents/untitled/vendor/symfony/twig-bundle/Resources/views/exception.css.twig");
+", "TwigBundle::exception.css.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/exception.css.twig");
     }
 }

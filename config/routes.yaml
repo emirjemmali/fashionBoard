@@ -13,3 +13,27 @@ manageBundle:
 addBundle:
   path: /addBundle
   controller: App\Controller\DefaultController::addBundle
+manageProduct:
+  path: /manageProducts
+  controller: App\Controller\DefaultController::manageProducts
+addProduct:
+  path: /addProduct
+  controller: App\Controller\DefaultController::newProduct
+listFashionBoard:
+  path: /listFashionBoard
+  controller: App\Controller\DefaultController::listFashionBoard
+manageFashionBoard:
+  path: /manageFashionBoard
+  controller: App\Controller\DefaultController::manageFashionBoard
+manageOrders:
+  path: /manageOrders
+  controller: App\Controller\DefaultController::manageOrders
+manageQuiz:
+  path: /manageQuiz
+  controller: App\Controller\DefaultController::manageQuiz
+addQuiz:
+  path: /addQuiz
+  controller: App\Controller\DefaultController::addQuiz
+dashboard:
+  path: /dashboard
+  controller: App\Controller\DefaultController::viewDashboard

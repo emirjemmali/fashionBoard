@@ -154,6 +154,6 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
             </div>
             <div id=\"alert-msg\" class=\"alert-msg\"></div>
         </form>
-    </div></div>", "@FOSUser/Security/login_content.html.twig", "/home/emir/Documents/untitled/templates/bundles/FOSUserBundle/Security/login_content.html.twig");
+    </div></div>", "@FOSUser/Security/login_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Security/login_content.html.twig");
     }
 }

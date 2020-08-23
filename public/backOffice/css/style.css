@@ -469,10 +469,10 @@ a, a:active, a:focus, a:hover {
 }
 
 .header-title {
-    font-size: 18px;
+    font-size: 14px;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+    padding-bottom: 13px;
+    margin-bottom: 13px;
     position: relative;
     z-index: 1;
     font-weight: 700;

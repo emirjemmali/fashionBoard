@@ -160,6 +160,6 @@ class __TwigTemplate_0ebb9f2b3ce364fed4cbc73b089242624f2aed3123b7156988eb625d64d
         {% endblock fos_user_content %}
     </div>
 {% endblock %}
-", "@FOSUser/layout.html.twig", "/home/emir/Documents/untitled/templates/bundles/FOSUserBundle/layout.html.twig");
+", "@FOSUser/layout.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/layout.html.twig");
     }
 }
