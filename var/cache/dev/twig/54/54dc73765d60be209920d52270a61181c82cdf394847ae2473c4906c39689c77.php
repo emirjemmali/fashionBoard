@@ -56,23 +56,35 @@ class __TwigTemplate_bfd2410773179d5a9f422f82e68f2895f86b162d11b508663f1318934fd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <form>
-        <div class=\"form-group\">
-            <label for=\"exampleInputEmail1\">Email address</label>
-            <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">
-            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>
+        echo "    <div class=\"page-title mb-15\">
+        <div class=\"pull-left\"><h3 class=\"breadcrumb-header\">Paquet</h3>
+            <p class=\"text-muted mb-0\">";
+        // line 6
+        echo twig_escape_filter($this->env, (isset($context["form_title"]) || array_key_exists("form_title", $context) ? $context["form_title"] : (function () { throw new RuntimeError('Variable "form_title" does not exist.', 6, $this->source); })()), "html", null, true);
+        echo "</p></div>
+        <div class=\"pull-right\">
+            <div class=\"btn-group mx-auto\">
+                <ol class=\"breadcrumb hide-phone pt-4 pb-4 m-0\">
+                    <li class=\"breadcrumb-item\"><a href=\"#\">Admin</a></li>
+                    <li class=\"breadcrumb-item active\">Paquet</li>
+                </ol>
+            </div>
         </div>
-        <div class=\"form-group\">
-            <label for=\"exampleInputPassword1\">Password</label>
-            <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">
-        </div>
-        <div class=\"form-group form-check\">
-            <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">
-            <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>
-        </div>
-
-        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
-    </form>
+        <div class=\"clearfix\"></div>
+    </div>
+    <div id=\"main-wrapper\" >
+        ";
+        // line 18
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), 'form_start');
+        echo "
+        ";
+        // line 20
+        echo "
+        ";
+        // line 21
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), 'form_end');
+        echo "
+    </div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -91,7 +103,7 @@ class __TwigTemplate_bfd2410773179d5a9f422f82e68f2895f86b162d11b508663f1318934fd
 
     public function getDebugInfo()
     {
-        return array (  59 => 4,  52 => 3,  35 => 1,);
+        return array (  85 => 21,  82 => 20,  78 => 18,  63 => 6,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -99,23 +111,25 @@ class __TwigTemplate_bfd2410773179d5a9f422f82e68f2895f86b162d11b508663f1318934fd
         return new Source("{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
-    <form>
-        <div class=\"form-group\">
-            <label for=\"exampleInputEmail1\">Email address</label>
-            <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\" placeholder=\"Enter email\">
-            <small id=\"emailHelp\" class=\"form-text text-muted\">We'll never share your email with anyone else.</small>
+    <div class=\"page-title mb-15\">
+        <div class=\"pull-left\"><h3 class=\"breadcrumb-header\">Paquet</h3>
+            <p class=\"text-muted mb-0\">{{ form_title }}</p></div>
+        <div class=\"pull-right\">
+            <div class=\"btn-group mx-auto\">
+                <ol class=\"breadcrumb hide-phone pt-4 pb-4 m-0\">
+                    <li class=\"breadcrumb-item\"><a href=\"#\">Admin</a></li>
+                    <li class=\"breadcrumb-item active\">Paquet</li>
+                </ol>
+            </div>
         </div>
-        <div class=\"form-group\">
-            <label for=\"exampleInputPassword1\">Password</label>
-            <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\" placeholder=\"Password\">
-        </div>
-        <div class=\"form-group form-check\">
-            <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">
-            <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>
-        </div>
+        <div class=\"clearfix\"></div>
+    </div>
+    <div id=\"main-wrapper\" >
+        {{ form_start(form) }}
+        {# ... #}
 
-        <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
-    </form>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}", "backOffice/addBundle.html.twig", "/home/emir/Bureau/untitled/templates/backOffice/addBundle.html.twig");
     }
 }

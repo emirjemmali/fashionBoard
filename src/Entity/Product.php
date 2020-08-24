@@ -27,6 +27,10 @@ class Product
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
+    private $marque;
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
     private $prix;
 
     /**
@@ -89,6 +93,22 @@ class Product
     {
         $this->brochureFilename = $brochureFilename;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMarque()
+    {
+        return $this->marque;
+    }
+
+    /**
+     * @param mixed $marque
+     */
+    public function setMarque($marque): void
+    {
+        $this->marque = $marque;
     }
 
 }

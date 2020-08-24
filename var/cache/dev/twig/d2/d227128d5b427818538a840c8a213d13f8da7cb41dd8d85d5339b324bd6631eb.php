@@ -56,11 +56,17 @@ class __TwigTemplate_53fce15eca0ecf2ddc0269414f820eb1954730cb4ec7eb97f533a6d597c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <table id=\"dtBasicExample\" class=\"table table-striped table-bordered table-sm\"
+        echo "    <ul>
+
+    </ul>
+    <table id=\"dtBasicExample\" class=\"table table-striped table-bordered table-sm\"
            cellspacing=\"0\" width=\"100%\">
         <thead>
         <tr>
             <th >Nom
+
+            </th>
+            <th >Description
 
             </th>
             <th >Nb planches
@@ -78,39 +84,61 @@ class __TwigTemplate_53fce15eca0ecf2ddc0269414f820eb1954730cb4ec7eb97f533a6d597c
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
+        ";
+        // line 32
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["fashionBundles"]) || array_key_exists("fashionBundles", $context) ? $context["fashionBundles"] : (function () { throw new RuntimeError('Variable "fashionBundles" does not exist.', 32, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["fashionBundle"]) {
+            // line 33
+            echo "        <tr>
+            <td>";
+            // line 34
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "nom", [], "any", false, false, false, 34));
+            echo "</td>
+            <td>";
+            // line 35
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "description", [], "any", false, false, false, 35));
+            echo "</td>
+            <td>";
+            // line 36
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "fashionbordernumber", [], "any", false, false, false, 36));
+            echo "</td>
+            <td>";
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "price", [], "any", false, false, false, 37));
+            echo "</td>
+            <td>";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "promotion", [], "any", false, false, false, 38));
+            echo "</td>
             <td>
-                <a href=\"\">
+                <a href=\"";
+            // line 40
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateBundle", ["id" => twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "id", [], "any", false, false, false, 40)]), "html", null, true);
+            echo "\">
                     <i class=\"fa fa-edit\" style=\"color:yellowgreen\"></i>
                 </a>
-                <a href=\"\">
+                <a href=\"";
+            // line 43
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteBundle", ["id" => twig_get_attribute($this->env, $this->source, $context["fashionBundle"], "id", [], "any", false, false, false, 43)]), "html", null, true);
+            echo "\">
                     <i class=\"fa fa-trash-o\" style=\"color:red\"></i>
                 </a>
             </td>
         </tr>
-        <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>
-                <a href=\"\">
-                    <i class=\"fa fa-edit\" style=\"color:yellowgreen\"></i>
-                </a>
-                <a href=\"\">
-                    <i class=\"fa fa-trash-o\" style=\"color:red\"></i>
-                </a>
-
-        </tr>
-
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fashionBundle'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 49
+        echo "
         </tbody>
         <tfoot>
         <tr>
             <th>Nom
+            </th>
+            <th>Description
             </th>
             <th>Nb planches
             </th>
@@ -142,7 +170,7 @@ class __TwigTemplate_53fce15eca0ecf2ddc0269414f820eb1954730cb4ec7eb97f533a6d597c
 
     public function getDebugInfo()
     {
-        return array (  59 => 4,  52 => 3,  35 => 1,);
+        return array (  135 => 49,  123 => 43,  117 => 40,  112 => 38,  108 => 37,  104 => 36,  100 => 35,  96 => 34,  93 => 33,  89 => 32,  59 => 4,  52 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -150,11 +178,17 @@ class __TwigTemplate_53fce15eca0ecf2ddc0269414f820eb1954730cb4ec7eb97f533a6d597c
         return new Source("{% extends 'baseAdmin.html.twig' %}
 
 {% block body %}
+    <ul>
+
+    </ul>
     <table id=\"dtBasicExample\" class=\"table table-striped table-bordered table-sm\"
            cellspacing=\"0\" width=\"100%\">
         <thead>
         <tr>
             <th >Nom
+
+            </th>
+            <th >Description
 
             </th>
             <th >Nb planches
@@ -172,39 +206,30 @@ class __TwigTemplate_53fce15eca0ecf2ddc0269414f820eb1954730cb4ec7eb97f533a6d597c
         </tr>
         </thead>
         <tbody>
+        {% for fashionBundle in fashionBundles %}
         <tr>
-            <td>Tiger Nixon</td>
-            <td>System Architect</td>
-            <td>Edinburgh</td>
-            <td>61</td>
+            <td>{{ fashionBundle.nom|e }}</td>
+            <td>{{ fashionBundle.description|e }}</td>
+            <td>{{ fashionBundle.fashionbordernumber|e }}</td>
+            <td>{{ fashionBundle.price|e }}</td>
+            <td>{{ fashionBundle.promotion|e }}</td>
             <td>
-                <a href=\"\">
+                <a href=\"{{ path('updateBundle', {'id': fashionBundle.id}) }}\">
                     <i class=\"fa fa-edit\" style=\"color:yellowgreen\"></i>
                 </a>
-                <a href=\"\">
+                <a href=\"{{ path('deleteBundle', {'id': fashionBundle.id}) }}\">
                     <i class=\"fa fa-trash-o\" style=\"color:red\"></i>
                 </a>
             </td>
         </tr>
-        <tr>
-            <td>Garrett Winters</td>
-            <td>Accountant</td>
-            <td>Tokyo</td>
-            <td>63</td>
-            <td>
-                <a href=\"\">
-                    <i class=\"fa fa-edit\" style=\"color:yellowgreen\"></i>
-                </a>
-                <a href=\"\">
-                    <i class=\"fa fa-trash-o\" style=\"color:red\"></i>
-                </a>
-
-        </tr>
+        {% endfor %}
 
         </tbody>
         <tfoot>
         <tr>
             <th>Nom
+            </th>
+            <th>Description
             </th>
             <th>Nb planches
             </th>

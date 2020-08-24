@@ -15,16 +15,28 @@ userProfile:
   controller: App\Controller\DefaultController::userProfile
 manageBundle:
   path: /manageBundle
-  controller: App\Controller\DefaultController::manageBundle
+  controller: App\Controller\FashionBundleController::manageBundle
 addBundle:
   path: /addBundle
   controller: App\Controller\FashionBundleController::addBundle
+updateBundle:
+  path: /updateBundle/{id}
+  controller: App\Controller\FashionBundleController::updateBundle
+deleteBundle:
+  path: /deleteBundle/{id}
+  controller: App\Controller\FashionBundleController::deleteFashionBUndle
 manageProduct:
   path: /manageProducts
-  controller: App\Controller\DefaultController::manageProducts
+  controller: App\Controller\ProductController::manageProducts
 addProduct:
   path: /addProduct
-  controller: App\Controller\DefaultController::newProduct
+  controller: App\Controller\ProductController::newProduct
+updateProduct:
+  path: /updateProduct/{id}
+  controller: App\Controller\ProductController::updateProduct
+deleteProduct:
+  path: /deleteProduct/{id}
+  controller: App\Controller\ProductController::deleteProduct
 listFashionBoard:
   path: /listFashionBoard
   controller: App\Controller\DefaultController::listFashionBoard

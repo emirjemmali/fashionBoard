@@ -22,12 +22,11 @@ class Fashionbundle
     /**
      * Fashionbundle constructor.
      */
-   /* public function __construct()
+    public function __construct()
     {
-        $this->orders=new ArrayCollection();
-    }*/
+    }
 
-    public function getId(): ?int
+    public function getId(): int
     {
         return $this->id;
     }
@@ -35,58 +34,43 @@ class Fashionbundle
      * @var int
      * @Assert\NotBlank
      * @Assert\Positive
-     * @ORM\Column(name="fashionbordern", type="integer", nullable=false)
+     * @ORM\Column(name="fashionbordern", type="integer", nullable=true)
      */
     private $fashionbordernumber;
     /**
-     * @var string
-     * @ORM\Column(name="nom", type="string", length=256, nullable=false)
+     *
+     * @ORM\Column(name="nom", type="string", length=256, nullable=true)
      */
     private $nom;
 
     /**
-     * @return string
-     */
-    public function getNom(): string
-    {
-        return $this->nom;
-    }
-
-    /**
-     * @param string $nom
-     */
-    public function setNom(string $nom): void
-    {
-        $this->nom = $nom;
-    }
-    /**
-     * @var string
-     * @ORM\Column(name="description", type="string", length=256, nullable=false)
+     *
+     * @ORM\Column(name="description", type="string", length=256, nullable=true)
      */
     private $description;
     /**
      * @var boolean
-     * @ORM\Column(name="promotionstatus", type="boolean", length=256, nullable=false)
+     * @ORM\Column(name="promotionstatus", type="boolean", length=256, nullable=true)
      */
     private $promotionstatus;
     /**
      * @var int
      * @Assert\NotBlank
      * @Assert\Positive
-     * @ORM\Column(name="promotion", type="integer", nullable=false)     */
+     * @ORM\Column(name="promotion", type="integer", nullable=true)     */
     private $promotion;
     /**
      * @var float
      * @Assert\NotBlank
      * @Assert\Positive
-     * @ORM\Column(name="price", type="float", nullable=false)     */
+     * @ORM\Column(name="price", type="float", nullable=true)     */
     private $price;
 
     /**
-     * @return int
+     * @return int|null
      */
 
-    public function getFashionbordernumber(): int
+    public function getFashionbordernumber(): ?int
     {
         return $this->fashionbordernumber;
     }
@@ -99,15 +83,15 @@ class Fashionbundle
         $this->fashionbordernumber = $fashionbordernumber;
     }
     /**
-     * @return int
+     * @return int|null
      */
-    public function  getfashionbordern():int{
+    public function  getfashionbordern():?int{
             return  $this->fashionbordernumber;
     }
     /**
-     * @return string
+     * @return string|null
      */
-    public function getDescription(): string
+    public function getDescription(): ?string
     {
         return $this->description;
     }
@@ -119,12 +103,26 @@ class Fashionbundle
     {
         $this->description = $description;
     }
-
+    /**
+     * @return string|null
+     */
+    public function getNom(): ?string
+    {
+        return $this->nom;
+    }
 
     /**
-     * @return bool
+     * @param string $nom
      */
-    public function isPromotionstatus(): bool
+    public function setNom(string $nom): void
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function isPromotionstatus(): ?bool
     {
         return $this->promotionstatus;
     }
@@ -138,9 +136,9 @@ class Fashionbundle
     }
 
     /**
-     * @return int
+     * @return int|null
      */
-    public function getPromotion(): int
+    public function getPromotion(): ?int
     {
         return $this->promotion;
     }
@@ -154,9 +152,9 @@ class Fashionbundle
     }
 
     /**
-     * @return float
+     * @return float|null
      */
-    public function getPrice(): float
+    public function getPrice(): ?float
     {
         return $this->price;
     }

@@ -24,6 +24,9 @@
             'type' => [
                 2 => 'float',
             ],
+            'nullable' => [
+                2 => true,
+            ],
         ],
     ],
     [
