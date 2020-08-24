@@ -87,6 +87,6 @@ class __TwigTemplate_39d4fe2f2d3df73f64f4dff017def82f06f31e01ab81a91eccbc7942dee
         <input type=\"submit\" value=\"{{ 'group.new.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/Group/new_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Group/new_content.html.twig");
+", "@FOSUser/Group/new_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Group/new_content.html.twig");
     }
 }

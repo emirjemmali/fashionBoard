@@ -59,6 +59,6 @@ class __TwigTemplate_167506c0a1532f7a778a22bfce59704a6f67fa7b01c189dc16c239ea3f6
     {
         return new Source("id=\"<?php echo \$view->escape(\$id) ?>\" name=\"<?php echo \$view->escape(\$full_name) ?>\"<?php if (\$disabled): ?> disabled=\"disabled\"<?php endif ?>
 <?php echo \$attr ? ' '.\$view['form']->block(\$form, 'attributes') : '' ?>
-", "FrameworkBundle:Form:button_attributes.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/button_attributes.html.php");
+", "FrameworkBundle:Form:button_attributes.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/button_attributes.html.php");
     }
 }

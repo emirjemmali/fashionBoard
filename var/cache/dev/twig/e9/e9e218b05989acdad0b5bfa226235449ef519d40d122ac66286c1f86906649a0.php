@@ -57,6 +57,6 @@ class __TwigTemplate_0c68e8f2a7c773255588769384c0a3d2bd1920a78d1932ba2310d659cf7
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'password']) ?>
-", "FrameworkBundle:Form:password_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/password_widget.html.php");
+", "FrameworkBundle:Form:password_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/password_widget.html.php");
     }
 }

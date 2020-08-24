@@ -89,7 +89,7 @@ class ChoosePaymentMethodType extends AbstractType
 
         $options['choices'] = array();
         foreach (array_keys($methods) as $method) {
-            $label = 'form.label.'.$method;
+            $label = "";
 
             if (Legacy::formChoicesAsValues()) {
                 $options['choices'][$label] = $method;

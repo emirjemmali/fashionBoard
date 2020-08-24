@@ -57,6 +57,6 @@ class __TwigTemplate_902cfc551332eb545c273fae9f01e99f46c33f2688ab4dcb882e2ecfcbe
     public function getSourceContext()
     {
         return new Source("<?php if (\$form->vars['multipart']): ?>enctype=\"multipart/form-data\"<?php endif ?>
-", "FrameworkBundle:Form:form_enctype.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/form_enctype.html.php");
+", "FrameworkBundle:Form:form_enctype.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/form_enctype.html.php");
     }
 }

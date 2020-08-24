@@ -57,6 +57,6 @@ class __TwigTemplate_50b91847f4b7a61bb73aabe2539920baa201c29f3f3931e5b9a119f0e26
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->widget(\$form) ?>
-", "FrameworkBundle:Form:hidden_row.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/hidden_row.html.php");
+", "FrameworkBundle:Form:hidden_row.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/hidden_row.html.php");
     }
 }

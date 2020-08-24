@@ -61,6 +61,6 @@ class __TwigTemplate_b741d33f6e5b043e13fd5eb61cea0259ca52d5121fc0117373f44da4983
         return new Source("<?php echo \$view['form']->start(\$form) ?>
     <?php echo \$view['form']->widget(\$form) ?>
 <?php echo \$view['form']->end(\$form) ?>
-", "FrameworkBundle:Form:form.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/form.html.php");
+", "FrameworkBundle:Form:form.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/form.html.php");
     }
 }

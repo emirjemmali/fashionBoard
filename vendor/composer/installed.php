@@ -13,12 +13,12 @@
   array (
     'composer/package-versions-deprecated' => 
     array (
-      'pretty_version' => '1.10.99',
-      'version' => '1.10.99.0',
+      'pretty_version' => '1.10.99.1',
+      'version' => '1.10.99.1',
       'aliases' => 
       array (
       ),
-      'reference' => 'dd51b4443d58b34b6d9344cf4c288e621c9a826f',
+      'reference' => '68c9b502036e820c33445ff4d174327f6bb87486',
     ),
     'craue/twigextensions-bundle' => 
     array (
@@ -40,12 +40,12 @@
     ),
     'doctrine/annotations' => 
     array (
-      'pretty_version' => '1.10.3',
-      'version' => '1.10.3.0',
+      'pretty_version' => '1.10.4',
+      'version' => '1.10.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '5db60a4969eba0e0c197a19c077780aadbc43c5d',
+      'reference' => 'bfe91e31984e2ba76df1c1339681770401ec262f',
     ),
     'doctrine/cache' => 
     array (
@@ -184,12 +184,12 @@
     ),
     'egulias/email-validator' => 
     array (
-      'pretty_version' => '2.1.18',
-      'version' => '2.1.18.0',
+      'pretty_version' => '2.1.19',
+      'version' => '2.1.19.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'cfa3d44471c7f5bfb684ac2b0da7114283d78441',
+      'reference' => '840d5603eb84cc81a6a0382adac3293e57c1c64c',
     ),
     'friendsofsymfony/user-bundle' => 
     array (
@@ -199,6 +199,33 @@
       array (
       ),
       'reference' => '1049935edd24ec305cc6cfde1875372fa9600446',
+    ),
+    'guzzlehttp/guzzle' => 
+    array (
+      'pretty_version' => '7.0.1',
+      'version' => '7.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2d9d3c186a6637a43193e66b097c50e4451eaab2',
+    ),
+    'guzzlehttp/promises' => 
+    array (
+      'pretty_version' => 'v1.3.1',
+      'version' => '1.3.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a59da6cf61d80060647ff4d3eb2c03a2bc694646',
+    ),
+    'guzzlehttp/psr7' => 
+    array (
+      'pretty_version' => '1.6.1',
+      'version' => '1.6.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '239400de7a173fe9901b9ac7c06497751f00727a',
     ),
     'jms/payment-core-bundle' => 
     array (
@@ -217,6 +244,15 @@
       array (
       ),
       'reference' => '7151eaf50f4cdc04273346e2327209e54c2f33de',
+    ),
+    'knpuniversity/oauth2-client-bundle' => 
+    array (
+      'pretty_version' => 'v1.34.0',
+      'version' => '1.34.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'fd892fe2d4752116f09c85d1a3a34af91e1ddade',
     ),
     'laminas/laminas-code' => 
     array (
@@ -238,21 +274,30 @@
     ),
     'laminas/laminas-zendframework-bridge' => 
     array (
-      'pretty_version' => '1.0.4',
-      'version' => '1.0.4.0',
+      'pretty_version' => '1.1.0',
+      'version' => '1.1.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fcd87520e4943d968557803919523772475e8ea3',
+      'reference' => '4939c81f63a8a4968c108c440275c94955753b19',
+    ),
+    'league/oauth2-client' => 
+    array (
+      'pretty_version' => '2.5.0',
+      'version' => '2.5.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'd9f2a1e000dc14eb3c02e15d15759385ec7ff0fb',
     ),
     'nikic/php-parser' => 
     array (
-      'pretty_version' => 'v4.7.0',
-      'version' => '4.7.0.0',
+      'pretty_version' => 'v4.9.0',
+      'version' => '4.9.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '21dce06dfbf0365c6a7cc8fdbdc995926c6a9300',
+      'reference' => 'aaee038b912e567780949787d5fe1977be11a778',
     ),
     'ocramius/package-versions' => 
     array (
@@ -316,6 +361,38 @@
         0 => '1.0',
       ),
     ),
+    'psr/http-client' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '2dfb5f6c5eff0e91e20e913f8c5452ed95b86621',
+    ),
+    'psr/http-client-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
+    'psr/http-message' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
+    ),
+    'psr/http-message-implementation' => 
+    array (
+      'provided' => 
+      array (
+        0 => '1.0',
+      ),
+    ),
     'psr/log' => 
     array (
       'pretty_version' => '1.1.3',
@@ -338,6 +415,15 @@
       array (
         0 => '1.0',
       ),
+    ),
+    'ralouphie/getallheaders' => 
+    array (
+      'pretty_version' => '3.0.3',
+      'version' => '3.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '120b605dfeb996808c31b6477290a714d356e822',
     ),
     'sensio/framework-extra-bundle' => 
     array (

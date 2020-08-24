@@ -42,6 +42,9 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "default/purchase.html.twig"));
 
+        // line 2
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), [0 => "form_div_layout.html.twig"], true);
+        // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "default/purchase.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -49,18 +52,20 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
     }
 
-    // line 2
+    // line 4
     public function block_scripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "scripts"));
 
-        // line 3
+        // line 5
         echo "    <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
     <script >
+
+        var state=true;
         \$(document).ready(function () {
 
             var navListItems = \$('div.setup-panel div a'),
@@ -68,7 +73,6 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                 allNextBtn = \$('.nextBtn');
 
             allWells.hide();
-
             navListItems.click(function (e) {
                 e.preventDefault();
                 var \$target = \$(\$(this).attr('href')),
@@ -89,7 +93,32 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     curStepBtn = curStep.attr(\"id\"),
                     nextStepWizard = \$('div.setup-panel div a[href=\"#' + curStepBtn + '\"]').parent().next().children(\"a\"),
                     curInputs = curStep.find(\"input[type='text'],input[type='url']\"),
+
                     isValid = true;
+             var indexd = curStepBtn[curStepBtn.length -1];
+
+                if (parseInt(indexd)==1){
+
+                    var firstname=document.getElementById('firstname').value;
+                    var lastname=document.getElementById('lastname').value;
+                    var city=document.getElementById('country').value;
+                    var phone=document.getElementById('phone').value;
+                    \$.ajax({
+                        url: \"";
+        // line 49
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("updateuser");
+        echo "\",
+                        type: \"POST\",
+                        data: {'id' : ";
+        // line 51
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51), "id", [], "any", false, false, false, 51), "html", null, true);
+        echo ",'firstname':firstname,'lastname':lastname,'city':city,'phone':phone},
+                        success: function (result) {
+                        console.log(result.data)
+                        }
+                    });
+                }
+
 
                 \$(\".form-group\").removeClass(\"has-error\");
                 for (var i = 0; i < curInputs.length; i++) {
@@ -104,6 +133,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
             \$('div.setup-panel div a.btn-success').trigger('click');
         });
+
     </script>
 ";
         
@@ -111,14 +141,14 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
     }
 
-    // line 52
+    // line 75
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 53
+        // line 76
         echo "    <style>
         .btn-success {
             color: #fff;
@@ -183,7 +213,11 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
     </style>
 
     <div class=\"container\">
-        <div class=\"stepwizard\">
+        ";
+        // line 140
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 140, $this->source); })()), "user", [], "any", false, false, false, 140), "state", [], "any", false, false, false, 140) == 0)) {
+            // line 141
+            echo "        <div class=\"stepwizard\">
             <div class=\"stepwizard-row setup-panel\">
                 <div class=\"stepwizard-step col-xs-3\" style=\"padding-left: 250px;\">
                     <a href=\"#step-1\" type=\"button\" class=\"btn btn-success btn-circle\">1</a>
@@ -201,52 +235,169 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                 </div>
 
             </div>
+
         </div>
+        ";
+        } else {
+            // line 162
+            echo "            <div class=\"stepwizard\">
+                <div class=\"stepwizard-row setup-panel\">
 
-        <form role=\"form\">
+                    <div class=\"stepwizard-step col-xs-3\" style=\"padding-left: 550px;
+\">
+                        <a href=\"#step-1\" type=\"button\" class=\"btn btn-success btn-circle\" style=\"border-color: #FF8661;background-color: #FF8661\">3</a>
+                        <p><small>payment</small></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        ";
+        }
+        // line 176
+        echo "        ";
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 176, $this->source); })()), "user", [], "any", false, false, false, 176), "state", [], "any", false, false, false, 176) == 0)) {
+            // line 177
+            echo "            <form role=\"form\">
+                <div class=\"panel panel-primary setup-content\" id=\"step-1\">
+                    <div class=\"panel-heading\">
+                        <h3 class=\"panel-title\">Shipper </h3>
+                    </div>
+                    <div class=\"panel-body\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">First Name</label>
+                            <input id=\"firstname\" maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter First Name\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Last Name</label>
+                            <input  id=\"lastname\" maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Last Name\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Country</label>
+                            <input  id=\"country\" maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Country\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Phone</label>
+                            <input  id=\"phone\"  type=\"number\" required=\"required\" class=\"form-control\" placeholder=\"phone number\"/>
+                        </div>
+                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
+                    </div>
+                </div>
+
+                <div class=\"panel panel-primary setup-content\" id=\"step-2\">
+                    <div class=\"panel-heading\">
+                        <h3 class=\"panel-title\">Destination</h3>
+                    </div>
+                    <div class=\"panel-body\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Company Name</label>
+                            <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Name\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Company Address</label>
+                            <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Address\" />
+                        </div>
+                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
+                    </div>
+                </div>
+
+                <div class=\"panel panel-primary setup-content\" id=\"step-3\">
+                    <div class=\"panel-heading\">
+                        <h3 class=\"panel-title\">Schedule</h3>
+                    </div>
+                    <div class=\"panel-body\">
+                        <div class=\"payment\">
+                            <div class=\"payment-tab payment-tab-active\">
+                                <div class=\"payment-tab-trigger form-group\">
+                                    <input id=\"paypal\" name=\"cardType\" type=\"radio\" value=\"paypal\">
+                                    <label for=\"paypal\">PayPal</label>
+                                    <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
+                                </div>
+                                <div class=\"payment-tab-content\">
+                                    <p>You will be redirected to PayPal to complete payment.</p>
+                                </div>
+                            </div>
+                            <div class=\"payment-tab\">
+                                <div class=\"payment-tab-trigger\">
+                                    <input type=\"radio\" name=\"cardType\" id=\"creditCart\" value=\"creditCard\">
+                                    <label for=\"creditCart\">Credit / Debit Card</label>
+                                    <img class=\"payment-logo\" width=\"100px\" src=\"https://i.imgur.com/IHEKLgm.png\" alt=\"\">
+                                </div>
+                                <div class=\"payment-tab-content\">
+                                    <div class=\"row\">
+                                        <div class=\"col-md-6\">
+                                            <div class=\"card-label\">
+                                                <label for=\"nameOnCard\">Name on Card</label>
+                                                <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-6\">
+                                            <div class=\"card-label\">
+                                                <label for=\"cardNumber\">Card Number</label>
+                                                <input class=\"form-control\" id=\"cardNumber\" name=\"cardNumber\"
+                                                       placeholder=\"1234  5678  9876  5432\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-4\">
+                                            <div class=\"card-label\">
+                                                <label for=\"expirynDate\">Expiry Month</label>
+                                                <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-4\">
+                                            <div class=\"card-label\">
+                                                <label for=\"expiryDate\">Expiry Year</label>
+                                                <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-4\">
+                                            <div class=\"card-label\">
+                                                <label for=\"cvv\">CVV</label>
+                                                <input class=\"form-control\" id=\"cvv\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">pay</button>
+                    </div>
+                </div>
+
+            </form>
+        ";
+        } else {
+            // line 286
+            echo "
+            ";
+            // line 288
+            echo "
+
+            ";
+            // line 291
+            echo "
+
+            ";
+            // line 293
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 293, $this->source); })()), 'form_start');
+            echo "
+            ";
+            // line 294
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 294, $this->source); })()), 'widget');
+            echo "
+            <input type=\"submit\" value=\"Pay € ";
+            // line 295
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["bundle"]) || array_key_exists("bundle", $context) ? $context["bundle"] : (function () { throw new RuntimeError('Variable "bundle" does not exist.', 295, $this->source); })()), "price", [], "any", false, false, false, 295), "html", null, true);
+            echo "\" />
+            ";
+            // line 296
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 296, $this->source); })()), 'form_end');
+            echo "
+
+            <form name=\"jms_choose_payment_method\" method=\"post\" role=\"form\">
             <div class=\"panel panel-primary setup-content\" id=\"step-1\">
-                <div class=\"panel-heading\">
-                    <h3 class=\"panel-title\">Shipper</h3>
-                </div>
-                <div class=\"panel-body\">
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">First Name</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter First Name\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Last Name</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Last Name\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Country</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Country\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Phone</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"phone number\" />
-                    </div>
-                    <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
-                </div>
-            </div>
-
-            <div class=\"panel panel-primary setup-content\" id=\"step-2\">
-                <div class=\"panel-heading\">
-                    <h3 class=\"panel-title\">Destination</h3>
-                </div>
-                <div class=\"panel-body\">
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Company Name</label>
-                        <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Name\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Company Address</label>
-                        <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Address\" />
-                    </div>
-                    <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
-                </div>
-            </div>
-
-            <div class=\"panel panel-primary setup-content\" id=\"step-3\">
                 <div class=\"panel-heading\">
                     <h3 class=\"panel-title\">Schedule</h3>
                 </div>
@@ -254,9 +405,9 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     <div class=\"payment\">
                         <div class=\"payment-tab payment-tab-active\">
                             <div class=\"payment-tab-trigger form-group\">
-                                <input id=\"paypal\" name=\"cardType\" type=\"radio\" value=\"paypal\">
-                                <label for=\"paypal\">PayPal</label>
+                                <input type=\"radio\" id=\"jms_choose_payment_method_method_0\" name=\"jms_choose_payment_method[method]\" required=\"required\" value=\"paypal_express_checkout\">                                <label for=\"paypal\">PayPal</label>
                                 <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
+                                <input type=\"hidden\" id=\"jms_choose_payment_method__token\" name=\"jms_choose_payment_method[_token]\" value=\"Yv6r12pZ-T7XqZolXGscKT36L9bHgGLkqJfBGx3AWko\">
                             </div>
                             <div class=\"payment-tab-content\">
                                 <p>You will be redirected to PayPal to complete payment.</p>
@@ -264,7 +415,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                         </div>
                         <div class=\"payment-tab\">
                             <div class=\"payment-tab-trigger\">
-                                <input type=\"radio\" name=\"cardType\" id=\"creditCart\" value=\"creditCard\">
+                                <input type=\"radio\" name=\"jms_choose_payment_method[method]\" id=\"jms_choose_payment_method_method_0\" value=\"creditCard\">
                                 <label for=\"creditCart\">Credit / Debit Card</label>
                                 <img class=\"payment-logo\" width=\"100px\" src=\"https://i.imgur.com/IHEKLgm.png\" alt=\"\">
                             </div>
@@ -273,32 +424,32 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                                     <div class=\"col-md-6\">
                                         <div class=\"card-label\">
                                             <label for=\"nameOnCard\">Name on Card</label>
-                                            <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-6\">
                                         <div class=\"card-label\">
                                             <label for=\"cardNumber\">Card Number</label>
                                             <input class=\"form-control\" id=\"cardNumber\" name=\"cardNumber\"
-                                                   placeholder=\"1234  5678  9876  5432\" required type=\"text\">
+                                                   placeholder=\"1234  5678  9876  5432\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-4\">
                                         <div class=\"card-label\">
                                             <label for=\"expirynDate\">Expiry Month</label>
-                                            <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-4\">
                                         <div class=\"card-label\">
                                             <label for=\"expiryDate\">Expiry Year</label>
-                                            <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-4\">
                                         <div class=\"card-label\">
                                             <label for=\"cvv\">CVV</label>
-                                            <input class=\"form-control\" id=\"cvv\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"cvv\"  type=\"text\">
                                         </div>
                                     </div>
                                 </div>
@@ -306,11 +457,17 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                         </div>
                     </div>
                     <br>
-                    <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">pay</button>
+                    <input class=\"btn btn-primary nextBtn pull-right\" type=\"submit\" value=\"Pay € ";
+            // line 359
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["bundle"]) || array_key_exists("bundle", $context) ? $context["bundle"] : (function () { throw new RuntimeError('Variable "bundle" does not exist.', 359, $this->source); })()), "price", [], "any", false, false, false, 359), "html", null, true);
+            echo "\" />
                 </div>
             </div>
-
-        </form>
+            </form>
+        ";
+        }
+        // line 364
+        echo "
     </div>
 
 
@@ -333,17 +490,21 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
     public function getDebugInfo()
     {
-        return array (  122 => 53,  115 => 52,  60 => 3,  53 => 2,  36 => 1,);
+        return array (  470 => 364,  462 => 359,  396 => 296,  392 => 295,  388 => 294,  384 => 293,  380 => 291,  376 => 288,  373 => 286,  262 => 177,  259 => 176,  243 => 162,  220 => 141,  218 => 140,  152 => 76,  145 => 75,  114 => 51,  109 => 49,  63 => 5,  56 => 4,  48 => 1,  46 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends \"base.html.twig\" %}
+{% form_theme form 'form_div_layout.html.twig' %}
+
 {% block scripts %}
     <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css\" rel=\"stylesheet\" id=\"bootstrap-css\">
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js\"></script>
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
     <script >
+
+        var state=true;
         \$(document).ready(function () {
 
             var navListItems = \$('div.setup-panel div a'),
@@ -351,7 +512,6 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                 allNextBtn = \$('.nextBtn');
 
             allWells.hide();
-
             navListItems.click(function (e) {
                 e.preventDefault();
                 var \$target = \$(\$(this).attr('href')),
@@ -372,7 +532,26 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     curStepBtn = curStep.attr(\"id\"),
                     nextStepWizard = \$('div.setup-panel div a[href=\"#' + curStepBtn + '\"]').parent().next().children(\"a\"),
                     curInputs = curStep.find(\"input[type='text'],input[type='url']\"),
+
                     isValid = true;
+             var indexd = curStepBtn[curStepBtn.length -1];
+
+                if (parseInt(indexd)==1){
+
+                    var firstname=document.getElementById('firstname').value;
+                    var lastname=document.getElementById('lastname').value;
+                    var city=document.getElementById('country').value;
+                    var phone=document.getElementById('phone').value;
+                    \$.ajax({
+                        url: \"{{ path('updateuser') }}\",
+                        type: \"POST\",
+                        data: {'id' : {{ app.user.id }},'firstname':firstname,'lastname':lastname,'city':city,'phone':phone},
+                        success: function (result) {
+                        console.log(result.data)
+                        }
+                    });
+                }
+
 
                 \$(\".form-group\").removeClass(\"has-error\");
                 for (var i = 0; i < curInputs.length; i++) {
@@ -387,6 +566,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
             \$('div.setup-panel div a.btn-success').trigger('click');
         });
+
     </script>
 {% endblock %}
 {% block body %}
@@ -454,6 +634,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
     </style>
 
     <div class=\"container\">
+        {% if ( app.user.state==0 ) %}
         <div class=\"stepwizard\">
             <div class=\"stepwizard-row setup-panel\">
                 <div class=\"stepwizard-step col-xs-3\" style=\"padding-left: 250px;\">
@@ -472,52 +653,147 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                 </div>
 
             </div>
+
         </div>
+        {% else %}
+            <div class=\"stepwizard\">
+                <div class=\"stepwizard-row setup-panel\">
 
-        <form role=\"form\">
+                    <div class=\"stepwizard-step col-xs-3\" style=\"padding-left: 550px;
+\">
+                        <a href=\"#step-1\" type=\"button\" class=\"btn btn-success btn-circle\" style=\"border-color: #FF8661;background-color: #FF8661\">3</a>
+                        <p><small>payment</small></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        {% endif %}
+        {% if ( app.user.state==0 ) %}
+            <form role=\"form\">
+                <div class=\"panel panel-primary setup-content\" id=\"step-1\">
+                    <div class=\"panel-heading\">
+                        <h3 class=\"panel-title\">Shipper </h3>
+                    </div>
+                    <div class=\"panel-body\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">First Name</label>
+                            <input id=\"firstname\" maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter First Name\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Last Name</label>
+                            <input  id=\"lastname\" maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Last Name\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Country</label>
+                            <input  id=\"country\" maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Country\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Phone</label>
+                            <input  id=\"phone\"  type=\"number\" required=\"required\" class=\"form-control\" placeholder=\"phone number\"/>
+                        </div>
+                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
+                    </div>
+                </div>
+
+                <div class=\"panel panel-primary setup-content\" id=\"step-2\">
+                    <div class=\"panel-heading\">
+                        <h3 class=\"panel-title\">Destination</h3>
+                    </div>
+                    <div class=\"panel-body\">
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Company Name</label>
+                            <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Name\" />
+                        </div>
+                        <div class=\"form-group\">
+                            <label class=\"control-label\">Company Address</label>
+                            <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Address\" />
+                        </div>
+                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
+                    </div>
+                </div>
+
+                <div class=\"panel panel-primary setup-content\" id=\"step-3\">
+                    <div class=\"panel-heading\">
+                        <h3 class=\"panel-title\">Schedule</h3>
+                    </div>
+                    <div class=\"panel-body\">
+                        <div class=\"payment\">
+                            <div class=\"payment-tab payment-tab-active\">
+                                <div class=\"payment-tab-trigger form-group\">
+                                    <input id=\"paypal\" name=\"cardType\" type=\"radio\" value=\"paypal\">
+                                    <label for=\"paypal\">PayPal</label>
+                                    <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
+                                </div>
+                                <div class=\"payment-tab-content\">
+                                    <p>You will be redirected to PayPal to complete payment.</p>
+                                </div>
+                            </div>
+                            <div class=\"payment-tab\">
+                                <div class=\"payment-tab-trigger\">
+                                    <input type=\"radio\" name=\"cardType\" id=\"creditCart\" value=\"creditCard\">
+                                    <label for=\"creditCart\">Credit / Debit Card</label>
+                                    <img class=\"payment-logo\" width=\"100px\" src=\"https://i.imgur.com/IHEKLgm.png\" alt=\"\">
+                                </div>
+                                <div class=\"payment-tab-content\">
+                                    <div class=\"row\">
+                                        <div class=\"col-md-6\">
+                                            <div class=\"card-label\">
+                                                <label for=\"nameOnCard\">Name on Card</label>
+                                                <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-6\">
+                                            <div class=\"card-label\">
+                                                <label for=\"cardNumber\">Card Number</label>
+                                                <input class=\"form-control\" id=\"cardNumber\" name=\"cardNumber\"
+                                                       placeholder=\"1234  5678  9876  5432\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-4\">
+                                            <div class=\"card-label\">
+                                                <label for=\"expirynDate\">Expiry Month</label>
+                                                <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-4\">
+                                            <div class=\"card-label\">
+                                                <label for=\"expiryDate\">Expiry Year</label>
+                                                <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                        <div class=\"col-md-4\">
+                                            <div class=\"card-label\">
+                                                <label for=\"cvv\">CVV</label>
+                                                <input class=\"form-control\" id=\"cvv\" required type=\"text\">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">pay</button>
+                    </div>
+                </div>
+
+            </form>
+        {% else %}
+
+            {# templates/Orders/show.html.twig #}
+
+
+            {# templates/Orders/show.html.twig #}
+
+
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <input type=\"submit\" value=\"Pay € {{ bundle.price }}\" />
+            {{ form_end(form) }}
+
+            <form name=\"jms_choose_payment_method\" method=\"post\" role=\"form\">
             <div class=\"panel panel-primary setup-content\" id=\"step-1\">
-                <div class=\"panel-heading\">
-                    <h3 class=\"panel-title\">Shipper</h3>
-                </div>
-                <div class=\"panel-body\">
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">First Name</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter First Name\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Last Name</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Last Name\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Country</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Country\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Phone</label>
-                        <input maxlength=\"100\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"phone number\" />
-                    </div>
-                    <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
-                </div>
-            </div>
-
-            <div class=\"panel panel-primary setup-content\" id=\"step-2\">
-                <div class=\"panel-heading\">
-                    <h3 class=\"panel-title\">Destination</h3>
-                </div>
-                <div class=\"panel-body\">
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Company Name</label>
-                        <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Name\" />
-                    </div>
-                    <div class=\"form-group\">
-                        <label class=\"control-label\">Company Address</label>
-                        <input maxlength=\"200\" type=\"text\" required=\"required\" class=\"form-control\" placeholder=\"Enter Company Address\" />
-                    </div>
-                    <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">Next</button>
-                </div>
-            </div>
-
-            <div class=\"panel panel-primary setup-content\" id=\"step-3\">
                 <div class=\"panel-heading\">
                     <h3 class=\"panel-title\">Schedule</h3>
                 </div>
@@ -525,9 +801,9 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     <div class=\"payment\">
                         <div class=\"payment-tab payment-tab-active\">
                             <div class=\"payment-tab-trigger form-group\">
-                                <input id=\"paypal\" name=\"cardType\" type=\"radio\" value=\"paypal\">
-                                <label for=\"paypal\">PayPal</label>
+                                <input type=\"radio\" id=\"jms_choose_payment_method_method_0\" name=\"jms_choose_payment_method[method]\" required=\"required\" value=\"paypal_express_checkout\">                                <label for=\"paypal\">PayPal</label>
                                 <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
+                                <input type=\"hidden\" id=\"jms_choose_payment_method__token\" name=\"jms_choose_payment_method[_token]\" value=\"Yv6r12pZ-T7XqZolXGscKT36L9bHgGLkqJfBGx3AWko\">
                             </div>
                             <div class=\"payment-tab-content\">
                                 <p>You will be redirected to PayPal to complete payment.</p>
@@ -535,7 +811,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                         </div>
                         <div class=\"payment-tab\">
                             <div class=\"payment-tab-trigger\">
-                                <input type=\"radio\" name=\"cardType\" id=\"creditCart\" value=\"creditCard\">
+                                <input type=\"radio\" name=\"jms_choose_payment_method[method]\" id=\"jms_choose_payment_method_method_0\" value=\"creditCard\">
                                 <label for=\"creditCart\">Credit / Debit Card</label>
                                 <img class=\"payment-logo\" width=\"100px\" src=\"https://i.imgur.com/IHEKLgm.png\" alt=\"\">
                             </div>
@@ -544,32 +820,32 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                                     <div class=\"col-md-6\">
                                         <div class=\"card-label\">
                                             <label for=\"nameOnCard\">Name on Card</label>
-                                            <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-6\">
                                         <div class=\"card-label\">
                                             <label for=\"cardNumber\">Card Number</label>
                                             <input class=\"form-control\" id=\"cardNumber\" name=\"cardNumber\"
-                                                   placeholder=\"1234  5678  9876  5432\" required type=\"text\">
+                                                   placeholder=\"1234  5678  9876  5432\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-4\">
                                         <div class=\"card-label\">
                                             <label for=\"expirynDate\">Expiry Month</label>
-                                            <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-4\">
                                         <div class=\"card-label\">
                                             <label for=\"expiryDate\">Expiry Year</label>
-                                            <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\"  type=\"text\">
                                         </div>
                                     </div>
                                     <div class=\"col-md-4\">
                                         <div class=\"card-label\">
                                             <label for=\"cvv\">CVV</label>
-                                            <input class=\"form-control\" id=\"cvv\" required type=\"text\">
+                                            <input class=\"form-control\" id=\"cvv\"  type=\"text\">
                                         </div>
                                     </div>
                                 </div>
@@ -577,15 +853,16 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                         </div>
                     </div>
                     <br>
-                    <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">pay</button>
+                    <input class=\"btn btn-primary nextBtn pull-right\" type=\"submit\" value=\"Pay € {{ bundle.price }}\" />
                 </div>
             </div>
+            </form>
+        {% endif %}
 
-        </form>
     </div>
 
 
 
-{% endblock %}", "default/purchase.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/purchase.html.twig");
+{% endblock %}", "default/purchase.html.twig", "/home/emir/Bureau/untitled/templates/default/purchase.html.twig");
     }
 }

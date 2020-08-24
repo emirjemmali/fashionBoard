@@ -87,6 +87,6 @@ class __TwigTemplate_08fcaf016cca0e5e0e0d257b24582af428bf710bd3af20af8532c843ba9
         <input type=\"submit\" value=\"{{ 'change_password.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/ChangePassword/change_password_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig");
+", "@FOSUser/ChangePassword/change_password_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/ChangePassword/change_password_content.html.twig");
     }
 }

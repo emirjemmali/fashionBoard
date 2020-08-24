@@ -69,6 +69,6 @@ class __TwigTemplate_a89223628d805138995e61aa4fd9b7d3811a733411f0ee1c43772370099
         <?php echo \$view['form']->widget(\$form['date']).' '.\$view['form']->widget(\$form['time']) ?>
     </div>
 <?php endif ?>
-", "FrameworkBundle:Form:datetime_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/datetime_widget.html.php");
+", "FrameworkBundle:Form:datetime_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/datetime_widget.html.php");
     }
 }

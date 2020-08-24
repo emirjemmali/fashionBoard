@@ -84,6 +84,6 @@ class __TwigTemplate_94d1584cff4e2fab31399baf9a3e6544b51630ebfc3ffe3dc48a8c9503a
 {% block fos_user_content %}
 {% include \"@FOSUser/ChangePassword/change_password_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/ChangePassword/change_password.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/ChangePassword/change_password.html.twig");
+", "@FOSUser/ChangePassword/change_password.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/ChangePassword/change_password.html.twig");
     }
 }

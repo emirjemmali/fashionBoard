@@ -99,6 +99,6 @@ class __TwigTemplate_e280154f43782d09a77b2f402a33b5bf77b12080227953f12aeb460e756
 {% block craue_language_link_text %}
 \t{{- craue_languageName(locale) -}}
 {% endblock %}
-", "@CraueTwigExtensions/ChangeLanguage/changeLanguage_blocks.html.twig", "/home/emir/Bureau/fashionBoard/vendor/craue/twigextensions-bundle/Resources/views/ChangeLanguage/changeLanguage_blocks.html.twig");
+", "@CraueTwigExtensions/ChangeLanguage/changeLanguage_blocks.html.twig", "/home/emir/Bureau/untitled/vendor/craue/twigextensions-bundle/Resources/views/ChangeLanguage/changeLanguage_blocks.html.twig");
     }
 }

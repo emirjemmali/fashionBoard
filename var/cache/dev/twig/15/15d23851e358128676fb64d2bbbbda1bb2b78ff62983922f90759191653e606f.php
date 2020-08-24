@@ -59,6 +59,6 @@ class __TwigTemplate_b4755920590e835f0ad88929d91c25fed3d86d94849c38d3b3a1e910508
     {
         return new Source("<?php \$symbol = false !== \$symbol ? (\$symbol ? ' '.\$symbol : ' %') : '' ?>
 <?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => isset(\$type) ? \$type : 'text']).\$view->escape(\$symbol) ?>
-", "FrameworkBundle:Form:percent_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/percent_widget.html.php");
+", "FrameworkBundle:Form:percent_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/percent_widget.html.php");
     }
 }

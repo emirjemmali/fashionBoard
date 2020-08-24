@@ -206,6 +206,6 @@ class __TwigTemplate_bf57c105278e208fe7a2fed5b766abb145678511342636dd540c7055b43
     {% endfor %}
     </tbody>
 </table>
-", "TwigBundle:Exception:logs.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/logs.html.twig");
+", "TwigBundle:Exception:logs.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/logs.html.twig");
     }
 }

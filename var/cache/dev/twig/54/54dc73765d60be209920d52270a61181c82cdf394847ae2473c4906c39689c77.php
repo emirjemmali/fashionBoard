@@ -116,6 +116,6 @@ class __TwigTemplate_bfd2410773179d5a9f422f82e68f2895f86b162d11b508663f1318934fd
 
         <button type=\"submit\" class=\"btn btn-primary\">Submit</button>
     </form>
-{% endblock %}", "backOffice/addBundle.html.twig", "/home/emir/Bureau/fashionBoard/templates/backOffice/addBundle.html.twig");
+{% endblock %}", "backOffice/addBundle.html.twig", "/home/emir/Bureau/untitled/templates/backOffice/addBundle.html.twig");
     }
 }

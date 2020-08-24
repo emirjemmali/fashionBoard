@@ -1,0 +1,235 @@
+<?php return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'JMS\\Payment\\CoreBundle\\Entity\\FinancialTransaction',
+            ],
+            'namespace' => [
+                'JMS\\Payment\\CoreBundle\\Entity',
+            ],
+            'rootEntityName' => [
+                'JMS\\Payment\\CoreBundle\\Entity\\FinancialTransaction',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'extendedData' => [
+                        'fieldName' => 'extendedData',
+                        'type' => 'extended_payment_data',
+                        'columnName' => 'extended_data',
+                        'nullable' => true,
+                    ],
+                    'processedAmount' => [
+                        'fieldName' => 'processedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'processed_amount',
+                        'scale' => 5,
+                    ],
+                    'reasonCode' => [
+                        'fieldName' => 'reasonCode',
+                        'type' => 'string',
+                        'columnName' => 'reason_code',
+                        'length' => 100,
+                        'nullable' => true,
+                    ],
+                    'referenceNumber' => [
+                        'fieldName' => 'referenceNumber',
+                        'type' => 'string',
+                        'columnName' => 'reference_number',
+                        'length' => 100,
+                        'nullable' => true,
+                    ],
+                    'requestedAmount' => [
+                        'fieldName' => 'requestedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'requested_amount',
+                        'scale' => 5,
+                    ],
+                    'responseCode' => [
+                        'fieldName' => 'responseCode',
+                        'type' => 'string',
+                        'columnName' => 'response_code',
+                        'length' => 100,
+                        'nullable' => true,
+                    ],
+                    'state' => [
+                        'fieldName' => 'state',
+                        'type' => 'smallint',
+                        'columnName' => 'state',
+                    ],
+                    'createdAt' => [
+                        'fieldName' => 'createdAt',
+                        'type' => 'datetime',
+                        'columnName' => 'created_at',
+                    ],
+                    'updatedAt' => [
+                        'fieldName' => 'updatedAt',
+                        'type' => 'datetime',
+                        'columnName' => 'updated_at',
+                        'nullable' => true,
+                    ],
+                    'trackingId' => [
+                        'fieldName' => 'trackingId',
+                        'type' => 'string',
+                        'columnName' => 'tracking_id',
+                        'length' => 100,
+                        'nullable' => true,
+                    ],
+                    'transactionType' => [
+                        'fieldName' => 'transactionType',
+                        'type' => 'smallint',
+                        'columnName' => 'transaction_type',
+                    ],
+                    'id' => [
+                        'id' => true,
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'columnName' => 'id',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'extended_data' => 'extendedData',
+                    'processed_amount' => 'processedAmount',
+                    'reason_code' => 'reasonCode',
+                    'reference_number' => 'referenceNumber',
+                    'requested_amount' => 'requestedAmount',
+                    'response_code' => 'responseCode',
+                    'state' => 'state',
+                    'created_at' => 'createdAt',
+                    'updated_at' => 'updatedAt',
+                    'tracking_id' => 'trackingId',
+                    'transaction_type' => 'transactionType',
+                    'id' => 'id',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'extendedData' => 'extended_data',
+                    'processedAmount' => 'processed_amount',
+                    'reasonCode' => 'reason_code',
+                    'referenceNumber' => 'reference_number',
+                    'requestedAmount' => 'requested_amount',
+                    'responseCode' => 'response_code',
+                    'state' => 'state',
+                    'createdAt' => 'created_at',
+                    'updatedAt' => 'updated_at',
+                    'trackingId' => 'tracking_id',
+                    'transactionType' => 'transaction_type',
+                    'id' => 'id',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'financial_transactions',
+                ],
+            ],
+            'lifecycleCallbacks' => [
+                [
+                    'prePersist' => [
+                        'onPrePersist',
+                    ],
+                    'preUpdate' => [
+                        'onPrePersist',
+                    ],
+                    'postLoad' => [
+                        'onPostLoad',
+                    ],
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'credit' => [
+                        'fieldName' => 'credit',
+                        'targetEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\Credit',
+                        'inversedBy' => 'transactions',
+                        'joinColumns' => [
+                            [
+                                'name' => 'credit_id',
+                                'referencedColumnName' => 'id',
+                                'nullable' => true,
+                                'onDelete' => 'CASCADE',
+                            ],
+                        ],
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\FinancialTransaction',
+                        'fetch' => 2,
+                        'cascade' => [],
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'credit_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'credit_id' => 'credit_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'credit_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                    'payment' => [
+                        'fieldName' => 'payment',
+                        'targetEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\Payment',
+                        'inversedBy' => 'transactions',
+                        'joinColumns' => [
+                            [
+                                'name' => 'payment_id',
+                                'referencedColumnName' => 'id',
+                                'nullable' => true,
+                                'onDelete' => 'CASCADE',
+                            ],
+                        ],
+                        'type' => 2,
+                        'mappedBy' => null,
+                        'isOwningSide' => true,
+                        'sourceEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\FinancialTransaction',
+                        'fetch' => 2,
+                        'cascade' => [],
+                        'isCascadeRemove' => false,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => false,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'sourceToTargetKeyColumns' => [
+                            'payment_id' => 'id',
+                        ],
+                        'joinColumnFieldNames' => [
+                            'payment_id' => 'payment_id',
+                        ],
+                        'targetToSourceKeyColumns' => [
+                            'id' => 'payment_id',
+                        ],
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+            'changeTrackingPolicy' => [
+                2,
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

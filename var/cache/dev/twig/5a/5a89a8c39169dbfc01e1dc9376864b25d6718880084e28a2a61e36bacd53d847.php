@@ -65,6 +65,6 @@ class __TwigTemplate_6b66ce3cf2f003ae5b0293e2b5f9e7461f709809abdbaed5917c6c8f3f0
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'form_widget_simple')?>
 <?php endif ?>
-", "FrameworkBundle:Form:form_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/form_widget.html.php");
+", "FrameworkBundle:Form:form_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/form_widget.html.php");
     }
 }

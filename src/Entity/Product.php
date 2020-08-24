@@ -4,8 +4,8 @@ namespace App\Entity;
 
 use App\Repository\ProductRepository;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ProductRepository::class)
@@ -22,58 +22,73 @@ class Product
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $name;
+    private $nom;
 
     /**
-     * @ORM\ManyToMany(targetEntity=Fashionbundle::class, inversedBy="products")
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
-    private $fashionBundles;
+    private $prix;
 
-    public function __construct()
-    {
-        $this->fashionBundles = new ArrayCollection();
-    }
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $url;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $brochureFilename;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getName(): ?string
+    public function getNom(): ?string
     {
-        return $this->name;
+        return $this->nom;
     }
 
-    public function setName(?string $name): self
+    public function setNom(?string $nom): self
     {
-        $this->name = $name;
+        $this->nom = $nom;
 
         return $this;
     }
 
-    /**
-     * @return Collection|Fashionbundle[]
-     */
-    public function getFashionBundles(): Collection
+    public function getPrix(): ?string
     {
-        return $this->fashionBundles;
+        return $this->prix;
     }
 
-    public function addFashionBundle(Fashionbundle $fashionBundle): self
+    public function setPrix(?string $prix): self
     {
-        if (!$this->fashionBundles->contains($fashionBundle)) {
-            $this->fashionBundles[] = $fashionBundle;
-        }
+        $this->prix = $prix;
 
         return $this;
     }
 
-    public function removeFashionBundle(Fashionbundle $fashionBundle): self
+    public function getUrl(): ?string
     {
-        if ($this->fashionBundles->contains($fashionBundle)) {
-            $this->fashionBundles->removeElement($fashionBundle);
-        }
+        return $this->url;
+    }
+
+    public function setUrl(?string $url): self
+    {
+        $this->url = $url;
 
         return $this;
     }
+
+    public function getBrochureFilename(): ?string
+    {
+        return $this->brochureFilename;
+    }
+
+    public function setBrochureFilename(?string $brochureFilename): self
+    {
+        $this->brochureFilename = $brochureFilename;
+        return $this;
+    }
+
 }

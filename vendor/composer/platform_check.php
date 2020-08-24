@@ -11,6 +11,7 @@ if (!(PHP_VERSION_ID >= 70400)) {
 $missingExtensions = array();
 extension_loaded('ctype') || $missingExtensions[] = 'ctype';
 extension_loaded('iconv') || $missingExtensions[] = 'iconv';
+extension_loaded('json') || $missingExtensions[] = 'json';
 extension_loaded('openssl') || $missingExtensions[] = 'openssl';
 extension_loaded('pdo') || $missingExtensions[] = 'pdo';
 extension_loaded('tokenizer') || $missingExtensions[] = 'tokenizer';

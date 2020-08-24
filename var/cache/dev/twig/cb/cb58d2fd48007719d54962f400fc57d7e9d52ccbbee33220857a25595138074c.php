@@ -165,6 +165,6 @@ class __TwigTemplate_6c1042de484d6f81800e30c7d8b47267b99e55b365f7d7cb9b14706c5af
         {%- endfor -%}
     </pre>
 {% endif %}
-", "DoctrineBundle:Collector:explain.html.twig", "/home/emir/Bureau/fashionBoard/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
+", "DoctrineBundle:Collector:explain.html.twig", "/home/emir/Bureau/untitled/vendor/doctrine/doctrine-bundle/Resources/views/Collector/explain.html.twig");
     }
 }

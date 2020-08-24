@@ -629,6 +629,6 @@ class __TwigTemplate_fa1394a4a4b8d3a7f26dfb245057409addb32c8360dcc599a35dae9da92
     });
 
 /*]]>*/</script>
-", "TwigBundle::base_js.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
+", "TwigBundle::base_js.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/base_js.html.twig");
     }
 }

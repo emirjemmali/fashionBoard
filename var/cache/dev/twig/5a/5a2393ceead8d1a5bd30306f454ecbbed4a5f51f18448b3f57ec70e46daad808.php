@@ -63,6 +63,6 @@ class __TwigTemplate_238791fd9d2a81e2b60dd5faba72dbf1c076959dd998a886329afa49bb5
 <?php echo \$view['form']->rest(\$form) ?>
 <?php endif ?>
 </form>
-", "FrameworkBundle:Form:form_end.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/form_end.html.php");
+", "FrameworkBundle:Form:form_end.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/form_end.html.php");
     }
 }

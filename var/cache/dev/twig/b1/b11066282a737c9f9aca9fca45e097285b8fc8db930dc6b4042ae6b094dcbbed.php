@@ -526,6 +526,6 @@ class __TwigTemplate_6a33701d5da57808c5d75747281d15b39d7991b018c8615806516ff89c7
     </script>
 
 
-{% endblock %}", "backOffice/manageFashionBoard.html.twig", "/home/emir/Bureau/fashionBoard/templates/backOffice/manageFashionBoard.html.twig");
+{% endblock %}", "backOffice/manageFashionBoard.html.twig", "/home/emir/Bureau/untitled/templates/backOffice/manageFashionBoard.html.twig");
     }
 }

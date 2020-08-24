@@ -89,6 +89,6 @@ class __TwigTemplate_387b93053f3a5b50598044a4d7adee8c15007c11141aa9ecb310eec7daf
 {% block fos_user_content %}
     <p>{{ 'registration.check_email'|trans({'%email%': user.email}) }}</p>
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/check_email.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Registration/check_email.html.twig");
+", "@FOSUser/Registration/check_email.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Registration/check_email.html.twig");
     }
 }

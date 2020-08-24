@@ -155,6 +155,6 @@ class __TwigTemplate_e6f7af38887c085f6c9e9b4ad47618346e89e64b28d459001b12d2faa68
         </tr>
     </tbody>
 </table>
-", "TwigBundle:Exception:traces_text.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
+", "TwigBundle:Exception:traces_text.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/traces_text.html.twig");
     }
 }

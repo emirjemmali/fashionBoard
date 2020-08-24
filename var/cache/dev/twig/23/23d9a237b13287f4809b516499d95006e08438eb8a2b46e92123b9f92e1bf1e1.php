@@ -90,7 +90,7 @@ class __TwigTemplate_0ddec6dc20c79b6f5a8d73f6273f0cb1dc04a1724f17c77bd884984891d
                         <p></p>
                         <a href=\"";
             // line 24
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("purchase");
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("purchase", ["idbundle" => twig_get_attribute($this->env, $this->source, $context["bundle"], "id", [], "any", false, false, false, 24)]), "html", null, true);
             echo "\" title=\"Read More\" class=\"read-more\">Purchase</a>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ class __TwigTemplate_0ddec6dc20c79b6f5a8d73f6273f0cb1dc04a1724f17c77bd884984891d
                     </div>
                     <div class=\"entry-content\">
                         <p></p>
-                        <a href=\"{{ path('purchase') }}\" title=\"Read More\" class=\"read-more\">Purchase</a>
+                        <a href=\"{{ path('purchase',{'idbundle': bundle.id}) }}\" title=\"Read More\" class=\"read-more\">Purchase</a>
                     </div>
                 </div>
             </div>
@@ -160,6 +160,6 @@ class __TwigTemplate_0ddec6dc20c79b6f5a8d73f6273f0cb1dc04a1724f17c77bd884984891d
 
     </div><!-- Container /- -->
 </div>
-{% endblock %}", "default/formule.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/formule.html.twig");
+{% endblock %}", "default/formule.html.twig", "/home/emir/Bureau/untitled/templates/default/formule.html.twig");
     }
 }

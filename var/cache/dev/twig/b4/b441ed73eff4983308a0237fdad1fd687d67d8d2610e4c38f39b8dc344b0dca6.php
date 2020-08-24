@@ -120,6 +120,6 @@ class __TwigTemplate_a80b3c47978b70c4d988fe60326660dc248df967d3167cf1fa4fbc7a845
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "@FOSUser/Registration/email.txt.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Registration/email.txt.twig");
+", "@FOSUser/Registration/email.txt.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Registration/email.txt.twig");
     }
 }

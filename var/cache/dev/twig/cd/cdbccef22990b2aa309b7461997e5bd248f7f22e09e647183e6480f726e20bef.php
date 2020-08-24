@@ -89,6 +89,6 @@ class __TwigTemplate_ee31a61b8f858ebf76b4a7fc578b4d836d483ded0d1ece3442fca83adb6
             </trace>
 {% endfor %}
         </traces>
-", "TwigBundle:Exception:traces.xml.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
+", "TwigBundle:Exception:traces.xml.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/traces.xml.twig");
     }
 }

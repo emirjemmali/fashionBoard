@@ -198,6 +198,6 @@ class __TwigTemplate_fa82ef46c5e5db3bd6289f9efc86a75752171ccf27f32f7681818979c37
         })|raw }}
     </div>
 {% endif %}
-", "TwigBundle:Exception:trace.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
+", "TwigBundle:Exception:trace.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/trace.html.twig");
     }
 }

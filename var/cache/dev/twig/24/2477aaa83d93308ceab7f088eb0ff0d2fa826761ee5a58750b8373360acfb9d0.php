@@ -87,6 +87,6 @@ class __TwigTemplate_8da18971a7f28a816631fa38bceabf7556e66d94947e2718d8e88a7c1ae
         <input type=\"submit\" value=\"{{ 'resetting.reset.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/Resetting/reset_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Resetting/reset_content.html.twig");
+", "@FOSUser/Resetting/reset_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Resetting/reset_content.html.twig");
     }
 }

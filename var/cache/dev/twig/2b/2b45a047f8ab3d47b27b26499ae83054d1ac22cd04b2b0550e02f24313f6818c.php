@@ -57,6 +57,6 @@ class __TwigTemplate_e5988732a00eabc88395aa04b0f5c9cdb92e33f0d3c25d31ced0b3e3301
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'choice_widget_options') ?>
-", "FrameworkBundle:Form:choice_options.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
+", "FrameworkBundle:Form:choice_options.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/choice_options.html.php");
     }
 }

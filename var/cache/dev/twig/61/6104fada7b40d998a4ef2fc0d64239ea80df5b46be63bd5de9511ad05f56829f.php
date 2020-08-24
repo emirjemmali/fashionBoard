@@ -102,6 +102,6 @@ class __TwigTemplate_5a2a6f5865f068f4c71690db30003a9c1447d249ed6b403200b06500e3f
     <p><a href=\"{{ targetUrl }}\">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
-", "@FOSUser/Registration/confirmed.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Registration/confirmed.html.twig");
+", "@FOSUser/Registration/confirmed.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Registration/confirmed.html.twig");
     }
 }

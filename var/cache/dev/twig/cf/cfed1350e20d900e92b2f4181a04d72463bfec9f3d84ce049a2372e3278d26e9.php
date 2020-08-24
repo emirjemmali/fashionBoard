@@ -238,6 +238,6 @@ class __TwigTemplate_10f11143d4eed62693ebbb6e08d6115ca21d5fd0793f5b6b99fe331b842
         </div>
 
     </div>
-{% endblock %}", "backOffice/dashboard.html.twig", "/home/emir/Bureau/fashionBoard/templates/backOffice/dashboard.html.twig");
+{% endblock %}", "backOffice/dashboard.html.twig", "/home/emir/Bureau/untitled/templates/backOffice/dashboard.html.twig");
     }
 }

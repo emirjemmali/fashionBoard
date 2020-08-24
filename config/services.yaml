@@ -6,10 +6,12 @@
 parameters:
     brochures_directory: '%kernel.project_dir%/public/uploads/brochures'
 services:
+
     # optionally you can define the priority of the extension (default = 0).
     # Extensions with higher priorities are registered earlier. This is mostly
     # useful to register late extensions that override other extensions.
     # default configuration for services in *this* file
+
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.

@@ -1,0 +1,243 @@
+<?php return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'JMS\\Payment\\CoreBundle\\Entity\\PaymentInstruction',
+            ],
+            'namespace' => [
+                'JMS\\Payment\\CoreBundle\\Entity',
+            ],
+            'rootEntityName' => [
+                'JMS\\Payment\\CoreBundle\\Entity\\PaymentInstruction',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'amount' => [
+                        'fieldName' => 'amount',
+                        'type' => 'decimal',
+                        'scale' => 5,
+                        'columnName' => 'amount',
+                    ],
+                    'approvedAmount' => [
+                        'fieldName' => 'approvedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'approved_amount',
+                        'scale' => 5,
+                    ],
+                    'approvingAmount' => [
+                        'fieldName' => 'approvingAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'approving_amount',
+                        'scale' => 5,
+                    ],
+                    'createdAt' => [
+                        'fieldName' => 'createdAt',
+                        'type' => 'datetime',
+                        'columnName' => 'created_at',
+                    ],
+                    'creditedAmount' => [
+                        'fieldName' => 'creditedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'credited_amount',
+                        'scale' => 5,
+                    ],
+                    'creditingAmount' => [
+                        'fieldName' => 'creditingAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'crediting_amount',
+                        'scale' => 5,
+                    ],
+                    'currency' => [
+                        'fieldName' => 'currency',
+                        'type' => 'string',
+                        'length' => 3,
+                        'columnName' => 'currency',
+                    ],
+                    'depositedAmount' => [
+                        'fieldName' => 'depositedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'deposited_amount',
+                        'scale' => 5,
+                    ],
+                    'depositingAmount' => [
+                        'fieldName' => 'depositingAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'depositing_amount',
+                        'scale' => 5,
+                    ],
+                    'extendedData' => [
+                        'fieldName' => 'extendedData',
+                        'type' => 'extended_payment_data',
+                        'columnName' => 'extended_data',
+                    ],
+                    'paymentSystemName' => [
+                        'fieldName' => 'paymentSystemName',
+                        'type' => 'string',
+                        'columnName' => 'payment_system_name',
+                        'length' => 100,
+                    ],
+                    'reversingApprovedAmount' => [
+                        'fieldName' => 'reversingApprovedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'reversing_approved_amount',
+                        'scale' => 5,
+                    ],
+                    'reversingCreditedAmount' => [
+                        'fieldName' => 'reversingCreditedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'reversing_credited_amount',
+                        'scale' => 5,
+                    ],
+                    'reversingDepositedAmount' => [
+                        'fieldName' => 'reversingDepositedAmount',
+                        'type' => 'decimal',
+                        'columnName' => 'reversing_deposited_amount',
+                        'scale' => 5,
+                    ],
+                    'state' => [
+                        'fieldName' => 'state',
+                        'type' => 'smallint',
+                        'columnName' => 'state',
+                    ],
+                    'updatedAt' => [
+                        'fieldName' => 'updatedAt',
+                        'type' => 'datetime',
+                        'columnName' => 'updated_at',
+                        'nullable' => true,
+                    ],
+                    'id' => [
+                        'id' => true,
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'columnName' => 'id',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'amount' => 'amount',
+                    'approved_amount' => 'approvedAmount',
+                    'approving_amount' => 'approvingAmount',
+                    'created_at' => 'createdAt',
+                    'credited_amount' => 'creditedAmount',
+                    'crediting_amount' => 'creditingAmount',
+                    'currency' => 'currency',
+                    'deposited_amount' => 'depositedAmount',
+                    'depositing_amount' => 'depositingAmount',
+                    'extended_data' => 'extendedData',
+                    'payment_system_name' => 'paymentSystemName',
+                    'reversing_approved_amount' => 'reversingApprovedAmount',
+                    'reversing_credited_amount' => 'reversingCreditedAmount',
+                    'reversing_deposited_amount' => 'reversingDepositedAmount',
+                    'state' => 'state',
+                    'updated_at' => 'updatedAt',
+                    'id' => 'id',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'amount' => 'amount',
+                    'approvedAmount' => 'approved_amount',
+                    'approvingAmount' => 'approving_amount',
+                    'createdAt' => 'created_at',
+                    'creditedAmount' => 'credited_amount',
+                    'creditingAmount' => 'crediting_amount',
+                    'currency' => 'currency',
+                    'depositedAmount' => 'deposited_amount',
+                    'depositingAmount' => 'depositing_amount',
+                    'extendedData' => 'extended_data',
+                    'paymentSystemName' => 'payment_system_name',
+                    'reversingApprovedAmount' => 'reversing_approved_amount',
+                    'reversingCreditedAmount' => 'reversing_credited_amount',
+                    'reversingDepositedAmount' => 'reversing_deposited_amount',
+                    'state' => 'state',
+                    'updatedAt' => 'updated_at',
+                    'id' => 'id',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'payment_instructions',
+                ],
+            ],
+            'lifecycleCallbacks' => [
+                [
+                    'prePersist' => [
+                        'onPreSave',
+                    ],
+                    'preUpdate' => [
+                        'onPreSave',
+                    ],
+                    'postLoad' => [
+                        'onPostLoad',
+                    ],
+                ],
+            ],
+            'associationMappings' => [
+                [
+                    'credits' => [
+                        'fieldName' => 'credits',
+                        'targetEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\Credit',
+                        'mappedBy' => 'paymentInstruction',
+                        'cascade' => [
+                            'remove',
+                            'refresh',
+                        ],
+                        'type' => 4,
+                        'inversedBy' => null,
+                        'isOwningSide' => false,
+                        'sourceEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\PaymentInstruction',
+                        'fetch' => 2,
+                        'isCascadeRemove' => true,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => true,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'orphanRemoval' => false,
+                    ],
+                    'payments' => [
+                        'fieldName' => 'payments',
+                        'targetEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\Payment',
+                        'mappedBy' => 'paymentInstruction',
+                        'cascade' => [
+                            'remove',
+                            'refresh',
+                        ],
+                        'type' => 4,
+                        'inversedBy' => null,
+                        'isOwningSide' => false,
+                        'sourceEntity' => 'JMS\\Payment\\CoreBundle\\Entity\\PaymentInstruction',
+                        'fetch' => 2,
+                        'isCascadeRemove' => true,
+                        'isCascadePersist' => false,
+                        'isCascadeRefresh' => true,
+                        'isCascadeMerge' => false,
+                        'isCascadeDetach' => false,
+                        'orphanRemoval' => false,
+                    ],
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+            'changeTrackingPolicy' => [
+                2,
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -7,12 +7,18 @@ formule:
 purchase:
   path: /purchase
   controller: App\Controller\DefaultController::purchase
+updateuser:
+  path: /updateuser
+  controller: App\Controller\DefaultController::updateuser
+userProfile:
+  path: /userprofile
+  controller: App\Controller\DefaultController::userProfile
 manageBundle:
   path: /manageBundle
   controller: App\Controller\DefaultController::manageBundle
 addBundle:
   path: /addBundle
-  controller: App\Controller\DefaultController::addBundle
+  controller: App\Controller\FashionBundleController::addBundle
 manageProduct:
   path: /manageProducts
   controller: App\Controller\DefaultController::manageProducts

@@ -63,6 +63,6 @@ class __TwigTemplate_a89f4911786046c222a02bc246851c188c74e63697258aa04fbcb221c08
     <?php \$attr['data-prototype'] = \$view->escape(\$view['form']->row(\$prototype)) ?>
 <?php endif ?>
 <?php echo \$view['form']->widget(\$form, ['attr' => \$attr]) ?>
-", "FrameworkBundle:Form:collection_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/collection_widget.html.php");
+", "FrameworkBundle:Form:collection_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/collection_widget.html.php");
     }
 }

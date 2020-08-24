@@ -4,7 +4,6 @@ namespace App\Entity;
 
 use App\Repository\FashionbundleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -20,6 +19,14 @@ class Fashionbundle
      */
     private $id;
 
+    /**
+     * Fashionbundle constructor.
+     */
+   /* public function __construct()
+    {
+        $this->orders=new ArrayCollection();
+    }*/
+
     public function getId(): ?int
     {
         return $this->id;
@@ -31,6 +38,27 @@ class Fashionbundle
      * @ORM\Column(name="fashionbordern", type="integer", nullable=false)
      */
     private $fashionbordernumber;
+    /**
+     * @var string
+     * @ORM\Column(name="nom", type="string", length=256, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @return string
+     */
+    public function getNom(): string
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param string $nom
+     */
+    public function setNom(string $nom): void
+    {
+        $this->nom = $nom;
+    }
     /**
      * @var string
      * @ORM\Column(name="description", type="string", length=256, nullable=false)
@@ -48,22 +76,12 @@ class Fashionbundle
      * @ORM\Column(name="promotion", type="integer", nullable=false)     */
     private $promotion;
     /**
-     * @var int
+     * @var float
      * @Assert\NotBlank
      * @Assert\Positive
-     * @ORM\Column(name="price", type="integer", nullable=true)
-     */
+     * @ORM\Column(name="price", type="float", nullable=false)     */
     private $price;
 
-    /**
-     * @ORM\ManyToMany(targetEntity=Product::class, mappedBy="fashionBundles")
-     */
-    private $products;
-
-    public function __construct()
-    {
-        $this->products = new ArrayCollection();
-    }
     /**
      * @return int
      */
@@ -136,47 +154,19 @@ class Fashionbundle
     }
 
     /**
-     * @return int
+     * @return float
      */
-    public function getPrice(): int
+    public function getPrice(): float
     {
         return $this->price;
     }
 
     /**
-     * @param int $price
+     * @param float $price
      */
-    public function setPrice(int $price): void
+    public function setPrice(float $price): void
     {
         $this->price = $price;
-    }
-
-    /**
-     * @return Collection|Product[]
-     */
-    public function getProducts(): Collection
-    {
-        return $this->products;
-    }
-
-    public function addProduct(Product $product): self
-    {
-        if (!$this->products->contains($product)) {
-            $this->products[] = $product;
-            $product->addFashionBundle($this);
-        }
-
-        return $this;
-    }
-
-    public function removeProduct(Product $product): self
-    {
-        if ($this->products->contains($product)) {
-            $this->products->removeElement($product);
-            $product->removeFashionBundle($this);
-        }
-
-        return $this;
     }
 
 }

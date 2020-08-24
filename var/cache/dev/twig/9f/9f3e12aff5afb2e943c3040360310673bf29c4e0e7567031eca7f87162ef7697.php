@@ -48,7 +48,45 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
 ";
         }
         // line 6
-        echo "<div style=\"padding-left: 100px;padding-right: 100px \"  class=\"contact-us container-fluid no-padding\">
+        echo "<style>
+    .btn-google {
+        color: #545454;
+        background-color: #ffffff;
+        box-shadow: 0 1px 2px 1px #ddd
+    }
+
+    .btn-facebook {
+        color: #fff;
+        background-color: #3b5998;
+        border-color: rgba(0,0,0,0.2);
+    }
+
+    .btn-social {
+        position: relative;
+        padding-left: 44px;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .btn-social:hover {
+        color: #eee;
+    }
+
+    .btn-social :first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        padding: 7px;
+        font-size: 1.6em;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }</style>
+<div id=\"fb-root\"></div>
+<div style=\"padding-left: 100px;padding-right: 100px \"  class=\"contact-us container-fluid no-padding\">
 
     <div class=\"form-detail\" style=\"background-color: #FFFFFF\">
         <!-- Section Header -->
@@ -58,28 +96,28 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
         </div><!-- Section Header /- -->
 
         ";
-        // line 15
-        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 15, $this->source); })())) {
-            // line 16
+        // line 53
+        if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 53, $this->source); })())) {
+            // line 54
             echo "            <div>";
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 16, $this->source); })()), "messageKey", [], "any", false, false, false, 16), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 16, $this->source); })()), "messageData", [], "any", false, false, false, 16), "security"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\TranslationExtension']->trans(twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 54, $this->source); })()), "messageKey", [], "any", false, false, false, 54), twig_get_attribute($this->env, $this->source, (isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 54, $this->source); })()), "messageData", [], "any", false, false, false, 54), "security"), "html", null, true);
             echo "</div>
         ";
         }
-        // line 18
+        // line 56
         echo "        <form action=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_check");
         echo "\" method=\"post\">
             ";
-        // line 19
-        if ((isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new RuntimeError('Variable "csrf_token" does not exist.', 19, $this->source); })())) {
-            // line 20
+        // line 57
+        if ((isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new RuntimeError('Variable "csrf_token" does not exist.', 57, $this->source); })())) {
+            // line 58
             echo "                <input type=\"hidden\" name=\"_csrf_token\" value=\"";
-            echo twig_escape_filter($this->env, (isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new RuntimeError('Variable "csrf_token" does not exist.', 20, $this->source); })()), "html", null, true);
+            echo twig_escape_filter($this->env, (isset($context["csrf_token"]) || array_key_exists("csrf_token", $context) ? $context["csrf_token"] : (function () { throw new RuntimeError('Variable "csrf_token" does not exist.', 58, $this->source); })()), "html", null, true);
             echo "\" />
             ";
         }
-        // line 22
+        // line 60
         echo "            <div class=\"col-md-12 col-md-12 col-xs-12 form-group\">
                 <input type=\"text\" id=\"username\" class=\"form-control\" name=\"_username\" placeholder=\"Username *\" required=\"required\" autocomplete=\"username\" />
             </div>
@@ -91,8 +129,28 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
 
 
             <div class=\"form-group col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"row\">
+                    <div class=\"col-lg-4\">
                 <button style=\"border:1px solid #FF8661;color: #FF8661\" type=\"submit\" id=\"_submit\" name=\"_submit\"+ name=\"post\">Login</button>
-            </div>
+                    </div>
+                    <div class=\"col-lg-4\">
+                        <div class=\"container\">
+                            <a href=\"";
+        // line 77
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connect_facebook_start");
+        echo "\" class=\"btn btn-lg btn-social btn-facebook\">
+                                <i class=\"fa fa-facebook fa-fw\"></i> Sign in with Facebook
+                            </a>
+                        </div>
+                    </div>
+                    <div class=\"col-lg-4\">
+                        <a class=\"btn btn-lg btn-google btn-block text-uppercase btn-outline\" href=\"";
+        // line 83
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("connect_google");
+        echo "\"><img src=\"https://img.icons8.com/color/16/000000/google-logo.png\"> Signup Using Google</a>
+                    </div>
+                    </div>
+                </div>
             <div id=\"alert-msg\" class=\"alert-msg\"></div>
         </form>
     </div></div>";
@@ -113,7 +171,7 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
 
     public function getDebugInfo()
     {
-        return array (  83 => 22,  77 => 20,  75 => 19,  70 => 18,  64 => 16,  62 => 15,  51 => 6,  45 => 4,  43 => 3,  40 => 2,);
+        return array (  149 => 83,  140 => 77,  121 => 60,  115 => 58,  113 => 57,  108 => 56,  102 => 54,  100 => 53,  51 => 6,  45 => 4,  43 => 3,  40 => 2,);
     }
 
     public function getSourceContext()
@@ -123,6 +181,44 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
+<style>
+    .btn-google {
+        color: #545454;
+        background-color: #ffffff;
+        box-shadow: 0 1px 2px 1px #ddd
+    }
+
+    .btn-facebook {
+        color: #fff;
+        background-color: #3b5998;
+        border-color: rgba(0,0,0,0.2);
+    }
+
+    .btn-social {
+        position: relative;
+        padding-left: 44px;
+        text-align: left;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .btn-social:hover {
+        color: #eee;
+    }
+
+    .btn-social :first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 40px;
+        padding: 7px;
+        font-size: 1.6em;
+        text-align: center;
+        border-right: 1px solid rgba(0,0,0,0.2);
+    }</style>
+<div id=\"fb-root\"></div>
 <div style=\"padding-left: 100px;padding-right: 100px \"  class=\"contact-us container-fluid no-padding\">
 
     <div class=\"form-detail\" style=\"background-color: #FFFFFF\">
@@ -150,10 +246,24 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
 
 
             <div class=\"form-group col-md-12 col-sm-12 col-xs-12\">
+                <div class=\"row\">
+                    <div class=\"col-lg-4\">
                 <button style=\"border:1px solid #FF8661;color: #FF8661\" type=\"submit\" id=\"_submit\" name=\"_submit\"+ name=\"post\">Login</button>
-            </div>
+                    </div>
+                    <div class=\"col-lg-4\">
+                        <div class=\"container\">
+                            <a href=\"{{ path('connect_facebook_start') }}\" class=\"btn btn-lg btn-social btn-facebook\">
+                                <i class=\"fa fa-facebook fa-fw\"></i> Sign in with Facebook
+                            </a>
+                        </div>
+                    </div>
+                    <div class=\"col-lg-4\">
+                        <a class=\"btn btn-lg btn-google btn-block text-uppercase btn-outline\" href=\"{{ path('connect_google') }}\"><img src=\"https://img.icons8.com/color/16/000000/google-logo.png\"> Signup Using Google</a>
+                    </div>
+                    </div>
+                </div>
             <div id=\"alert-msg\" class=\"alert-msg\"></div>
         </form>
-    </div></div>", "@FOSUser/Security/login_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Security/login_content.html.twig");
+    </div></div>", "@FOSUser/Security/login_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Security/login_content.html.twig");
     }
 }

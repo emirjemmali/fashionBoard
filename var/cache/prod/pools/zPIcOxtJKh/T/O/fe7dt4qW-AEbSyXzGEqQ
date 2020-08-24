@@ -1,0 +1,126 @@
+<?php return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+        clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Fashionbundle',
+            ],
+            'namespace' => [
+                'App\\Entity',
+            ],
+            'rootEntityName' => [
+                'App\\Entity\\Fashionbundle',
+            ],
+            'customRepositoryClassName' => [
+                'App\\Repository\\FashionbundleRepository',
+            ],
+            'identifier' => [
+                [
+                    'id',
+                ],
+            ],
+            'generatorType' => [
+                4,
+            ],
+            'fieldMappings' => [
+                [
+                    'id' => [
+                        'fieldName' => 'id',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'id' => true,
+                        'columnName' => 'id',
+                    ],
+                    'fashionbordernumber' => [
+                        'fieldName' => 'fashionbordernumber',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'fashionbordern',
+                    ],
+                    'description' => [
+                        'fieldName' => 'description',
+                        'type' => 'string',
+                        'scale' => 0,
+                        'length' => 256,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'description',
+                    ],
+                    'promotionstatus' => [
+                        'fieldName' => 'promotionstatus',
+                        'type' => 'boolean',
+                        'scale' => 0,
+                        'length' => 256,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'promotionstatus',
+                    ],
+                    'promotion' => [
+                        'fieldName' => 'promotion',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'promotion',
+                    ],
+                    'price' => [
+                        'fieldName' => 'price',
+                        'type' => 'integer',
+                        'scale' => 0,
+                        'length' => null,
+                        'unique' => false,
+                        'nullable' => false,
+                        'precision' => 0,
+                        'columnName' => 'price',
+                    ],
+                ],
+            ],
+            'fieldNames' => [
+                [
+                    'id' => 'id',
+                    'fashionbordern' => 'fashionbordernumber',
+                    'description' => 'description',
+                    'promotionstatus' => 'promotionstatus',
+                    'promotion' => 'promotion',
+                    'price' => 'price',
+                ],
+            ],
+            'columnNames' => [
+                [
+                    'id' => 'id',
+                    'fashionbordernumber' => 'fashionbordern',
+                    'description' => 'description',
+                    'promotionstatus' => 'promotionstatus',
+                    'promotion' => 'promotion',
+                    'price' => 'price',
+                ],
+            ],
+            'table' => [
+                [
+                    'name' => 'fashionbundle',
+                ],
+            ],
+            'idGenerator' => [
+                $o[1],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

@@ -549,6 +549,6 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js\"></script>
 
 </body>
-</html>", "baseAdmin.html.twig", "/home/emir/Bureau/fashionBoard/templates/baseAdmin.html.twig");
+</html>", "baseAdmin.html.twig", "/home/emir/Bureau/untitled/templates/baseAdmin.html.twig");
     }
 }

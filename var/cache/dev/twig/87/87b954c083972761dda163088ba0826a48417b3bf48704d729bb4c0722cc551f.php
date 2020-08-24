@@ -176,8 +176,11 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
                         <ul class=\"cart\">
                             <li>
                                 <ul class=\"dropdown-menu no-padding\">
-                                    <li style=\"color: #696666\" class=\"button\">
-                                        <a href=\"#\" title=\"View Cart\">Profile</a>
+                                    <li style=\"color: #FF8661\"  class=\"button\">
+                                        <a href=\"";
+            // line 94
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userProfile");
+            echo "\" title=\"View Cart\">Profile</a>
                                         <a href=\"";
             // line 95
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
@@ -209,12 +212,7 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
                             </li>
                             <li><a href=\"#product-section\" style=\"color: #FF8661\" title=\"Products\">FAQ</a></li>
-                            <li class=\"dropdown\">
-                                <a href=\"shop.html\" title=\"Shop\" class=\"dropdown-toggle\" role=\"button\" style=\"color: #FF8661\" aria-haspopup=\"true\" aria-expanded=\"false\">Profile</a>
-                                <i class=\"ddl-switch fa fa-angle-down\"></i>
-                                <ul class=\"dropdown-menu\">
-                                </ul>
-                            </li>
+
                             <li class=\"dropdown\">
                                 <a href=\"blog.html\" title=\"Blog\" class=\"dropdown-toggle\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color: #FF8661\">Contact</a>
 
@@ -226,65 +224,65 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
         </div><!-- Menu Block /- -->
     </header><!-- Header /- -->
     ";
-        // line 132
+        // line 127
         $this->displayBlock('body', $context, $blocks);
-        // line 523
+        // line 518
         echo "    <!-- Footer Main -->";
         $this->displayBlock('footer', $context, $blocks);
-        // line 593
+        // line 588
         echo "</div>
 
 
 <!-- JQuery v1.12.4 -->
 <script src=\"";
-        // line 597
+        // line 592
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Library - Js -->
 <script src=\"";
-        // line 600
+        // line 595
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("libraries/lib.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 602
+        // line 597
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("libraries/jquery.countdown.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- RS5.0 Core JS Files -->
 <script type=\"text/javascript\" src=\"";
-        // line 605
+        // line 600
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/jquery.themepunch.tools.min838f.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 606
+        // line 601
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/jquery.themepunch.revolution.min838f.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 607
+        // line 602
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.video.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 608
+        // line 603
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 609
+        // line 604
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.layeranimation.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 610
+        // line 605
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.navigation.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 611
+        // line 606
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.actions.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Library - Theme JS -->
 <script src=\"";
-        // line 614
+        // line 609
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/functions.js"), "html", null, true);
         echo "\"></script>
 
@@ -312,14 +310,14 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
     }
 
-    // line 132
+    // line 127
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 133
+        // line 128
         echo "
     <main>
         <!-- Slider Section 1 -->
@@ -715,14 +713,14 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
     }
 
-    // line 523
+    // line 518
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 524
+        // line 519
         echo "    <footer id=\"footer-main\" class=\"footer-main container-fluid\">
         <!-- Container -->
         <div class=\"container\">
@@ -809,7 +807,7 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
     public function getDebugInfo()
     {
-        return array (  726 => 524,  719 => 523,  323 => 133,  316 => 132,  309 => 55,  302 => 54,  288 => 614,  282 => 611,  278 => 610,  274 => 609,  270 => 608,  266 => 607,  262 => 606,  258 => 605,  252 => 602,  247 => 600,  241 => 597,  235 => 593,  232 => 523,  230 => 132,  207 => 112,  198 => 105,  195 => 104,  183 => 95,  175 => 89,  173 => 88,  139 => 56,  137 => 54,  132 => 52,  125 => 48,  121 => 47,  117 => 46,  113 => 45,  107 => 42,  101 => 39,  97 => 38,  91 => 35,  83 => 30,  77 => 27,  71 => 24,  65 => 21,  43 => 1,);
+        return array (  724 => 519,  717 => 518,  321 => 128,  314 => 127,  307 => 55,  300 => 54,  286 => 609,  280 => 606,  276 => 605,  272 => 604,  268 => 603,  264 => 602,  260 => 601,  256 => 600,  250 => 597,  245 => 595,  239 => 592,  233 => 588,  230 => 518,  228 => 127,  210 => 112,  201 => 105,  198 => 104,  186 => 95,  182 => 94,  175 => 89,  173 => 88,  139 => 56,  137 => 54,  132 => 52,  125 => 48,  121 => 47,  117 => 46,  113 => 45,  107 => 42,  101 => 39,  97 => 38,  91 => 35,  83 => 30,  77 => 27,  71 => 24,  65 => 21,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -906,8 +904,8 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
                         <ul class=\"cart\">
                             <li>
                                 <ul class=\"dropdown-menu no-padding\">
-                                    <li style=\"color: #696666\" class=\"button\">
-                                        <a href=\"#\" title=\"View Cart\">Profile</a>
+                                    <li style=\"color: #FF8661\"  class=\"button\">
+                                        <a href=\"{{ path('userProfile')}}\" title=\"View Cart\">Profile</a>
                                         <a href=\"{{ path('fos_user_security_logout') }}\" title=\"Log out\">Log out</a>
                                     </li>
                                 </ul>
@@ -929,12 +927,7 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
                             </li>
                             <li><a href=\"#product-section\" style=\"color: #FF8661\" title=\"Products\">FAQ</a></li>
-                            <li class=\"dropdown\">
-                                <a href=\"shop.html\" title=\"Shop\" class=\"dropdown-toggle\" role=\"button\" style=\"color: #FF8661\" aria-haspopup=\"true\" aria-expanded=\"false\">Profile</a>
-                                <i class=\"ddl-switch fa fa-angle-down\"></i>
-                                <ul class=\"dropdown-menu\">
-                                </ul>
-                            </li>
+
                             <li class=\"dropdown\">
                                 <a href=\"blog.html\" title=\"Blog\" class=\"dropdown-toggle\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color: #FF8661\">Contact</a>
 
@@ -1433,6 +1426,6 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
 <!-- Mirrored from premiumlayers.net/demo/html/maxshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Aug 2020 11:27:57 GMT -->
 </html>
-", "base.html.twig", "/home/emir/Bureau/fashionBoard/templates/base.html.twig");
+", "base.html.twig", "/home/emir/Bureau/untitled/templates/base.html.twig");
     }
 }
