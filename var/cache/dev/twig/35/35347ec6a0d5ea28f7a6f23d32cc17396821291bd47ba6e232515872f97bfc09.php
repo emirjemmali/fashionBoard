@@ -143,6 +143,6 @@ class __TwigTemplate_7642f5f014b41d0845778501d4274aa6e623e7c164ad0c3c0285734543d
 \t\t</li>
 \t{% endfor %}
 </ul>
-", "CraueTwigExtensionsBundle:ChangeLanguage:changeLanguage_content.html.twig", "/home/emir/Bureau/untitled/vendor/craue/twigextensions-bundle/Resources/views/ChangeLanguage/changeLanguage_content.html.twig");
+", "CraueTwigExtensionsBundle:ChangeLanguage:changeLanguage_content.html.twig", "/home/emir/Bureau/fashionBoard/vendor/craue/twigextensions-bundle/Resources/views/ChangeLanguage/changeLanguage_content.html.twig");
     }
 }

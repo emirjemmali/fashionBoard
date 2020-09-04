@@ -87,6 +87,6 @@ class __TwigTemplate_9ee14fca71cd92c16cee0c3447f75cd160f9abe41fbb42c7c7463413c35
         <input type=\"submit\" value=\"{{ 'profile.edit.submit'|trans }}\" />
     </div>
 {{ form_end(form) }}
-", "@FOSUser/Profile/edit_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig");
+", "@FOSUser/Profile/edit_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Profile/edit_content.html.twig");
     }
 }

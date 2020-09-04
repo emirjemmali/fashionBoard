@@ -1087,6 +1087,6 @@ class __TwigTemplate_5c8bcfb8f78bbb75f824b26e3117aae1a0321981d878772902ff3794fdc
 </body>
 <!-- Mirrored from themesboss.com/fadmin/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue
                         <a href=\"ui-tabs-accordions.html\">Tabs &amp; Accordions</a></li>, 11 Aug 2020 01:18:13 GMT -->
-</html>", "backOffice/template.html", "/home/emir/Bureau/untitled/templates/backOffice/template.html");
+</html>", "backOffice/template.html", "/home/emir/Bureau/fashionBoard/templates/backOffice/template.html");
     }
 }

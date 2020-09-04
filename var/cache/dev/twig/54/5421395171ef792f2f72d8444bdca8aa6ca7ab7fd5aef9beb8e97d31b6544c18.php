@@ -976,6 +976,6 @@ class __TwigTemplate_2877e6ac9a31487870baf1370922e83f180a483dd601739b08c883657da
         {% endif %}
     {% endfor %}
 {% endblock %}
-", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
+", "SwiftmailerBundle:Collector:swiftmailer.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/swiftmailer-bundle/Resources/views/Collector/swiftmailer.html.twig");
     }
 }

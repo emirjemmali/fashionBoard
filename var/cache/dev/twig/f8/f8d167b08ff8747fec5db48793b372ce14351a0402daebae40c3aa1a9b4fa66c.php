@@ -90,6 +90,6 @@ class __TwigTemplate_c5e53be8c93f3b7dbd9d2b016d98a0a3c0aeec71607ca7b6b97805580ca
 \t{# You could use the variable \"locale\" here to add an image or anything else. #}
 \t{{ parent() }}
 {% endblock %}
-", "CraueTwigExtensionsBundle:ChangeLanguage:changeLanguage_customization.html.twig", "/home/emir/Bureau/untitled/vendor/craue/twigextensions-bundle/Resources/views/ChangeLanguage/changeLanguage_customization.html.twig");
+", "CraueTwigExtensionsBundle:ChangeLanguage:changeLanguage_customization.html.twig", "/home/emir/Bureau/fashionBoard/vendor/craue/twigextensions-bundle/Resources/views/ChangeLanguage/changeLanguage_customization.html.twig");
     }
 }

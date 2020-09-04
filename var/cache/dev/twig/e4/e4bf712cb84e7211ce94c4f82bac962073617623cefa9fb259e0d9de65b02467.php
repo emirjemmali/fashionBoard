@@ -203,6 +203,6 @@ class __TwigTemplate_a0759dafdf0a885018fe2de986bf194957fe1f90773b0cf02f48c9e2542
         {{ include('@Twig/base_js.html.twig') }}
     </body>
 </html>
-", "TwigBundle::layout.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
+", "TwigBundle::layout.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/layout.html.twig");
     }
 }

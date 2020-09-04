@@ -269,6 +269,6 @@ class __TwigTemplate_dbd1b2bbc3955efeab8c6bf79430852565ed384ff3a086ff874288f6846
         {{- form_rest(form) -}}
     </table>
 {%- endblock form_widget_compound -%}
-", "form_table_layout.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
+", "form_table_layout.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bridge/Resources/views/Form/form_table_layout.html.twig");
     }
 }

@@ -94,6 +94,6 @@ class __TwigTemplate_2f4cfd15fa3242f124ddb18efba5e00960c4815f30cb884b9f4f43f3997
 {{ 'resetting.check_email'|trans({'%tokenLifetime%': tokenLifetime})|nl2br }}
 </p>
 {% endblock %}
-", "@FOSUser/Resetting/check_email.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Resetting/check_email.html.twig");
+", "@FOSUser/Resetting/check_email.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Resetting/check_email.html.twig");
     }
 }

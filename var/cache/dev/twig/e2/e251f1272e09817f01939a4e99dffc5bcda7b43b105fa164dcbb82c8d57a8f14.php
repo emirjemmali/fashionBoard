@@ -74,6 +74,6 @@ class __TwigTemplate_434a76592c05c94d3167e028049a357c9a2741ca9a77ade15338a1f6ca9
 <div class=\"fos_user_group_show\">
     <p>{{ 'group.show.name'|trans }}: {{ group.getName() }}</p>
 </div>
-", "FOSUserBundle:Group:show_content.html.twig", "/home/emir/Bureau/untitled/vendor/friendsofsymfony/user-bundle/Resources/views/Group/show_content.html.twig");
+", "FOSUserBundle:Group:show_content.html.twig", "/home/emir/Bureau/fashionBoard/vendor/friendsofsymfony/user-bundle/Resources/views/Group/show_content.html.twig");
     }
 }

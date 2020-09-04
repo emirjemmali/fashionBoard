@@ -65,6 +65,6 @@ class __TwigTemplate_c2781e452217d914496d53fcd6396e0d84475201b869d85e4b3c34716b3
     <?php if (strlen(\$value) > 0): ?> value=\"<?php echo \$view->escape(\$value) ?>\"<?php endif ?>
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "FrameworkBundle:Form:checkbox_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/checkbox_widget.html.php");
+", "FrameworkBundle:Form:checkbox_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/checkbox_widget.html.php");
     }
 }

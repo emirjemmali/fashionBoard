@@ -67,6 +67,6 @@ class __TwigTemplate_0f63f4beaf55654052b8a7682fcf711da60c17aeda01695807f3fb3928c
         return new Source("{% extends 'base.html.twig' %}
 
 
-", "default/index.html.twig", "/home/emir/Bureau/untitled/templates/default/index.html.twig");
+", "default/index.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/index.html.twig");
     }
 }

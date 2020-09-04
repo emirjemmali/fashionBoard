@@ -65,6 +65,6 @@ class __TwigTemplate_62d9de8b9a58d86d7d63d0f39dd92fa9f578f25d0126c146a59c6f6478d
         <?php echo \$view['form']->row(\$child) ?>
     <?php endif; ?>
 <?php endforeach; ?>
-", "FrameworkBundle:Form:form_rest.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/form_rest.html.php");
+", "FrameworkBundle:Form:form_rest.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/form_rest.html.php");
     }
 }

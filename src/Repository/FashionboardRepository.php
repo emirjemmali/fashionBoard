@@ -18,7 +18,21 @@ class FashionboardRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Fashionboard::class);
     }
-
+    public function getUsers(){
+        return $this->createQueryBuilder('a')
+            ->groupBy('a.user')
+            ->getQuery()
+            ->getResult();
+    }
+    public function findByUser( $value){
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.clientActivation = true')
+            ->andWhere('a.adminValidation = false')
+            ->andWhere('a.user = :id')
+            ->setParameter('id', $value)
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Fashionboard[] Returns an array of Fashionboard objects
     //  */

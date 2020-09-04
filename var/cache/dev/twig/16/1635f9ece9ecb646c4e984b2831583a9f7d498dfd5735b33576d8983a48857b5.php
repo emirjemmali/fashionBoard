@@ -102,6 +102,6 @@ class __TwigTemplate_4c06052c8bd5459fe82df9605631b9062646e5bc4df84838fdea4a10e09
     </exception>
 {% endfor %}
 </error>
-", "TwigBundle:Exception:exception.xml.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
+", "TwigBundle:Exception:exception.xml.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/exception.xml.twig");
     }
 }

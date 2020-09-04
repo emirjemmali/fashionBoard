@@ -67,6 +67,6 @@ class __TwigTemplate_729970ad28df76a98183865e30a6602ca9ba951e36478c9bf9aaaa99ce6
     <?php \$help = false === \$help_html ? \$view->escape(\$help) : \$help ?>
     <p id=\"<?php echo \$view->escape(\$id); ?>_help\" <?php echo ' '.\$view['form']->block(\$form, 'attributes', ['attr' => \$help_attr]); ?>><?php echo \$help; ?></p>
 <?php endif; ?>
-", "FrameworkBundle:Form:form_help.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/form_help.html.php");
+", "FrameworkBundle:Form:form_help.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/form_help.html.php");
     }
 }

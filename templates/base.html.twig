@@ -86,21 +86,21 @@
                     </div>
                     <!-- Menu Icon -->
                     {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                    <div style="color: #FF8661" class="menu-icon">
-                        <ul class="cart">
-                            <li>
-                                <ul class="dropdown-menu no-padding">
-                                    <li style="color: #FF8661"  class="button">
-                                        <a href="{{ path('userProfile')}}" title="View Cart">Profile</a>
-                                        <a href="{{ path('fos_user_security_logout') }}" title="Log out">Log out</a>
-                                    </li>
+
+                    <div style="color: #FF8661;" class="menu-icon">
+                        <ul class="cart" style="all: unset">
+                                <ul id="popover-content" style="display: inline-grid;background-color: white;padding: unset;width: 220px" class="dropdown-menu list-group no-padding" style="display: none">
+                                    <a href="{{ path('userProfile') }}" class="list-group-item"><i class="icon icon-User"></i>        Profile</a>
+                                    <a href="{{ path('wardrobe') }}" class="list-group-item"><i class="icon icon-House"></i>  wardrobe</a>
+                                    <a href="{{ path('fos_user_security_logout') }}" class="list-group-item"><i class="icon glyphicon-log-out"></i> log out</a>
                                 </ul>
-                            </li>
-                            <li><a href="#" title="User"><i class="icon icon-User"></i></a></li>
+                            <li><a href="#" class="pop" data-placement="bottom"  data-trigger="hover" data-toggle="popover"><i class="icon icon-User"></i></a></li>
                         </ul>
                     </div><!-- Menu Icon /- -->
 
                     {% else %}
+
+
                     {% endif %}
                     <div class="navbar-collapse collapse navbar-right" id="navbar">
                         <ul class="nav navbar-nav">
@@ -115,7 +115,13 @@
                             <li><a href="#product-section" style="color: #FF8661" title="Products">FAQ</a></li>
 
                             <li class="dropdown">
-                                <a href="blog.html" title="Blog" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false" style="color: #FF8661">Contact</a>
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+
+                                {% else%}
+                            <li><a href="{{ path('fos_user_security_login') }}" style="color: #FF8661" title="Products">Log in</a></li>
+
+                            {% endif %}
+
 
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -609,6 +615,37 @@
 <script src="{{ asset('js/functions.js') }}"></script>
 
 </body>
+<script>
+   $(function() {
+        $('[data-toggle="popover"]').popover({
+html:true
+        }).on("mouseenter", function() {
+            var _this = this;
+            $('#popover-content').html();
+            $('[data-toggle="popover"]').on("mouseleave", function() {
+                $('#popover-content').show();
+            });
+        }).on("mouseleave", function() {
+            var _this = this;
+            setTimeout(function() {
+                console.log($(".popover:hover").length)
+                if (!$('[data-toggle="popover"]').length) {
+                    $('#popover-content').hide();
+                }
+            }, 20000000);
+        });
+    })
 
+  /*$(function() {
+      $('[data-toggle="popover"]').popover({
+          html: true,
+          content: function() {
+
+              $('#popover-content').html();
+
+          }
+      });
+  })*/
+</script>
 <!-- Mirrored from premiumlayers.net/demo/html/maxshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Aug 2020 11:27:57 GMT -->
 </html>

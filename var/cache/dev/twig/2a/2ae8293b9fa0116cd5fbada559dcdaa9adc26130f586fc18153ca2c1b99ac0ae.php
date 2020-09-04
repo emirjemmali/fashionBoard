@@ -88,6 +88,6 @@ class __TwigTemplate_e3e2e17599ef0f0919407d42c2d0710c13b2b4c6cd024bb9974354b4933
     {% endfor %}
     </ul>
 </div>
-", "@FOSUser/Group/list_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Group/list_content.html.twig");
+", "@FOSUser/Group/list_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Group/list_content.html.twig");
     }
 }

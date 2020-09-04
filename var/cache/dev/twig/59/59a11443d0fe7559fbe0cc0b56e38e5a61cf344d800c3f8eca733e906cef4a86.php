@@ -471,6 +471,6 @@ header .container { display: flex; justify-content: space-between; }
     .hidden-xs-down { display: initial; }
     .help-link { margin-left: 30px; }
 }
-", "TwigBundle::exception.css.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/exception.css.twig");
+", "TwigBundle::exception.css.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/exception.css.twig");
     }
 }

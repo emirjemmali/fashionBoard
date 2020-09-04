@@ -77,6 +77,6 @@ class __TwigTemplate_7503cf82e4b3f5d97e9454202416bbb1d9f6de34eb4be41e7ca7ddd85dc
     <?php echo \$view['form']->block(\$form, 'form_rows'); ?>
     <?php echo \$view['form']->rest(\$form); ?>
 </table>
-", "FrameworkBundle:FormTable:form_widget_compound.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/FormTable/form_widget_compound.html.php");
+", "FrameworkBundle:FormTable:form_widget_compound.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/FormTable/form_widget_compound.html.php");
     }
 }

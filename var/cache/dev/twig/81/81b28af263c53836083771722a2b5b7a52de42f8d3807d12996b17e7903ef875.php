@@ -69,6 +69,6 @@ class __TwigTemplate_7a27bccb9648d17e7999c7fd59a84ca61b9d6e0c2c5adb48e6baba10930
         return new Source("/*
 {{ include('@Twig/Exception/exception.txt.twig', { exception: exception }) }}
 */
-", "TwigBundle:Exception:exception.js.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/exception.js.twig");
+", "TwigBundle:Exception:exception.js.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/exception.js.twig");
     }
 }

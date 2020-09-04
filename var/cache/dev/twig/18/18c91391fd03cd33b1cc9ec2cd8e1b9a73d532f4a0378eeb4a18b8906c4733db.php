@@ -259,8 +259,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
         echo "        ";
         if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 176, $this->source); })()), "user", [], "any", false, false, false, 176), "state", [], "any", false, false, false, 176) == 0)) {
             // line 177
-            echo "            <form role=\"form\">
-                <div class=\"panel panel-primary setup-content\" id=\"step-1\">
+            echo "                <div class=\"panel panel-primary setup-content\" id=\"step-1\">
                     <div class=\"panel-heading\">
                         <h3 class=\"panel-title\">Shipper </h3>
                     </div>
@@ -308,93 +307,94 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     </div>
                     <div class=\"panel-body\">
                         <div class=\"payment\">
-                            <div class=\"payment-tab payment-tab-active\">
-                                <div class=\"payment-tab-trigger form-group\">
-                                    <input id=\"paypal\" name=\"cardType\" type=\"radio\" value=\"paypal\">
-                                    <label for=\"paypal\">PayPal</label>
-                                    <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
-                                </div>
-                                <div class=\"payment-tab-content\">
-                                    <p>You will be redirected to PayPal to complete payment.</p>
-                                </div>
-                            </div>
+                            ";
+            // line 225
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 225, $this->source); })()), 'form_start');
+            echo "
+
                             <div class=\"payment-tab\">
                                 <div class=\"payment-tab-trigger\">
-                                    <input type=\"radio\" name=\"cardType\" id=\"creditCart\" value=\"creditCard\">
+                                    ";
+            // line 229
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 229, $this->source); })()), "method", [], "any", false, false, false, 229), 'row');
+            echo "
                                     <label for=\"creditCart\">Credit / Debit Card</label>
                                     <img class=\"payment-logo\" width=\"100px\" src=\"https://i.imgur.com/IHEKLgm.png\" alt=\"\">
+                                    ";
+            // line 232
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 232, $this->source); })()), 'widget');
+            echo "
+
                                 </div>
                                 <div class=\"payment-tab-content\">
                                     <div class=\"row\">
                                         <div class=\"col-md-6\">
                                             <div class=\"card-label\">
                                                 <label for=\"nameOnCard\">Name on Card</label>
-                                                <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <div class=\"card-label\">
                                                 <label for=\"cardNumber\">Card Number</label>
                                                 <input class=\"form-control\" id=\"cardNumber\" name=\"cardNumber\"
-                                                       placeholder=\"1234  5678  9876  5432\" required type=\"text\">
+                                                       placeholder=\"1234  5678  9876  5432\"  type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-4\">
                                             <div class=\"card-label\">
                                                 <label for=\"expirynDate\">Expiry Month</label>
-                                                <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\"  type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-4\">
                                             <div class=\"card-label\">
                                                 <label for=\"expiryDate\">Expiry Year</label>
-                                                <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\"  type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-4\">
                                             <div class=\"card-label\">
                                                 <label for=\"cvv\">CVV</label>
-                                                <input class=\"form-control\" id=\"cvv\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"cvv\"  type=\"text\">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <br>
-                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">pay</button>
+                        <input class=\"btn btn-primary nextBtn pull-right\" type=\"submit\" value=\"Pay € ";
+            // line 274
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["bundle"]) || array_key_exists("bundle", $context) ? $context["bundle"] : (function () { throw new RuntimeError('Variable "bundle" does not exist.', 274, $this->source); })()), "price", [], "any", false, false, false, 274), "html", null, true);
+            echo "\" />
+                        ";
+            // line 275
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 275, $this->source); })()), 'form_end');
+            echo "
+
                     </div>
                 </div>
 
-            </form>
         ";
         } else {
+            // line 281
+            echo "
+            ";
+            // line 283
+            echo "
+
+            ";
             // line 286
             echo "
+
             ";
             // line 288
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 288, $this->source); })()), 'form_start');
             echo "
 
-            ";
-            // line 291
-            echo "
 
-            ";
-            // line 293
-            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 293, $this->source); })()), 'form_start');
-            echo "
-            ";
-            // line 294
-            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 294, $this->source); })()), 'widget');
-            echo "
-            <input type=\"submit\" value=\"Pay € ";
-            // line 295
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["bundle"]) || array_key_exists("bundle", $context) ? $context["bundle"] : (function () { throw new RuntimeError('Variable "bundle" does not exist.', 295, $this->source); })()), "price", [], "any", false, false, false, 295), "html", null, true);
-            echo "\" />
-            ";
-            // line 296
-            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 296, $this->source); })()), 'form_end');
-            echo "
 
             <form name=\"jms_choose_payment_method\" method=\"post\" role=\"form\">
             <div class=\"panel panel-primary setup-content\" id=\"step-1\">
@@ -405,9 +405,16 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     <div class=\"payment\">
                         <div class=\"payment-tab payment-tab-active\">
                             <div class=\"payment-tab-trigger form-group\">
-                                <input type=\"radio\" id=\"jms_choose_payment_method_method_0\" name=\"jms_choose_payment_method[method]\" required=\"required\" value=\"paypal_express_checkout\">                                <label for=\"paypal\">PayPal</label>
-                                <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
-                                <input type=\"hidden\" id=\"jms_choose_payment_method__token\" name=\"jms_choose_payment_method[_token]\" value=\"Yv6r12pZ-T7XqZolXGscKT36L9bHgGLkqJfBGx3AWko\">
+                                ";
+            // line 301
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 301, $this->source); })()), "method", [], "any", false, false, false, 301), 'row');
+            echo "
+
+                                                      <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
+                                ";
+            // line 304
+            echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 304, $this->source); })()), 'widget');
+            echo "
                             </div>
                             <div class=\"payment-tab-content\">
                                 <p>You will be redirected to PayPal to complete payment.</p>
@@ -458,15 +465,20 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     </div>
                     <br>
                     <input class=\"btn btn-primary nextBtn pull-right\" type=\"submit\" value=\"Pay € ";
-            // line 359
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["bundle"]) || array_key_exists("bundle", $context) ? $context["bundle"] : (function () { throw new RuntimeError('Variable "bundle" does not exist.', 359, $this->source); })()), "price", [], "any", false, false, false, 359), "html", null, true);
+            // line 354
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["bundle"]) || array_key_exists("bundle", $context) ? $context["bundle"] : (function () { throw new RuntimeError('Variable "bundle" does not exist.', 354, $this->source); })()), "price", [], "any", false, false, false, 354), "html", null, true);
             echo "\" />
                 </div>
+                ";
+            // line 356
+            echo             $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 356, $this->source); })()), 'form_end');
+            echo "
+
             </div>
             </form>
         ";
         }
-        // line 364
+        // line 361
         echo "
     </div>
 
@@ -490,7 +502,7 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
     public function getDebugInfo()
     {
-        return array (  470 => 364,  462 => 359,  396 => 296,  392 => 295,  388 => 294,  384 => 293,  380 => 291,  376 => 288,  373 => 286,  262 => 177,  259 => 176,  243 => 162,  220 => 141,  218 => 140,  152 => 76,  145 => 75,  114 => 51,  109 => 49,  63 => 5,  56 => 4,  48 => 1,  46 => 2,  36 => 1,);
+        return array (  482 => 361,  474 => 356,  469 => 354,  416 => 304,  410 => 301,  394 => 288,  390 => 286,  386 => 283,  383 => 281,  374 => 275,  370 => 274,  325 => 232,  319 => 229,  312 => 225,  262 => 177,  259 => 176,  243 => 162,  220 => 141,  218 => 140,  152 => 76,  145 => 75,  114 => 51,  109 => 49,  63 => 5,  56 => 4,  48 => 1,  46 => 2,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -671,7 +683,6 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
         {% endif %}
         {% if ( app.user.state==0 ) %}
-            <form role=\"form\">
                 <div class=\"panel panel-primary setup-content\" id=\"step-1\">
                     <div class=\"panel-heading\">
                         <h3 class=\"panel-title\">Shipper </h3>
@@ -720,65 +731,61 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     </div>
                     <div class=\"panel-body\">
                         <div class=\"payment\">
-                            <div class=\"payment-tab payment-tab-active\">
-                                <div class=\"payment-tab-trigger form-group\">
-                                    <input id=\"paypal\" name=\"cardType\" type=\"radio\" value=\"paypal\">
-                                    <label for=\"paypal\">PayPal</label>
-                                    <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
-                                </div>
-                                <div class=\"payment-tab-content\">
-                                    <p>You will be redirected to PayPal to complete payment.</p>
-                                </div>
-                            </div>
+                            {{ form_start(form) }}
+
                             <div class=\"payment-tab\">
                                 <div class=\"payment-tab-trigger\">
-                                    <input type=\"radio\" name=\"cardType\" id=\"creditCart\" value=\"creditCard\">
+                                    {{ form_row(form.method) }}
                                     <label for=\"creditCart\">Credit / Debit Card</label>
                                     <img class=\"payment-logo\" width=\"100px\" src=\"https://i.imgur.com/IHEKLgm.png\" alt=\"\">
+                                    {{ form_widget(form) }}
+
                                 </div>
                                 <div class=\"payment-tab-content\">
                                     <div class=\"row\">
                                         <div class=\"col-md-6\">
                                             <div class=\"card-label\">
                                                 <label for=\"nameOnCard\">Name on Card</label>
-                                                <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"nameOnCard\" name=\"nameOnCard\" type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-6\">
                                             <div class=\"card-label\">
                                                 <label for=\"cardNumber\">Card Number</label>
                                                 <input class=\"form-control\" id=\"cardNumber\" name=\"cardNumber\"
-                                                       placeholder=\"1234  5678  9876  5432\" required type=\"text\">
+                                                       placeholder=\"1234  5678  9876  5432\"  type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-4\">
                                             <div class=\"card-label\">
                                                 <label for=\"expirynDate\">Expiry Month</label>
-                                                <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"expiryDate\" placeholder=\"MM\"  type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-4\">
                                             <div class=\"card-label\">
                                                 <label for=\"expiryDate\">Expiry Year</label>
-                                                <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"expirynDate\" placeholder=\"YY\"  type=\"text\">
                                             </div>
                                         </div>
                                         <div class=\"col-md-4\">
                                             <div class=\"card-label\">
                                                 <label for=\"cvv\">CVV</label>
-                                                <input class=\"form-control\" id=\"cvv\" required type=\"text\">
+                                                <input class=\"form-control\" id=\"cvv\"  type=\"text\">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <br>
-                        <button class=\"btn btn-primary nextBtn pull-right\" type=\"button\">pay</button>
+                        <input class=\"btn btn-primary nextBtn pull-right\" type=\"submit\" value=\"Pay € {{ bundle.price }}\" />
+                        {{ form_end(form) }}
+
                     </div>
                 </div>
 
-            </form>
         {% else %}
 
             {# templates/Orders/show.html.twig #}
@@ -788,9 +795,8 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
 
             {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <input type=\"submit\" value=\"Pay € {{ bundle.price }}\" />
-            {{ form_end(form) }}
+
+
 
             <form name=\"jms_choose_payment_method\" method=\"post\" role=\"form\">
             <div class=\"panel panel-primary setup-content\" id=\"step-1\">
@@ -801,9 +807,10 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     <div class=\"payment\">
                         <div class=\"payment-tab payment-tab-active\">
                             <div class=\"payment-tab-trigger form-group\">
-                                <input type=\"radio\" id=\"jms_choose_payment_method_method_0\" name=\"jms_choose_payment_method[method]\" required=\"required\" value=\"paypal_express_checkout\">                                <label for=\"paypal\">PayPal</label>
-                                <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
-                                <input type=\"hidden\" id=\"jms_choose_payment_method__token\" name=\"jms_choose_payment_method[_token]\" value=\"Yv6r12pZ-T7XqZolXGscKT36L9bHgGLkqJfBGx3AWko\">
+                                {{ form_row(form.method) }}
+
+                                                      <img class=\"payment-logo paypal\" width=\"100px\" src=\"https://i.imgur.com/ApBxkXU.png\" alt=\"\">
+                                {{ form_widget(form) }}
                             </div>
                             <div class=\"payment-tab-content\">
                                 <p>You will be redirected to PayPal to complete payment.</p>
@@ -855,6 +862,8 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
                     <br>
                     <input class=\"btn btn-primary nextBtn pull-right\" type=\"submit\" value=\"Pay € {{ bundle.price }}\" />
                 </div>
+                {{ form_end(form) }}
+
             </div>
             </form>
         {% endif %}
@@ -863,6 +872,6 @@ class __TwigTemplate_67342249fd19dd99c72bbb0c16a6ed0ee7afb2fb8084afd1341a5595e20
 
 
 
-{% endblock %}", "default/purchase.html.twig", "/home/emir/Bureau/untitled/templates/default/purchase.html.twig");
+{% endblock %}", "default/purchase.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/purchase.html.twig");
     }
 }

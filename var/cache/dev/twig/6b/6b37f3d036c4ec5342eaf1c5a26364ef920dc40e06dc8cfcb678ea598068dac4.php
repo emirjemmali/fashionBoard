@@ -110,7 +110,7 @@ class __TwigTemplate_992dbfb0ec956fa201f8d4469b152ba2a5a93db9f163fb5349e6da3980e
                 <td><img src=\"";
             // line 38
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["product"], "brochureFilename", [], "any", false, false, false, 38))), "html", null, true);
-            echo "\" style=\"width:100%;height:120px\"></td>
+            echo "\" style=\"width:100px;height:100px\"></td>
                 <td>
                     <a href=\"";
             // line 40
@@ -212,7 +212,7 @@ class __TwigTemplate_992dbfb0ec956fa201f8d4469b152ba2a5a93db9f163fb5349e6da3980e
                 <td>{{ product.prix|e }}</td>
                 <td>{{ product.url|e }}</td>
                 <td>{{ product.marque|e }}</td>
-                <td><img src=\"{{ asset('uploads/brochures/'~product.brochureFilename) }}\" style=\"width:100%;height:120px\"></td>
+                <td><img src=\"{{ asset('uploads/brochures/'~product.brochureFilename) }}\" style=\"width:100px;height:100px\"></td>
                 <td>
                     <a href=\"{{ path('updateProduct', {'id': product.id}) }}\">
                         <i class=\"fa fa-edit\" style=\"color:yellowgreen\"></i>
@@ -243,6 +243,6 @@ class __TwigTemplate_992dbfb0ec956fa201f8d4469b152ba2a5a93db9f163fb5349e6da3980e
         </tfoot>
     </table>
 
-{% endblock %}", "backOffice/manageProducts.html.twig", "/home/emir/Bureau/untitled/templates/backOffice/manageProducts.html.twig");
+{% endblock %}", "backOffice/manageProducts.html.twig", "/home/emir/Bureau/fashionBoard/templates/backOffice/manageProducts.html.twig");
     }
 }

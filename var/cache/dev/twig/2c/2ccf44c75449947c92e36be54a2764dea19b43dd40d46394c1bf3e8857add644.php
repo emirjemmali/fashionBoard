@@ -156,28 +156,16 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                         <ul class=\"sub-menu\">
                             <li><a href=\"";
         // line 75
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("manageOrders");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listOrders");
         echo "\">Liste des ordes</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a >
-                            <i class=\"menu-icon mdi mdi-stackexchange\"></i>
-                            <span>Gestion des quizs</span><i class=\"accordion-icon fa fa-angle-right\"></i>
-                        </a>
-                        <ul class=\"sub-menu\">
-                            <li><a href=\"";
-        // line 84
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("manageQuiz");
-        echo "\">Liste des quizs</a></li>
-                            <li><a href=\"";
-        // line 85
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("addQuiz");
-        echo "\">Ajouter quiz</a></li>
-
-                        </ul>
-                    </li>
-                </ul>
+";
+        // line 86
+        echo "
+";
+        // line 89
+        echo "                </ul>
             </div>
         </div>
     </div>
@@ -350,7 +338,7 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
 
     public function getDebugInfo()
     {
-        return array (  335 => 171,  328 => 170,  308 => 183,  304 => 182,  300 => 181,  296 => 180,  292 => 179,  288 => 178,  284 => 177,  280 => 176,  276 => 175,  271 => 172,  269 => 170,  257 => 161,  246 => 153,  175 => 85,  171 => 84,  159 => 75,  146 => 65,  142 => 64,  130 => 55,  126 => 54,  113 => 44,  109 => 43,  95 => 32,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 11,  51 => 9,  41 => 1,);
+        return array (  323 => 171,  316 => 170,  296 => 183,  292 => 182,  288 => 181,  284 => 180,  280 => 179,  276 => 178,  272 => 177,  268 => 176,  264 => 175,  259 => 172,  257 => 170,  245 => 161,  234 => 153,  168 => 89,  165 => 86,  159 => 75,  146 => 65,  142 => 64,  130 => 55,  126 => 54,  113 => 44,  109 => 43,  95 => 32,  76 => 16,  72 => 15,  68 => 14,  64 => 13,  60 => 12,  55 => 11,  51 => 9,  41 => 1,);
     }
 
     public function getSourceContext()
@@ -429,20 +417,20 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
                             <i class=\"accordion-icon fa fa-angle-right\"></i>
                         </a>
                         <ul class=\"sub-menu\">
-                            <li><a href=\"{{ path('manageOrders') }}\">Liste des ordes</a></li>
+                            <li><a href=\"{{ path('listOrders') }}\">Liste des ordes</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a >
-                            <i class=\"menu-icon mdi mdi-stackexchange\"></i>
-                            <span>Gestion des quizs</span><i class=\"accordion-icon fa fa-angle-right\"></i>
-                        </a>
-                        <ul class=\"sub-menu\">
-                            <li><a href=\"{{ path('manageQuiz') }}\">Liste des quizs</a></li>
-                            <li><a href=\"{{ path('addQuiz') }}\">Ajouter quiz</a></li>
+{#                    <li>#}
+{#                        <a >#}
+{#                            <i class=\"menu-icon mdi mdi-stackexchange\"></i>#}
+{#                            <span>Gestion des quizs</span><i class=\"accordion-icon fa fa-angle-right\"></i>#}
+{#                        </a>#}
+{#                        <ul class=\"sub-menu\">#}
+{#                            <li><a href=\"{{ path('manageQuiz') }}\">Liste des quizs</a></li>#}
+{#                            <li><a href=\"{{ path('addQuiz') }}\">Ajouter quiz</a></li>#}
 
-                        </ul>
-                    </li>
+{#                        </ul>#}
+{#                    </li>#}
                 </ul>
             </div>
         </div>
@@ -549,6 +537,6 @@ class __TwigTemplate_9050430a1f1357c02aad29c3595188bd65a4445074be64e7ff3c44b6d76
 <script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js\"></script>
 
 </body>
-</html>", "baseAdmin.html.twig", "/home/emir/Bureau/untitled/templates/baseAdmin.html.twig");
+</html>", "baseAdmin.html.twig", "/home/emir/Bureau/fashionBoard/templates/baseAdmin.html.twig");
     }
 }

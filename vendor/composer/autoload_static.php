@@ -17,11 +17,17 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
+        '72579e7bd17821bb1321b87411366eae' => __DIR__ . '/..' . '/illuminate/support/helpers.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
+        '3847a7d79cdbf13a4f13711a551b1100' => __DIR__ . '/..' . '/yoeunes/notify/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'Y' => 
+        array (
+            'Yoeunes\\Notify\\' => 15,
+        ),
         'W' => 
         array (
             'Webimpress\\SafeWriter\\' => 22,
@@ -87,6 +93,7 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
@@ -106,6 +113,13 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         'K' => 
         array (
             'KnpU\\OAuth2ClientBundle\\' => 24,
+        ),
+        'I' => 
+        array (
+            'Illuminate\\Support\\' => 19,
+            'Illuminate\\Session\\' => 19,
+            'Illuminate\\Filesystem\\' => 22,
+            'Illuminate\\Contracts\\' => 21,
         ),
         'G' => 
         array (
@@ -143,6 +157,7 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         'C' => 
         array (
             'Craue\\TwigExtensionsBundle\\' => 27,
+            'Carbon\\' => 7,
         ),
         'A' => 
         array (
@@ -152,6 +167,10 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
     );
 
     public static $prefixDirsPsr4 = array (
+        'Yoeunes\\Notify\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yoeunes/notify/src',
+        ),
         'Webimpress\\SafeWriter\\' => 
         array (
             0 => __DIR__ . '/..' . '/webimpress/safe-writer/src',
@@ -368,6 +387,10 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle/src',
         ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -421,6 +444,22 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         'KnpU\\OAuth2ClientBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/knpuniversity/oauth2-client-bundle/src',
+        ),
+        'Illuminate\\Support\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/support',
+        ),
+        'Illuminate\\Session\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/session',
+        ),
+        'Illuminate\\Filesystem\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/filesystem',
+        ),
+        'Illuminate\\Contracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/illuminate/contracts',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -513,6 +552,10 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
         array (
             0 => __DIR__ . '/..' . '/craue/twigextensions-bundle',
         ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
         'App\\Tests\\' => 
         array (
             0 => __DIR__ . '/../..' . '/tests',
@@ -550,6 +593,7 @@ class ComposerStaticInit099d533a61c46bf1806b400d72e081d2
 
     public static $classMap = array (
         'Collator' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Collator.php',
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'IntlDateFormatter' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/IntlDateFormatter.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Locale' => __DIR__ . '/..' . '/symfony/intl/Resources/stubs/Locale.php',

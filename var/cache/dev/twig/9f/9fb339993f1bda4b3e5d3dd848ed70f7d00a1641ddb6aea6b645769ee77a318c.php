@@ -84,6 +84,6 @@ class __TwigTemplate_2f3a7ae59f1346c12010589880c9c97873b13667d295054da09b0c63c6c
 {% block fos_user_content %}
 {% include \"@FOSUser/Profile/show_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "@FOSUser/Profile/show.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Profile/show.html.twig");
+", "@FOSUser/Profile/show.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Profile/show.html.twig");
     }
 }

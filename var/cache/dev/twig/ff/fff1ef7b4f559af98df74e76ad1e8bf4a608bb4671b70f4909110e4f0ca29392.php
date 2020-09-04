@@ -84,6 +84,6 @@ class __TwigTemplate_feaf51c95a39cc8493d334e58337d1c09c76ed51ee5a14dfafb2ec8956a
 {% block fos_user_content %}
 {% include \"@FOSUser/Group/list_content.html.twig\" %}
 {% endblock fos_user_content %}
-", "FOSUserBundle:Group:list.html.twig", "/home/emir/Bureau/untitled/vendor/friendsofsymfony/user-bundle/Resources/views/Group/list.html.twig");
+", "FOSUserBundle:Group:list.html.twig", "/home/emir/Bureau/fashionBoard/vendor/friendsofsymfony/user-bundle/Resources/views/Group/list.html.twig");
     }
 }

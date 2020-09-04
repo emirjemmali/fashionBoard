@@ -98,6 +98,6 @@ class __TwigTemplate_6536ab8c5c86740370308613d89975f8613d2b2827a8a4e6ed5c19c5a8b
   {{ include('@Twig/Exception/trace.txt.twig', { trace: trace }, with_context = false) }}
 {% endfor %}
 {% endif %}
-", "TwigBundle:Exception:traces.txt.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/traces.txt.twig");
+", "TwigBundle:Exception:traces.txt.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/traces.txt.twig");
     }
 }

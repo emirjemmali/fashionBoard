@@ -240,6 +240,42 @@ private static $installed = array (
       ),
       'reference' => '239400de7a173fe9901b9ac7c06497751f00727a',
     ),
+    'illuminate/contracts' => 
+    array (
+      'pretty_version' => 'v6.18.37',
+      'version' => '6.18.37.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0a144c2ee0163f8debd62da1386036567b1ba6b4',
+    ),
+    'illuminate/filesystem' => 
+    array (
+      'pretty_version' => 'v6.18.37',
+      'version' => '6.18.37.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f5ad508938fa8130b28de8a1a22210a7be8401e2',
+    ),
+    'illuminate/session' => 
+    array (
+      'pretty_version' => 'v6.18.37',
+      'version' => '6.18.37.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '92c7eede259fd6baf4f0da9765def0238480b086',
+    ),
+    'illuminate/support' => 
+    array (
+      'pretty_version' => 'v6.18.37',
+      'version' => '6.18.37.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '30e81a39fe96f145d807606900317f1dab96f456',
+    ),
     'jms/payment-core-bundle' => 
     array (
       'pretty_version' => '1.4.1',
@@ -302,6 +338,33 @@ private static $installed = array (
       array (
       ),
       'reference' => 'd9f2a1e000dc14eb3c02e15d15759385ec7ff0fb',
+    ),
+    'league/oauth2-facebook' => 
+    array (
+      'pretty_version' => '2.0.2',
+      'version' => '2.0.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'c482a851c93a6cb718270773635d6a0c8384b560',
+    ),
+    'league/oauth2-google' => 
+    array (
+      'pretty_version' => '3.0.3',
+      'version' => '3.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '18d1889897a8b18d85ecadacf74c9274d678d943',
+    ),
+    'nesbot/carbon' => 
+    array (
+      'pretty_version' => '2.39.0',
+      'version' => '2.39.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '0a41ea7f7fedacf307b7a339800e10356a042918',
     ),
     'nikic/php-parser' => 
     array (
@@ -421,6 +484,15 @@ private static $installed = array (
       array (
         0 => '1.0',
       ),
+    ),
+    'psr/simple-cache' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '408d5eafb83c57f6365a3ca330ff23aa4a5fa39b',
     ),
     'psr/simple-cache-implementation' => 
     array (
@@ -1013,6 +1085,15 @@ private static $installed = array (
       array (
       ),
       'reference' => 'd6e879960febb307c112538997316371f1e95b12',
+    ),
+    'yoeunes/notify' => 
+    array (
+      'pretty_version' => 'v1.0.5',
+      'version' => '1.0.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8d96c26306e3318741dd5d8fba90b4fd7824acca',
     ),
     'zendframework/zend-code' => 
     array (

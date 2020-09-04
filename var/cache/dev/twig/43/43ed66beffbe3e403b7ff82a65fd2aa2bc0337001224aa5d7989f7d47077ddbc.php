@@ -71,6 +71,6 @@ class __TwigTemplate_09b4f2a9c7e8b292c6fc9a3fbef325542702924b46cb7af02da2eaea9d9
 <?php printf('%s=\"%s\" ', \$view->escape(\$k), \$view->escape(\$v)) ?>
 <?php endif ?>
 <?php endforeach ?>
-", "FrameworkBundle:Form:choice_attributes.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
+", "FrameworkBundle:Form:choice_attributes.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/choice_attributes.html.php");
     }
 }

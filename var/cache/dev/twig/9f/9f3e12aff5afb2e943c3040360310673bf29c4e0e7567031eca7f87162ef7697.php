@@ -92,7 +92,10 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
         <!-- Section Header -->
         <div class=\"section-header\">
             <h3>Login</h3>
-            <p>If you don't have an account register now</p>
+            <p>If you don't have an account <a href=\"";
+        // line 50
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_registration_register");
+        echo "\">register now</a> </p>
         </div><!-- Section Header /- -->
 
         ";
@@ -171,7 +174,7 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
 
     public function getDebugInfo()
     {
-        return array (  149 => 83,  140 => 77,  121 => 60,  115 => 58,  113 => 57,  108 => 56,  102 => 54,  100 => 53,  51 => 6,  45 => 4,  43 => 3,  40 => 2,);
+        return array (  152 => 83,  143 => 77,  124 => 60,  118 => 58,  116 => 57,  111 => 56,  105 => 54,  103 => 53,  97 => 50,  51 => 6,  45 => 4,  43 => 3,  40 => 2,);
     }
 
     public function getSourceContext()
@@ -225,7 +228,7 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
         <!-- Section Header -->
         <div class=\"section-header\">
             <h3>Login</h3>
-            <p>If you don't have an account register now</p>
+            <p>If you don't have an account <a href=\"{{ path('fos_user_registration_register') }}\">register now</a> </p>
         </div><!-- Section Header /- -->
 
         {% if error %}
@@ -264,6 +267,6 @@ class __TwigTemplate_1fa5a4495870b8934d406db9de62c6218d2a7738a951e3b26f6859da897
                 </div>
             <div id=\"alert-msg\" class=\"alert-msg\"></div>
         </form>
-    </div></div>", "@FOSUser/Security/login_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Security/login_content.html.twig");
+    </div></div>", "@FOSUser/Security/login_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Security/login_content.html.twig");
     }
 }

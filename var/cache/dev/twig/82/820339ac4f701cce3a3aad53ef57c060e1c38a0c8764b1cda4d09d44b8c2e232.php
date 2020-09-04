@@ -73,6 +73,6 @@ class __TwigTemplate_e643ace40e6c8c3dd33b97764732169e60c6cf330658d7824793fc3ba0a
 {{ status_code }} {{ status_text }}
 
 */
-", "TwigBundle:Exception:error.js.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/error.js.twig");
+", "TwigBundle:Exception:error.js.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/error.js.twig");
     }
 }

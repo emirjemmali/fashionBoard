@@ -1009,6 +1009,6 @@ class __TwigTemplate_2ff8c150dce2bc9fe491f7ef1f030289d6f733918cd40f4f62f3c7b2251
 <script src=\"assets/js/custom.js\"></script>
 </body>
 <!-- Mirrored from themesboss.com/fadmin/maps.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 11 Aug 2020 01:22:02 GMT -->
-</html>", "backOffice/maps.html", "/home/emir/Bureau/untitled/templates/backOffice/maps.html");
+</html>", "backOffice/maps.html", "/home/emir/Bureau/fashionBoard/templates/backOffice/maps.html");
     }
 }

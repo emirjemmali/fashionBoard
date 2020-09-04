@@ -53,6 +53,6 @@ class __TwigTemplate_b892605723053b88d8e1ea604a807994585c2d973f0f2ad4a352d3c040a
 
     public function getSourceContext()
     {
-        return new Source("", "FrameworkBundle:Form:button_label.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
+        return new Source("", "FrameworkBundle:Form:button_label.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/button_label.html.php");
     }
 }

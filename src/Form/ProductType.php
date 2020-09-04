@@ -39,6 +39,7 @@ class ProductType extends AbstractType
                         'mimeTypes' => [
                             'image/png',
                             'image/jpg',
+                            'image/jpeg',
                             'application/pdf',
                             'application/x-pdf',
                         ],

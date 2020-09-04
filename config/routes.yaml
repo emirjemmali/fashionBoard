@@ -13,6 +13,36 @@ updateuser:
 userProfile:
   path: /userprofile
   controller: App\Controller\DefaultController::userProfile
+
+
+manageOrders:
+  path: /manageOrders
+  controller: App\Controller\DefaultController::manageOrders
+manageQuiz:
+  path: /manageQuiz
+  controller: App\Controller\DefaultController::manageQuiz
+addQuiz:
+  path: /addQuiz
+  controller: App\Controller\DefaultController::addQuiz
+dashboard:
+  path: /dashboard
+  controller: App\Controller\DefaultController::viewDashboard
+wardrobe:
+  path: /wardrob
+  controller: App\Controller\DefaultController::wardropfashionboard
+activatedfasionboard:
+  path: /activatefasionboard
+  controller: App\Controller\DefaultController::activationfasionboard
+quizanswer:
+  path: /quiz
+  controller: App\Controller\DefaultController::quizAnswer
+quizsubmit:
+  path: /submitquiz
+  controller: App\Controller\DefaultController::submitquiz
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
 manageBundle:
   path: /manageBundle
   controller: App\Controller\FashionBundleController::manageBundle
@@ -39,19 +69,16 @@ deleteProduct:
   controller: App\Controller\ProductController::deleteProduct
 listFashionBoard:
   path: /listFashionBoard
-  controller: App\Controller\DefaultController::listFashionBoard
+  controller: App\Controller\FashionBoardController::listFashionBoard
 manageFashionBoard:
   path: /manageFashionBoard
-  controller: App\Controller\DefaultController::manageFashionBoard
-manageOrders:
-  path: /manageOrders
-  controller: App\Controller\DefaultController::manageOrders
-manageQuiz:
-  path: /manageQuiz
-  controller: App\Controller\DefaultController::manageQuiz
-addQuiz:
-  path: /addQuiz
-  controller: App\Controller\DefaultController::addQuiz
-dashboard:
-  path: /dashboard
-  controller: App\Controller\DefaultController::viewDashboard
+  controller: App\Controller\FashionBoardController::manageFashionBoard
+updateFashionBoard:
+  path: /updateFashionBoard
+  controller: App\Controller\FashionBoardController::updateFashionBoard
+getQuiz:
+  path: /getQuiz
+  controller: App\Controller\FashionBoardController::getQuizByUser
+listOrders:
+  path: /listPaymentOrder
+  controller: App\Controller\OrderController::listPaymentOrder

@@ -57,6 +57,6 @@ class __TwigTemplate_50d541f5f0ea46d28e2815d62adb7f11f2241fc4c2b64f96182480cd57b
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'widget_container_attributes') ?>
-", "FrameworkBundle:Form:container_attributes.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/container_attributes.html.php");
+", "FrameworkBundle:Form:container_attributes.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/container_attributes.html.php");
     }
 }

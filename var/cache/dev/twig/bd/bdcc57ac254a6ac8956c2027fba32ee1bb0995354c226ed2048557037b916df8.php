@@ -120,6 +120,6 @@ class __TwigTemplate_6140b6a0eea66ee6a2c5e62d89a56527518aeb76358ca6fdce72fff51b3
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "FOSUserBundle:Resetting:email.txt.twig", "/home/emir/Bureau/untitled/vendor/friendsofsymfony/user-bundle/Resources/views/Resetting/email.txt.twig");
+", "FOSUserBundle:Resetting:email.txt.twig", "/home/emir/Bureau/fashionBoard/vendor/friendsofsymfony/user-bundle/Resources/views/Resetting/email.txt.twig");
     }
 }

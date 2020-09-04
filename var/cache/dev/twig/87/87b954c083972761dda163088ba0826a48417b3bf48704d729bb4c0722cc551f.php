@@ -172,30 +172,33 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
         // line 88
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
             // line 89
-            echo "                    <div style=\"color: #FF8661\" class=\"menu-icon\">
-                        <ul class=\"cart\">
-                            <li>
-                                <ul class=\"dropdown-menu no-padding\">
-                                    <li style=\"color: #FF8661\"  class=\"button\">
-                                        <a href=\"";
-            // line 94
+            echo "
+                    <div style=\"color: #FF8661;\" class=\"menu-icon\">
+                        <ul class=\"cart\" style=\"all: unset\">
+                                <ul id=\"popover-content\" style=\"display: inline-grid;background-color: white;padding: unset;width: 220px\" class=\"dropdown-menu list-group no-padding\" style=\"display: none\">
+                                    <a href=\"";
+            // line 93
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("userProfile");
-            echo "\" title=\"View Cart\">Profile</a>
-                                        <a href=\"";
+            echo "\" class=\"list-group-item\"><i class=\"icon icon-User\"></i>        Profile</a>
+                                    <a href=\"";
+            // line 94
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("wardrobe");
+            echo "\" class=\"list-group-item\"><i class=\"icon icon-House\"></i>  wardrobe</a>
+                                    <a href=\"";
             // line 95
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_logout");
-            echo "\" title=\"Log out\">Log out</a>
-                                    </li>
+            echo "\" class=\"list-group-item\"><i class=\"icon glyphicon-log-out\"></i> log out</a>
                                 </ul>
-                            </li>
-                            <li><a href=\"#\" title=\"User\"><i class=\"icon icon-User\"></i></a></li>
+                            <li><a href=\"#\" class=\"pop\" data-placement=\"bottom\"  data-trigger=\"hover\" data-toggle=\"popover\"><i class=\"icon icon-User\"></i></a></li>
                         </ul>
                     </div><!-- Menu Icon /- -->
 
                     ";
         } else {
-            // line 104
-            echo "                    ";
+            // line 102
+            echo "
+
+                    ";
         }
         // line 105
         echo "                    <div class=\"navbar-collapse collapse navbar-right\" id=\"navbar\">
@@ -214,7 +217,22 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
                             <li><a href=\"#product-section\" style=\"color: #FF8661\" title=\"Products\">FAQ</a></li>
 
                             <li class=\"dropdown\">
-                                <a href=\"blog.html\" title=\"Blog\" class=\"dropdown-toggle\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color: #FF8661\">Contact</a>
+                                ";
+        // line 118
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
+            // line 119
+            echo "
+                                ";
+        } else {
+            // line 121
+            echo "                            <li><a href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_user_security_login");
+            echo "\" style=\"color: #FF8661\" title=\"Products\">Log in</a></li>
+
+                            ";
+        }
+        // line 124
+        echo "
 
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -224,70 +242,101 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
         </div><!-- Menu Block /- -->
     </header><!-- Header /- -->
     ";
-        // line 127
+        // line 133
         $this->displayBlock('body', $context, $blocks);
-        // line 518
+        // line 524
         echo "    <!-- Footer Main -->";
         $this->displayBlock('footer', $context, $blocks);
-        // line 588
+        // line 594
         echo "</div>
 
 
 <!-- JQuery v1.12.4 -->
 <script src=\"";
-        // line 592
+        // line 598
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/jquery.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Library - Js -->
 <script src=\"";
-        // line 595
+        // line 601
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("libraries/lib.js"), "html", null, true);
         echo "\"></script>
 
 <script src=\"";
-        // line 597
+        // line 603
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("libraries/jquery.countdown.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- RS5.0 Core JS Files -->
 <script type=\"text/javascript\" src=\"";
-        // line 600
+        // line 606
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/jquery.themepunch.tools.min838f.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 601
+        // line 607
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/jquery.themepunch.revolution.min838f.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 602
+        // line 608
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.video.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 603
+        // line 609
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.slideanims.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 604
+        // line 610
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.layeranimation.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 605
+        // line 611
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.navigation.min.js"), "html", null, true);
         echo "\"></script>
 <script type=\"text/javascript\" src=\"";
-        // line 606
+        // line 612
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("revolution/js/extensions/revolution.extension.actions.min.js"), "html", null, true);
         echo "\"></script>
 
 <!-- Library - Theme JS -->
 <script src=\"";
-        // line 609
+        // line 615
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/functions.js"), "html", null, true);
         echo "\"></script>
 
 </body>
+<script>
+   \$(function() {
+        \$('[data-toggle=\"popover\"]').popover({
+html:true
+        }).on(\"mouseenter\", function() {
+            var _this = this;
+            \$('#popover-content').html();
+            \$('[data-toggle=\"popover\"]').on(\"mouseleave\", function() {
+                \$('#popover-content').show();
+            });
+        }).on(\"mouseleave\", function() {
+            var _this = this;
+            setTimeout(function() {
+                console.log(\$(\".popover:hover\").length)
+                if (!\$('[data-toggle=\"popover\"]').length) {
+                    \$('#popover-content').hide();
+                }
+            }, 20000000);
+        });
+    })
 
+  /*\$(function() {
+      \$('[data-toggle=\"popover\"]').popover({
+          html: true,
+          content: function() {
+
+              \$('#popover-content').html();
+
+          }
+      });
+  })*/
+</script>
 <!-- Mirrored from premiumlayers.net/demo/html/maxshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Aug 2020 11:27:57 GMT -->
 </html>
 ";
@@ -310,14 +359,14 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
     }
 
-    // line 127
+    // line 133
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 128
+        // line 134
         echo "
     <main>
         <!-- Slider Section 1 -->
@@ -713,14 +762,14 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
     }
 
-    // line 518
+    // line 524
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 519
+        // line 525
         echo "    <footer id=\"footer-main\" class=\"footer-main container-fluid\">
         <!-- Container -->
         <div class=\"container\">
@@ -807,7 +856,7 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 
     public function getDebugInfo()
     {
-        return array (  724 => 519,  717 => 518,  321 => 128,  314 => 127,  307 => 55,  300 => 54,  286 => 609,  280 => 606,  276 => 605,  272 => 604,  268 => 603,  264 => 602,  260 => 601,  256 => 600,  250 => 597,  245 => 595,  239 => 592,  233 => 588,  230 => 518,  228 => 127,  210 => 112,  201 => 105,  198 => 104,  186 => 95,  182 => 94,  175 => 89,  173 => 88,  139 => 56,  137 => 54,  132 => 52,  125 => 48,  121 => 47,  117 => 46,  113 => 45,  107 => 42,  101 => 39,  97 => 38,  91 => 35,  83 => 30,  77 => 27,  71 => 24,  65 => 21,  43 => 1,);
+        return array (  773 => 525,  766 => 524,  370 => 134,  363 => 133,  356 => 55,  349 => 54,  304 => 615,  298 => 612,  294 => 611,  290 => 610,  286 => 609,  282 => 608,  278 => 607,  274 => 606,  268 => 603,  263 => 601,  257 => 598,  251 => 594,  248 => 524,  246 => 133,  235 => 124,  228 => 121,  224 => 119,  222 => 118,  213 => 112,  204 => 105,  199 => 102,  189 => 95,  185 => 94,  181 => 93,  175 => 89,  173 => 88,  139 => 56,  137 => 54,  132 => 52,  125 => 48,  121 => 47,  117 => 46,  113 => 45,  107 => 42,  101 => 39,  97 => 38,  91 => 35,  83 => 30,  77 => 27,  71 => 24,  65 => 21,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -900,21 +949,21 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
                     </div>
                     <!-- Menu Icon -->
                     {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
-                    <div style=\"color: #FF8661\" class=\"menu-icon\">
-                        <ul class=\"cart\">
-                            <li>
-                                <ul class=\"dropdown-menu no-padding\">
-                                    <li style=\"color: #FF8661\"  class=\"button\">
-                                        <a href=\"{{ path('userProfile')}}\" title=\"View Cart\">Profile</a>
-                                        <a href=\"{{ path('fos_user_security_logout') }}\" title=\"Log out\">Log out</a>
-                                    </li>
+
+                    <div style=\"color: #FF8661;\" class=\"menu-icon\">
+                        <ul class=\"cart\" style=\"all: unset\">
+                                <ul id=\"popover-content\" style=\"display: inline-grid;background-color: white;padding: unset;width: 220px\" class=\"dropdown-menu list-group no-padding\" style=\"display: none\">
+                                    <a href=\"{{ path('userProfile') }}\" class=\"list-group-item\"><i class=\"icon icon-User\"></i>        Profile</a>
+                                    <a href=\"{{ path('wardrobe') }}\" class=\"list-group-item\"><i class=\"icon icon-House\"></i>  wardrobe</a>
+                                    <a href=\"{{ path('fos_user_security_logout') }}\" class=\"list-group-item\"><i class=\"icon glyphicon-log-out\"></i> log out</a>
                                 </ul>
-                            </li>
-                            <li><a href=\"#\" title=\"User\"><i class=\"icon icon-User\"></i></a></li>
+                            <li><a href=\"#\" class=\"pop\" data-placement=\"bottom\"  data-trigger=\"hover\" data-toggle=\"popover\"><i class=\"icon icon-User\"></i></a></li>
                         </ul>
                     </div><!-- Menu Icon /- -->
 
                     {% else %}
+
+
                     {% endif %}
                     <div class=\"navbar-collapse collapse navbar-right\" id=\"navbar\">
                         <ul class=\"nav navbar-nav\">
@@ -929,7 +978,13 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
                             <li><a href=\"#product-section\" style=\"color: #FF8661\" title=\"Products\">FAQ</a></li>
 
                             <li class=\"dropdown\">
-                                <a href=\"blog.html\" title=\"Blog\" class=\"dropdown-toggle\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\" style=\"color: #FF8661\">Contact</a>
+                                {% if is_granted(\"IS_AUTHENTICATED_REMEMBERED\") %}
+
+                                {% else%}
+                            <li><a href=\"{{ path('fos_user_security_login') }}\" style=\"color: #FF8661\" title=\"Products\">Log in</a></li>
+
+                            {% endif %}
+
 
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -1423,9 +1478,40 @@ class __TwigTemplate_fdae4887a78e1dc1621a7470059e91c5926fa13f268a793007297c230c0
 <script src=\"{{ asset('js/functions.js') }}\"></script>
 
 </body>
+<script>
+   \$(function() {
+        \$('[data-toggle=\"popover\"]').popover({
+html:true
+        }).on(\"mouseenter\", function() {
+            var _this = this;
+            \$('#popover-content').html();
+            \$('[data-toggle=\"popover\"]').on(\"mouseleave\", function() {
+                \$('#popover-content').show();
+            });
+        }).on(\"mouseleave\", function() {
+            var _this = this;
+            setTimeout(function() {
+                console.log(\$(\".popover:hover\").length)
+                if (!\$('[data-toggle=\"popover\"]').length) {
+                    \$('#popover-content').hide();
+                }
+            }, 20000000);
+        });
+    })
 
+  /*\$(function() {
+      \$('[data-toggle=\"popover\"]').popover({
+          html: true,
+          content: function() {
+
+              \$('#popover-content').html();
+
+          }
+      });
+  })*/
+</script>
 <!-- Mirrored from premiumlayers.net/demo/html/maxshop/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Aug 2020 11:27:57 GMT -->
 </html>
-", "base.html.twig", "/home/emir/Bureau/untitled/templates/base.html.twig");
+", "base.html.twig", "/home/emir/Bureau/fashionBoard/templates/base.html.twig");
     }
 }

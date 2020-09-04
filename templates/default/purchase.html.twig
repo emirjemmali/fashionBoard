@@ -174,7 +174,6 @@
 
         {% endif %}
         {% if ( app.user.state==0 ) %}
-            <form role="form">
                 <div class="panel panel-primary setup-content" id="step-1">
                     <div class="panel-heading">
                         <h3 class="panel-title">Shipper </h3>
@@ -223,65 +222,61 @@
                     </div>
                     <div class="panel-body">
                         <div class="payment">
-                            <div class="payment-tab payment-tab-active">
-                                <div class="payment-tab-trigger form-group">
-                                    <input id="paypal" name="cardType" type="radio" value="paypal">
-                                    <label for="paypal">PayPal</label>
-                                    <img class="payment-logo paypal" width="100px" src="https://i.imgur.com/ApBxkXU.png" alt="">
-                                </div>
-                                <div class="payment-tab-content">
-                                    <p>You will be redirected to PayPal to complete payment.</p>
-                                </div>
-                            </div>
+                            {{ form_start(form) }}
+
                             <div class="payment-tab">
                                 <div class="payment-tab-trigger">
-                                    <input type="radio" name="cardType" id="creditCart" value="creditCard">
+                                    {{ form_row(form.method) }}
                                     <label for="creditCart">Credit / Debit Card</label>
                                     <img class="payment-logo" width="100px" src="https://i.imgur.com/IHEKLgm.png" alt="">
+                                    {{ form_widget(form) }}
+
                                 </div>
                                 <div class="payment-tab-content">
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="card-label">
                                                 <label for="nameOnCard">Name on Card</label>
-                                                <input class="form-control" id="nameOnCard" name="nameOnCard" required type="text">
+                                                <input class="form-control" id="nameOnCard" name="nameOnCard" type="text">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="card-label">
                                                 <label for="cardNumber">Card Number</label>
                                                 <input class="form-control" id="cardNumber" name="cardNumber"
-                                                       placeholder="1234  5678  9876  5432" required type="text">
+                                                       placeholder="1234  5678  9876  5432"  type="text">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="card-label">
                                                 <label for="expirynDate">Expiry Month</label>
-                                                <input class="form-control" id="expiryDate" placeholder="MM" required type="text">
+                                                <input class="form-control" id="expiryDate" placeholder="MM"  type="text">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="card-label">
                                                 <label for="expiryDate">Expiry Year</label>
-                                                <input class="form-control" id="expirynDate" placeholder="YY" required type="text">
+                                                <input class="form-control" id="expirynDate" placeholder="YY"  type="text">
                                             </div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="card-label">
                                                 <label for="cvv">CVV</label>
-                                                <input class="form-control" id="cvv" required type="text">
+                                                <input class="form-control" id="cvv"  type="text">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <br>
-                        <button class="btn btn-primary nextBtn pull-right" type="button">pay</button>
+                        <input class="btn btn-primary nextBtn pull-right" type="submit" value="Pay € {{ bundle.price }}" />
+                        {{ form_end(form) }}
+
                     </div>
                 </div>
 
-            </form>
         {% else %}
 
             {# templates/Orders/show.html.twig #}
@@ -291,9 +286,8 @@
 
 
             {{ form_start(form) }}
-            {{ form_widget(form) }}
-            <input type="submit" value="Pay € {{ bundle.price }}" />
-            {{ form_end(form) }}
+
+
 
             <form name="jms_choose_payment_method" method="post" role="form">
             <div class="panel panel-primary setup-content" id="step-1">
@@ -304,9 +298,10 @@
                     <div class="payment">
                         <div class="payment-tab payment-tab-active">
                             <div class="payment-tab-trigger form-group">
-                                <input type="radio" id="jms_choose_payment_method_method_0" name="jms_choose_payment_method[method]" required="required" value="paypal_express_checkout">                                <label for="paypal">PayPal</label>
-                                <img class="payment-logo paypal" width="100px" src="https://i.imgur.com/ApBxkXU.png" alt="">
-                                <input type="hidden" id="jms_choose_payment_method__token" name="jms_choose_payment_method[_token]" value="Yv6r12pZ-T7XqZolXGscKT36L9bHgGLkqJfBGx3AWko">
+                                {{ form_row(form.method) }}
+
+                                                      <img class="payment-logo paypal" width="100px" src="https://i.imgur.com/ApBxkXU.png" alt="">
+                                {{ form_widget(form) }}
                             </div>
                             <div class="payment-tab-content">
                                 <p>You will be redirected to PayPal to complete payment.</p>
@@ -358,6 +353,8 @@
                     <br>
                     <input class="btn btn-primary nextBtn pull-right" type="submit" value="Pay € {{ bundle.price }}" />
                 </div>
+                {{ form_end(form) }}
+
             </div>
             </form>
         {% endif %}

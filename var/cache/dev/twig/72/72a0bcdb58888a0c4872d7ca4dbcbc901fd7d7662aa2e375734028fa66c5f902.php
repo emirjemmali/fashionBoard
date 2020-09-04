@@ -389,6 +389,6 @@ class __TwigTemplate_4e9cddd86a27b235ac6200f08282b570b2ba01e5a92e96dc854f6b83e62
 {% block body %}
     {% include '@Twig/Exception/exception.html.twig' %}
 {% endblock %}
-", "TwigBundle:Exception:exception_full.html.twig", "/home/emir/Bureau/untitled/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
+", "TwigBundle:Exception:exception_full.html.twig", "/home/emir/Bureau/fashionBoard/vendor/symfony/twig-bundle/Resources/views/Exception/exception_full.html.twig");
     }
 }

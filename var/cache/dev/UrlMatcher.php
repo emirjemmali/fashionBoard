@@ -29,48 +29,55 @@ return [
         '/purchase' => [[['_route' => 'purchase', '_controller' => 'App\\Controller\\DefaultController::purchase'], null, null, null, false, false, null]],
         '/updateuser' => [[['_route' => 'updateuser', '_controller' => 'App\\Controller\\DefaultController::updateuser'], null, null, null, false, false, null]],
         '/userprofile' => [[['_route' => 'userProfile', '_controller' => 'App\\Controller\\DefaultController::userProfile'], null, null, null, false, false, null]],
-        '/manageBundle' => [[['_route' => 'manageBundle', '_controller' => 'App\\Controller\\FashionBundleController::manageBundle'], null, null, null, false, false, null]],
-        '/addBundle' => [[['_route' => 'addBundle', '_controller' => 'App\\Controller\\FashionBundleController::addBundle'], null, null, null, false, false, null]],
-        '/manageProducts' => [[['_route' => 'manageProduct', '_controller' => 'App\\Controller\\ProductController::manageProducts'], null, null, null, false, false, null]],
-        '/addProduct' => [[['_route' => 'addProduct', '_controller' => 'App\\Controller\\ProductController::newProduct'], null, null, null, false, false, null]],
-        '/listFashionBoard' => [[['_route' => 'listFashionBoard', '_controller' => 'App\\Controller\\DefaultController::listFashionBoard'], null, null, null, false, false, null]],
-        '/manageFashionBoard' => [[['_route' => 'manageFashionBoard', '_controller' => 'App\\Controller\\DefaultController::manageFashionBoard'], null, null, null, false, false, null]],
         '/manageOrders' => [[['_route' => 'manageOrders', '_controller' => 'App\\Controller\\DefaultController::manageOrders'], null, null, null, false, false, null]],
         '/manageQuiz' => [[['_route' => 'manageQuiz', '_controller' => 'App\\Controller\\DefaultController::manageQuiz'], null, null, null, false, false, null]],
         '/addQuiz' => [[['_route' => 'addQuiz', '_controller' => 'App\\Controller\\DefaultController::addQuiz'], null, null, null, false, false, null]],
         '/dashboard' => [[['_route' => 'dashboard', '_controller' => 'App\\Controller\\DefaultController::viewDashboard'], null, null, null, false, false, null]],
+        '/wardrob' => [[['_route' => 'wardrobe', '_controller' => 'App\\Controller\\DefaultController::wardropfashionboard'], null, null, null, false, false, null]],
+        '/activatefasionboard' => [[['_route' => 'activatedfasionboard', '_controller' => 'App\\Controller\\DefaultController::activationfasionboard'], null, null, null, false, false, null]],
+        '/quiz' => [[['_route' => 'quizanswer', '_controller' => 'App\\Controller\\DefaultController::quizAnswer'], null, null, null, false, false, null]],
+        '/submitquiz' => [[['_route' => 'quizsubmit', '_controller' => 'App\\Controller\\DefaultController::submitquiz'], null, null, null, false, false, null]],
+        '/manageBundle' => [[['_route' => 'manageBundle', '_controller' => 'App\\Controller\\FashionBundleController::manageBundle'], null, null, null, false, false, null]],
+        '/addBundle' => [[['_route' => 'addBundle', '_controller' => 'App\\Controller\\FashionBundleController::addBundle'], null, null, null, false, false, null]],
+        '/manageProducts' => [[['_route' => 'manageProduct', '_controller' => 'App\\Controller\\ProductController::manageProducts'], null, null, null, false, false, null]],
+        '/addProduct' => [[['_route' => 'addProduct', '_controller' => 'App\\Controller\\ProductController::newProduct'], null, null, null, false, false, null]],
+        '/listFashionBoard' => [[['_route' => 'listFashionBoard', '_controller' => 'App\\Controller\\FashionBoardController::listFashionBoard'], null, null, null, false, false, null]],
+        '/manageFashionBoard' => [[['_route' => 'manageFashionBoard', '_controller' => 'App\\Controller\\FashionBoardController::manageFashionBoard'], null, null, null, false, false, null]],
+        '/updateFashionBoard' => [[['_route' => 'updateFashionBoard', '_controller' => 'App\\Controller\\FashionBoardController::updateFashionBoard'], null, null, null, false, false, null]],
+        '/getQuiz' => [[['_route' => 'getQuiz', '_controller' => 'App\\Controller\\FashionBoardController::getQuizByUser'], null, null, null, false, false, null]],
+        '/listPaymentOrder' => [[['_route' => 'listOrders', '_controller' => 'App\\Controller\\OrderController::listPaymentOrder'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
                 .'|/_error/(\\d+)(?:\\.([^/]++))?(*:35)'
-                .'|/([^/]++)/payment/c(?'
-                    .'|reate(*:69)'
-                    .'|omplete(*:83)'
+                .'|/([^/]++)/(?'
+                    .'|([^/]++)/payment/create(*:78)'
+                    .'|payment/complete(*:101)'
                 .')'
                 .'|/re(?'
-                    .'|gister/confirm/([^/]++)(*:120)'
-                    .'|setting/reset/([^/]++)(*:150)'
+                    .'|gister/confirm/([^/]++)(*:139)'
+                    .'|setting/reset/([^/]++)(*:169)'
                 .')'
                 .'|/update(?'
-                    .'|Bundle/([^/]++)(*:184)'
-                    .'|Product/([^/]++)(*:208)'
+                    .'|Bundle/([^/]++)(*:203)'
+                    .'|Product/([^/]++)(*:227)'
                 .')'
                 .'|/delete(?'
-                    .'|Bundle/([^/]++)(*:242)'
-                    .'|Product/([^/]++)(*:266)'
+                    .'|Bundle/([^/]++)(*:261)'
+                    .'|Product/([^/]++)(*:285)'
                 .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
         35 => [[['_route' => '_twig_error_test', '_controller' => 'twig.controller.preview_error::previewErrorPageAction', '_format' => 'html'], ['code', '_format'], null, null, false, true, null]],
-        69 => [[['_route' => 'app_orders_paymentcreate', '_controller' => 'App\\Controller\\DefaultController::paymentCreateAction'], ['orderId'], null, null, false, false, null]],
-        83 => [[['_route' => 'app_orders_paymentcomplete', '_controller' => 'App\\Controller\\DefaultController::paymentCompleteAction'], ['orderId'], null, null, false, false, null]],
-        120 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
-        150 => [[['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        184 => [[['_route' => 'updateBundle', '_controller' => 'App\\Controller\\FashionBundleController::updateBundle'], ['id'], null, null, false, true, null]],
-        208 => [[['_route' => 'updateProduct', '_controller' => 'App\\Controller\\ProductController::updateProduct'], ['id'], null, null, false, true, null]],
-        242 => [[['_route' => 'deleteBundle', '_controller' => 'App\\Controller\\FashionBundleController::deleteFashionBUndle'], ['id'], null, null, false, true, null]],
-        266 => [
+        78 => [[['_route' => 'app_orders_paymentcreate', '_controller' => 'App\\Controller\\DefaultController::paymentCreateAction'], ['bundleid', 'orderId'], null, null, false, false, null]],
+        101 => [[['_route' => 'app_orders_paymentcomplete', '_controller' => 'App\\Controller\\DefaultController::paymentCompleteAction'], ['orderId'], null, null, false, false, null]],
+        139 => [[['_route' => 'fos_user_registration_confirm', '_controller' => 'fos_user.registration.controller:confirmAction'], ['token'], ['GET' => 0], null, false, true, null]],
+        169 => [[['_route' => 'fos_user_resetting_reset', '_controller' => 'fos_user.resetting.controller:resetAction'], ['token'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        203 => [[['_route' => 'updateBundle', '_controller' => 'App\\Controller\\FashionBundleController::updateBundle'], ['id'], null, null, false, true, null]],
+        227 => [[['_route' => 'updateProduct', '_controller' => 'App\\Controller\\ProductController::updateProduct'], ['id'], null, null, false, true, null]],
+        261 => [[['_route' => 'deleteBundle', '_controller' => 'App\\Controller\\FashionBundleController::deleteFashionBUndle'], ['id'], null, null, false, true, null]],
+        285 => [
             [['_route' => 'deleteProduct', '_controller' => 'App\\Controller\\ProductController::deleteProduct'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

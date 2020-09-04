@@ -160,6 +160,6 @@ class __TwigTemplate_0ddec6dc20c79b6f5a8d73f6273f0cb1dc04a1724f17c77bd884984891d
 
     </div><!-- Container /- -->
 </div>
-{% endblock %}", "default/formule.html.twig", "/home/emir/Bureau/untitled/templates/default/formule.html.twig");
+{% endblock %}", "default/formule.html.twig", "/home/emir/Bureau/fashionBoard/templates/default/formule.html.twig");
     }
 }

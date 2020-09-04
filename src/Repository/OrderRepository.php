@@ -18,7 +18,12 @@ class OrderRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Order::class);
     }
-
+    public function findPaymentOrder(){
+        return $this->createQueryBuilder('a')
+            ->andWhere('a.state = true')
+            ->getQuery()
+            ->getResult();
+    }
     // /**
     //  * @return Order[] Returns an array of Order objects
     //  */

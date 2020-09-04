@@ -22,6 +22,10 @@ class Fashionboard
      */
     private $products;
     /**
+     * @ORM\ManyToOne (targetEntity="App\Entity\User")
+     */
+    private $user;
+    /**
      * @ORM\ManyToOne  (targetEntity="App\Entity\Fashionbundle")
      */
     private $fashionbundle;
@@ -113,6 +117,20 @@ class Fashionboard
         $this->fashionbundle = $fashionbundle;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
 
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user): void
+    {
+        $this->user = $user;
+    }
 
 }

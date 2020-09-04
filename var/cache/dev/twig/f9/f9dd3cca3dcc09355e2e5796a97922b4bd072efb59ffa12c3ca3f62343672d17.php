@@ -65,6 +65,6 @@ class __TwigTemplate_23073a18297f14638bba3a250444bbe709bb9274dba777828f8ae6fda2b
     value=\"<?php echo \$view->escape(\$value) ?>\"
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "FrameworkBundle:Form:radio_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/radio_widget.html.php");
+", "FrameworkBundle:Form:radio_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/radio_widget.html.php");
     }
 }

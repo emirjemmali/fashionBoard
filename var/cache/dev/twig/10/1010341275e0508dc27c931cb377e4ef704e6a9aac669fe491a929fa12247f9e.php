@@ -120,6 +120,6 @@ class __TwigTemplate_83fb11fc59a939d94deb95953e0040b92c77a3516fea0d483851a86d919
 {% endautoescape %}
 {% endblock %}
 {% block body_html %}{% endblock %}
-", "FOSUserBundle:Registration:email.txt.twig", "/home/emir/Bureau/untitled/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/email.txt.twig");
+", "FOSUserBundle:Registration:email.txt.twig", "/home/emir/Bureau/fashionBoard/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/email.txt.twig");
     }
 }

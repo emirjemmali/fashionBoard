@@ -1,11 +1,13 @@
 <?php
 
 namespace App\Controller;
+use App\Entity\Fashionboard;
 use App\Entity\Product;
-use App\Entity\Produit;
+use App\Entity\Quiz;
 use App\Form\ProductType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Routing\Generator\UrlGeneratorInterface;
 use JMS\Payment\CoreBundle\Plugin\Exception\Action\VisitUrl;
 use JMS\Payment\CoreBundle\Plugin\Exception\ActionRequiredException;
 use App\Entity\Fashionbundle;
@@ -19,9 +21,12 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use Yoeunes\Notify\Notifiers\Toastr;
+use function MongoDB\BSON\fromJSON;
 
 class DefaultController extends AbstractController
 {
+    private $fashionboardid;
 
     /**
      * @Route("/", name="default")
@@ -49,7 +54,6 @@ class DefaultController extends AbstractController
             'controller_name' => 'DefaultController',
         ]);
     }
-
     public function formule()
     {
         $fashionbundle = $this->getDoctrine()->getRepository(Fashionbundle::class)->findAll();
@@ -60,7 +64,10 @@ class DefaultController extends AbstractController
     }
     public function userProfile()
     {
-        return $this->render('default/profile.html.twig');
+        $boards=$this->getDoctrine()->getRepository(Fashionboard::class)->findBy(['user'=>$this->getUser()]);
+        return $this->render('default/profile.html.twig',array(
+            'boards' => $boards
+        ));
     }
     public function purchase(SessionInterface $session,Request $request, PluginController $ppc)
     {        $idbundle=$request->get('idbundle');
@@ -74,7 +81,6 @@ class DefaultController extends AbstractController
         $em->flush();
 
         if ($usr==null){
-            var_dump($usr);
             $session->set('route', 'formule');
             return $this->redirectToRoute('fos_user_security_login');
         }else{
@@ -84,7 +90,6 @@ class DefaultController extends AbstractController
                 'currency' => 'EUR',
             ]);
             $form->handleRequest($request);
-
             if ($form->isSubmitted() && $form->isValid()) {
                 $ppc->createPaymentInstruction($instruction = $form->getData());
 
@@ -96,7 +101,7 @@ class DefaultController extends AbstractController
 
 
                 return $this->redirectToRoute('app_orders_paymentcreate', [
-                    'orderId' => $order->getId(),
+                    'orderId' => $order->getId(),'bundleid' => $idbundle
                 ]);
             }
             return $this->render('default/purchase.html.twig',['form' => $form->createView(),'bundle'=>$bundle]);
@@ -107,6 +112,10 @@ class DefaultController extends AbstractController
     {
         $usr=$this->getUser();
         var_dump($request->request->get('firstname'));
+        if ($request->request->get('email')!=null){
+            $usr->setEmail($request->request->get('email'));
+
+        }
         $usr->setFirstname($request->request->get('firstname'));
         $usr->setLastname($request->request->get('firstname'));
         $usr->setPhonenumber($request->request->get('phone'));
@@ -130,10 +139,13 @@ class DefaultController extends AbstractController
         return $ppc->createPayment($instruction->getId(), $amount);
     }
     /**
-     * @Route("/{orderId}/payment/create",name="app_orders_paymentcreate")
+     * @Route("{bundleid}/{orderId}/payment/create",name="app_orders_paymentcreate")
      */
-    public function paymentCreateAction($orderId, PluginController $ppc)
+    public function paymentCreateAction($orderId, $bundleid, PluginController $ppc)
     {
+        $em = $this->getDoctrine()->getManager();
+        $bundle = $this->getDoctrine()->getManager()->getRepository('App:Fashionbundle')->find($bundleid);
+
         $order = $this->getDoctrine()->getManager()->getRepository(Order::class)->find($orderId);
 
         $payment = $this->createPayment($order, $ppc);
@@ -148,6 +160,18 @@ class DefaultController extends AbstractController
         if ($result->getStatus() === Result::STATUS_PENDING) {
             $order->setState(true);
             $order->setUser($this->getUser());
+            var_dump($order->getBundle());
+            for($i=0; $i<$bundle->getfashionbordern(); $i++)
+            {
+                $fashionboard=new Fashionboard();
+                $fashionboard->setUser($this->getUser());
+                $fashionboard->setClientActivation(0);
+                $fashionboard->setAdminValidation(0);
+                $fashionboard->setFashionbundle($order->getBundle());
+                $this->getDoctrine()->getManager()->persist($fashionboard);
+                $this->getDoctrine()->getManager()->flush();
+
+            }
             $this->getDoctrine()->getManager()->persist($order);
             $this->getDoctrine()->getManager()->flush();
             $ex = $result->getPluginException();
@@ -175,7 +199,27 @@ class DefaultController extends AbstractController
         var_dump('paymentcomplete');
         return new Response('Payment complete');
     }
+    public function manageBundle()
+    {
+        return $this->render('backOffice/manageBundles.html.twig');
 
+    }
+
+    public function addBundle()
+    {
+        return $this->render('backOffice/addBundle.html.twig'
+        );
+
+    }
+    public function manageProducts()
+    {
+        return $this->render('backOffice/manageBundles.html.twig');
+
+    }
+    public function addProduct()
+    {
+        return $this->render('backOffice/addProduct.html.twig');
+    }
     public function listFashionBoard()
     {
         return $this->render('backOffice/manageBundles.html.twig');
@@ -208,5 +252,120 @@ class DefaultController extends AbstractController
         return $this->render('backOffice/dashboard.html.twig');
 
     }
+    public function newProduct(Request $request)
+    {
+        $product = new Product();
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var UploadedFile $brochureFile */
+            $brochureFile = $form->get('image')->getData();
+
+            // this condition is needed because the 'brochure' field is not required
+            // so the PDF file must be processed only when a file is uploaded
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                //$safeFilename = $slugger->slug($originalFilename);
+                // SluggerInterface $slugger
+                $safeFilename = "test";
+                $newFilename = $safeFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $brochureFile->move(
+                        $this->getParameter('brochures_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $product->setBrochureFilename($newFilename);
+            }
+
+            // ... persist the $product variable or any other work
+
+            return $this->redirect($this->generateUrl('manageProduct'));
+        }
+
+        return $this->render('backOffice/addProduct.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+    public function wardropfashionboard()
+    {
+        $activatedboards=$this->getDoctrine()->getRepository(Fashionboard::class)->findBy(['user'=>$this->getUser(),'clientActivation'=>1]);
+
+        $boards=$this->getDoctrine()->getRepository(Fashionboard::class)->findBy(['user'=>$this->getUser()]);
+        return $this->render('default/fashionboard.html.twig',array(
+            'boards' => $boards,
+            'nbboards'=>sizeof($boards),
+            'nbactivatedboards'=>sizeof($activatedboards)
+        ));
+    }
+    public function activationfasionboard(){
+
+
+            $response = JsonResponse::fromJsonString('{ "message": "https://localhost:8000/quiz" }');
+            return $response;
+
+    }
+    public function quizAnswer(Request $request){
+        return $this->render('default/quiz.html.twig');
+    }
+    public function submitquiz(Request $request){
+        $result=json_decode($request->request->get('values'), true);
+        $activatedboards=new Fashionboard();
+        $activatedboards=$this->getDoctrine()->getRepository(Fashionboard::class)->findOneBy(['user'=>$this->getUser(),'clientActivation'=>0]);
+
+        if($activatedboards!=null){
+
+            $activatedboards->setClientActivation(1);
+            $this->getDoctrine()->getManager()->persist($activatedboards);
+
+            foreach ($result as $key => $value){
+                var_dump($value);
+
+                $quiz = new Quiz();
+            $quiz->setUser($this->getUser());
+                $quiz->setFashionboardid($activatedboards);
+                $quiz->setQuestionid($value['question']);
+                $quiz->setResponseid($value['answer']);
+
+
+                $this->getDoctrine()->getManager()->persist($quiz);
+
+                $this->getDoctrine()->getManager()->flush();
+
+
+
+            }
+
+        }
+        $arr=['message'=>'success'];
+        return $this->render('default/quiz.html.twig');
+
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFashionboardid()
+    {
+        return $this->fashionboardid;
+    }
+
+    /**
+     * @param mixed $fashionboardid
+     */
+    public function setFashionboardid($fashionboardid): void
+    {
+        $this->fashionboardid = $fashionboardid;
+    }
+
 
 }

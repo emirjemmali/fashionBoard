@@ -57,6 +57,6 @@ class __TwigTemplate_5debce722a4a8abfb2c90f7d09958dc0de1166c93c8bfbf9da2b4d58e4e
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'button_widget', ['type' => isset(\$type) ? \$type : 'reset']) ?>
-", "FrameworkBundle:Form:reset_widget.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/Form/reset_widget.html.php");
+", "FrameworkBundle:Form:reset_widget.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/Form/reset_widget.html.php");
     }
 }

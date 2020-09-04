@@ -65,6 +65,6 @@ class __TwigTemplate_987f2622f8f2fcbb1298f3239467d85702c2544a763e9ef8e2bad8a9d20
         <?php echo \$view['form']->widget(\$form); ?>
     </td>
 </tr>
-", "FrameworkBundle:FormTable:hidden_row.html.php", "/home/emir/Bureau/untitled/vendor/symfony/framework-bundle/Resources/views/FormTable/hidden_row.html.php");
+", "FrameworkBundle:FormTable:hidden_row.html.php", "/home/emir/Bureau/fashionBoard/vendor/symfony/framework-bundle/Resources/views/FormTable/hidden_row.html.php");
     }
 }

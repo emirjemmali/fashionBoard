@@ -81,6 +81,6 @@ class __TwigTemplate_8508ce3ded85fe23d673e96681354d8b50fa8fbdc80d31503e763699f7c
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
 </div>
-", "@FOSUser/Profile/show_content.html.twig", "/home/emir/Bureau/untitled/templates/bundles/FOSUserBundle/Profile/show_content.html.twig");
+", "@FOSUser/Profile/show_content.html.twig", "/home/emir/Bureau/fashionBoard/templates/bundles/FOSUserBundle/Profile/show_content.html.twig");
     }
 }

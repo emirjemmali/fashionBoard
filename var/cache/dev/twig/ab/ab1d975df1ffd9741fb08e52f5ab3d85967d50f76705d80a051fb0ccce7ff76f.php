@@ -190,6 +190,6 @@ class __TwigTemplate_66737447820d77641d09787af9f1544d9c5dd8e4957a0f1a4731b285a1c
         </div>
     </body>
 </html>
-", "FOSUserBundle::layout.html.twig", "/home/emir/Bureau/untitled/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig");
+", "FOSUserBundle::layout.html.twig", "/home/emir/Bureau/fashionBoard/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig");
     }
 }

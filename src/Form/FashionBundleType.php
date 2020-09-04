@@ -27,7 +27,7 @@ class FashionBundleType extends AbstractType
             ->add('fashionbordernumber', IntegerType::class,
                 array('attr' => array('class' => 'form-control','style' => ''),'required'=>true))
             ->add('promotionstatus', CheckboxType::class,
-                array('attr' => array('class' => 'form-control','style' => ''),'required'=>true))
+                array('attr' => array('class' => 'form-control','style' => ''),'required'=>false))
             ->add('promotion', IntegerType::class,
                 array('attr' => array('class' => 'form-control','style' => ''),'required'=>false))
             ->add('save', SubmitType::class, ['label' => 'Sauvegarder',

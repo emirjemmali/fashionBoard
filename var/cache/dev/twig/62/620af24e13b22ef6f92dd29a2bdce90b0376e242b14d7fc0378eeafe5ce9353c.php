@@ -157,6 +157,6 @@ class __TwigTemplate_96ce9a552f3dced26ce7eec405e5d44f697bb7947234c40bfe657e875ca
     {{ form_end(form) }}
 </div>
 {% endblock %}
-", "backOffice/addProduct.html.twig", "/home/emir/Bureau/untitled/templates/backOffice/addProduct.html.twig");
+", "backOffice/addProduct.html.twig", "/home/emir/Bureau/fashionBoard/templates/backOffice/addProduct.html.twig");
     }
 }
